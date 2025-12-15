@@ -15,9 +15,5 @@
     "title": "Chapter 1 - Foundations of Physical AI",
     "sidebar_label": "Chapter 1 - Foundations of Physical AI"
   },
-  "sidebar": "tutorialSidebar",
-  "previous": {
-    "title": "Introduction",
-    "permalink": "/physical-ai-humanoid-robotics-future/docs/intro"
-  }
+  "sidebar": "tutorialSidebar"
 }

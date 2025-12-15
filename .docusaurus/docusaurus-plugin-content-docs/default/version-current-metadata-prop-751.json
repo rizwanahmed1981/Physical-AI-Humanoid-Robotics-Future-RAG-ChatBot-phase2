@@ -10,13 +10,6 @@
   "docsSidebars": {
     "tutorialSidebar": [
       {
-        "type": "link",
-        "label": "Introduction",
-        "href": "/physical-ai-humanoid-robotics-future/docs/intro",
-        "docId": "intro",
-        "unlisted": false
-      },
-      {
         "type": "category",
         "label": "Textbook Chapters",
         "items": [
@@ -44,12 +37,6 @@
       "id": "chapters/template",
       "title": "Chapter Template",
       "description": "This is a template for textbook chapters."
-    },
-    "intro": {
-      "id": "intro",
-      "title": "Introduction",
-      "description": "This textbook explores the exciting field of Physical Artificial Intelligence (Physical AI) and its applications in humanoid robotics.",
-      "sidebar": "tutorialSidebar"
     },
     "quizzes/chapter1-section1": {
       "id": "quizzes/chapter1-section1",

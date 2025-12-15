@@ -8,7 +8,7 @@
           "label": "Next",
           "isLast": true,
           "path": "/physical-ai-humanoid-robotics-future/docs",
-          "mainDocId": "intro",
+          "mainDocId": "chapters/chapter1",
           "docs": [
             {
               "id": "chapters/chapter1",
@@ -18,11 +18,6 @@
             {
               "id": "chapters/template",
               "path": "/physical-ai-humanoid-robotics-future/docs/chapters/template"
-            },
-            {
-              "id": "intro",
-              "path": "/physical-ai-humanoid-robotics-future/docs/intro",
-              "sidebar": "tutorialSidebar"
             },
             {
               "id": "quizzes/chapter1-section1",
@@ -53,8 +48,8 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/physical-ai-humanoid-robotics-future/docs/intro",
-                "label": "intro"
+                "path": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter1",
+                "label": "chapters/chapter1"
               }
             }
           }

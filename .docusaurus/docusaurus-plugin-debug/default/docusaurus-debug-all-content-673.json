@@ -36,11 +36,7 @@
                 "title": "Chapter 1 - Foundations of Physical AI",
                 "sidebar_label": "Chapter 1 - Foundations of Physical AI"
               },
-              "sidebar": "tutorialSidebar",
-              "previous": {
-                "title": "Introduction",
-                "permalink": "/physical-ai-humanoid-robotics-future/docs/intro"
-              }
+              "sidebar": "tutorialSidebar"
             },
             {
               "id": "chapters/template",
@@ -58,29 +54,6 @@
               "frontMatter": {
                 "title": "Chapter Template",
                 "sidebar_label": "Chapter Template"
-              }
-            },
-            {
-              "id": "intro",
-              "title": "Introduction",
-              "description": "This textbook explores the exciting field of Physical Artificial Intelligence (Physical AI) and its applications in humanoid robotics.",
-              "source": "@site/docs/intro.md",
-              "sourceDirName": ".",
-              "slug": "/intro",
-              "permalink": "/physical-ai-humanoid-robotics-future/docs/intro",
-              "draft": false,
-              "unlisted": false,
-              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/intro.md",
-              "tags": [],
-              "version": "current",
-              "frontMatter": {
-                "title": "Introduction",
-                "sidebar_label": "Introduction"
-              },
-              "sidebar": "tutorialSidebar",
-              "next": {
-                "title": "Chapter 1 - Foundations of Physical AI",
-                "permalink": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter1"
               }
             },
             {
@@ -189,10 +162,6 @@
           "drafts": [],
           "sidebars": {
             "tutorialSidebar": [
-              {
-                "type": "doc",
-                "id": "intro"
-              },
               {
                 "type": "category",
                 "label": "Textbook Chapters",

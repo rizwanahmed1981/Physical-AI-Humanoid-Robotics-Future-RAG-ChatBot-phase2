@@ -6,7 +6,7 @@
 export default {
   "title": "Physical-AI-Humanoid-Robotics-Future",
   "tagline": "Bridging Digital AI with Embodied Intelligence",
-  "favicon": "img/favicon.ico",
+  "favicon": "/img/favicon.ico",
   "url": "https://rizwanahmed1981.github.io",
   "baseUrl": "/physical-ai-humanoid-robotics-future/",
   "organizationName": "rizwanahmed1981",
@@ -42,7 +42,7 @@ export default {
       "title": "Physical AI Textbook",
       "logo": {
         "alt": "Physical AI Logo",
-        "src": "img/logo.svg"
+        "src": "/img/logo.svg"
       },
       "items": [
         {

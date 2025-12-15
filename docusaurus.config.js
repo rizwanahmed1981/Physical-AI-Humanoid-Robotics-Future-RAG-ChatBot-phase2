@@ -6,7 +6,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'Physical-AI-Humanoid-Robotics-Future',
   tagline: 'Bridging Digital AI with Embodied Intelligence',
-  favicon: 'img/favicon.ico',
+  favicon: '/img/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://rizwanahmed1981.github.io',
@@ -36,8 +36,6 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/',
         },
@@ -58,7 +56,7 @@ const config = {
         title: 'Physical AI Textbook',
         logo: {
           alt: 'Physical AI Logo',
-          src: 'img/logo.svg',
+          src: '/img/logo.svg',
         },
         items: [
           {

@@ -4,15 +4,15 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/physical-ai-humanoid-robotics-future/docs',
-    component: ComponentCreator('/physical-ai-humanoid-robotics-future/docs', '9ec'),
+    component: ComponentCreator('/physical-ai-humanoid-robotics-future/docs', '1c1'),
     routes: [
       {
         path: '/physical-ai-humanoid-robotics-future/docs',
-        component: ComponentCreator('/physical-ai-humanoid-robotics-future/docs', 'f2b'),
+        component: ComponentCreator('/physical-ai-humanoid-robotics-future/docs', '499'),
         routes: [
           {
             path: '/physical-ai-humanoid-robotics-future/docs',
-            component: ComponentCreator('/physical-ai-humanoid-robotics-future/docs', '660'),
+            component: ComponentCreator('/physical-ai-humanoid-robotics-future/docs', 'ea0'),
             routes: [
               {
                 path: '/physical-ai-humanoid-robotics-future/docs/chapters/chapter1',
@@ -24,12 +24,6 @@ export default [
                 path: '/physical-ai-humanoid-robotics-future/docs/chapters/template',
                 component: ComponentCreator('/physical-ai-humanoid-robotics-future/docs/chapters/template', 'fd2'),
                 exact: true
-              },
-              {
-                path: '/physical-ai-humanoid-robotics-future/docs/intro',
-                component: ComponentCreator('/physical-ai-humanoid-robotics-future/docs/intro', 'e16'),
-                exact: true,
-                sidebar: "tutorialSidebar"
               },
               {
                 path: '/physical-ai-humanoid-robotics-future/docs/quizzes/chapter1-section1',

@@ -1,5 +1,4 @@
 export default {
-  "0e384e19": [() => import(/* webpackChunkName: "0e384e19" */ "@site/docs/intro.md"), "@site/docs/intro.md", require.resolveWeak("@site/docs/intro.md")],
   "17896441": [() => import(/* webpackChunkName: "17896441" */ "@theme/DocItem"), "@theme/DocItem", require.resolveWeak("@theme/DocItem")],
   "25e6d8fd": [() => import(/* webpackChunkName: "25e6d8fd" */ "@site/docs/quizzes/chapter1-section2.md"), "@site/docs/quizzes/chapter1-section2.md", require.resolveWeak("@site/docs/quizzes/chapter1-section2.md")],
   "32d04ea7": [() => import(/* webpackChunkName: "32d04ea7" */ "@site/docs/quizzes/chapter1-section5.md"), "@site/docs/quizzes/chapter1-section5.md", require.resolveWeak("@site/docs/quizzes/chapter1-section5.md")],
