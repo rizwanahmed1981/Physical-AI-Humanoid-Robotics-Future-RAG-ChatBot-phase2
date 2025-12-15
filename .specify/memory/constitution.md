@@ -13,7 +13,7 @@ Removed sections: None
 Templates requiring updates: ⚠ pending - .specify/templates/plan-template.md, .specify/templates/spec-template.md, .specify/templates/tasks-template.md
 Follow-up TODOs: None
 -->
-# Physical AI & Humanoid Robotics Constitution
+# Physical-AI-Humanoid-Robotics-Future Constitution
 
 ## Core Principles
 

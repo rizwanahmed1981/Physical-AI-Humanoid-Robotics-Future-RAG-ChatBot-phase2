@@ -31,7 +31,7 @@ tests: []
 /sp.constitution
 
 This project is an AI-native technical textbook titled:
-"Physical AI & Humanoid Robotics"
+"Physical-AI-Humanoid-Robotics-Future"
 
 The constitution defines the non-negotiable principles that govern all content creation, assessments, agent usage, and implementation decisions in this repository.
 
@@ -39,7 +39,7 @@ The constitution defines the non-negotiable principles that govern all content c
 - All factual claims must be grounded strictly in the provided course documents and officially documented technologies.
 - Never invent hardware capabilities, software features, benchmarks, timelines, or outcomes.
 - If information is missing or unclear in the source, explicitly state uncertainty instead of guessing.
-- Preserve the original intent, scope, and promises of the Physical AI & Humanoid Robotics course 100%.
+- Preserve the original intent, scope, and promises of the Physical-AI-Humanoid-Robotics-Future course 100%.
 
 ### 2. Core Educational Mission
 - The primary goal is to bridge digital AI systems with embodied intelligence in the physical world.
@@ -149,6 +149,18 @@ The constitution defines the non-negotiable principles that govern all content c
 This constitution overrides all other stylistic, generative, or tool-specific preferences and must be followed by all AI agents, skills, MCP servers, and contributors involved in this project.
 ```
 
+## Response Summary
+
+Updated the project constitution to reflect the new book name "Physical-AI-Humanoid-Robotics-Future". The constitution file has been updated with the new name in the title and throughout the document where references to the book name appear.
+
+## Outcome
+
+The constitution file at `.specify/memory/constitution.md` has been successfully updated with the new book name "Physical-AI-Humanoid-Robotics-Future". The corresponding PHR file has also been updated to reflect this change.
+
+## Files Modified
+
+- `.specify/memory/constitution.md` - Updated with new book name
+- `history/prompts/constitution/1-amend-constitution.constitution.prompt.md` - Updated with new book name in prompt
 ## Response Summary
 
 Updated the project constitution to reflect the specific requirements for the "Physical AI & Humanoid Robotics" textbook project. The new constitution includes 18 detailed principles covering source fidelity, educational mission, audience awareness, clarity, AI-native writing, emotional resonance, consistency, tool discipline, assessment standards, quiz design, pedagogical flow, agent governance, and more. The version was bumped from 1.0.0 to 2.0.0 to reflect the significant changes in principles and governance.
