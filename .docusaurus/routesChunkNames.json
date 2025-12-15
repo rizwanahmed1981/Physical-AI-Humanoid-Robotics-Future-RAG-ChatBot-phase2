@@ -1,0 +1,94 @@
+{
+  "/__docusaurus/debug-65e": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugbb-1-f58"
+    }
+  },
+  "/__docusaurus/debug/config-bea": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugbb-1-f58"
+    }
+  },
+  "/__docusaurus/debug/content-915": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugbb-1-f58"
+    },
+    "allContent": "allContent---docusaurus-debug-content-246-9aa"
+  },
+  "/__docusaurus/debug/globalData-c05": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugbb-1-f58"
+    }
+  },
+  "/__docusaurus/debug/metadata-846": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugbb-1-f58"
+    }
+  },
+  "/__docusaurus/debug/registry-3a4": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugbb-1-f58"
+    }
+  },
+  "/__docusaurus/debug/routes-c6f": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugbb-1-f58"
+    }
+  },
+  "/docs-959": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---docs-6-cf-8b9"
+    }
+  },
+  "/docs-f3f": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "version": "version---docs-935-398"
+  },
+  "/docs-6cd": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/docs/chapters/chapter1-274": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-chapters-chapter-1-cc-0-ecc"
+  },
+  "/docs/chapters/template-673": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-chapters-templateeec-afd"
+  },
+  "/docs/intro-aed": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-intro-0-e-3-be1"
+  },
+  "/docs/quizzes/chapter1-section1-d26": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-quizzes-chapter-1-section-1729-d76"
+  },
+  "/docs/quizzes/chapter1-section2-4d9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-quizzes-chapter-1-section-225-e-e1e"
+  },
+  "/docs/quizzes/chapter1-section3-98b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-quizzes-chapter-1-section-3-c-20-f9f"
+  },
+  "/docs/quizzes/chapter1-section4-4f9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-quizzes-chapter-1-section-4-d-88-c1b"
+  },
+  "/docs/quizzes/chapter1-section5-04c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-quizzes-chapter-1-section-532-d-7a7"
+  },
+  "/docs/quizzes/chapter1-sections-968": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-quizzes-chapter-1-sectionsfd-4-693"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "chapters/template",
+  "title": "Chapter Template",
+  "description": "This is a template for textbook chapters.",
+  "source": "@site/docs/chapters/template.md",
+  "sourceDirName": "chapters",
+  "slug": "/chapters/template",
+  "permalink": "/docs/chapters/template",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/chapters/template.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter Template",
+    "sidebar_label": "Chapter Template"
+  }
+}

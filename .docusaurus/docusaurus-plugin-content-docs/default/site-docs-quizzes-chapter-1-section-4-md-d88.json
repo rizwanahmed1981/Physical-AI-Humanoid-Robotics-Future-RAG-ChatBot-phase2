@@ -1,0 +1,17 @@
+{
+  "id": "quizzes/chapter1-section4",
+  "title": "Chapter 1 Section 4 Quiz",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter1-section4.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter1-section4",
+  "permalink": "/docs/quizzes/chapter1-section4",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/quizzes/chapter1-section4.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 1 Section 4 Quiz"
+  }
+}
