@@ -84,6 +84,10 @@ export default {
             {
               "label": "Chapter 5: Vision–Language–Action Systems",
               "to": "/docs/chapters/chapter5"
+            },
+            {
+              "label": "Chapter 6: Capstone Project - Simulated Autonomous Humanoid Robot",
+              "to": "/docs/chapters/chapter6"
             }
           ]
         },

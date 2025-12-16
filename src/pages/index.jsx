@@ -111,6 +111,21 @@ export default function Home() {
                 </div>
               </div>
             </div>
+            <div className="col col--6">
+              <div className="card">
+                <div className="card__header">
+                  <h3>Chapter 6: Capstone Project - Simulated Autonomous Humanoid Robot</h3>
+                </div>
+                <div className="card__body">
+                  <p>Integrate all concepts from the textbook into a complete, simulated autonomous humanoid robot system. This final project demonstrates how all components work together in a cohesive system.</p>
+                </div>
+                <div className="card__footer">
+                  <Link to="/docs/chapters/chapter6" className="button button--secondary">
+                    Read Chapter 6
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>

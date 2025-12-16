@@ -1,0 +1,23 @@
+{
+  "id": "chapters/chapter6",
+  "title": "Chapter 6 - Capstone Project - Simulated Autonomous Humanoid Robot",
+  "description": "Welcome to the final chapter of this textbook, where we bring together all the concepts you've learned to create a complete, simulated autonomous humanoid robot system. This capstone project demonstrates how all the components of Physical AI work together in a cohesive system.",
+  "source": "@site/docs/chapters/chapter6.mdx",
+  "sourceDirName": "chapters",
+  "slug": "/chapters/chapter6",
+  "permalink": "/Physical-AI-Humanoid-Robotics-Future/docs/chapters/chapter6",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/Physical-AI-Humanoid-Robotics-Future/edit/main/docs/chapters/chapter6.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 6 - Capstone Project - Simulated Autonomous Humanoid Robot",
+    "sidebar_label": "Chapter 6 - Capstone Project"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 5 - Vision–Language–Action Systems",
+    "permalink": "/Physical-AI-Humanoid-Robotics-Future/docs/chapters/chapter5"
+  }
+}

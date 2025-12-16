@@ -1,15 +1,15 @@
 {
-  "/Physical-AI-Humanoid-Robotics-Future/docs-0a9": {
+  "/Physical-AI-Humanoid-Robotics-Future/docs-6b9": {
     "__comp": "5e95c892",
     "__context": {
       "plugin": "6cfccef5"
     }
   },
-  "/Physical-AI-Humanoid-Robotics-Future/docs-877": {
+  "/Physical-AI-Humanoid-Robotics-Future/docs-b7a": {
     "__comp": "a7bd4aaa",
     "version": "935f2afb"
   },
-  "/Physical-AI-Humanoid-Robotics-Future/docs-c59": {
+  "/Physical-AI-Humanoid-Robotics-Future/docs-855": {
     "__comp": "a94703ab"
   },
   "/Physical-AI-Humanoid-Robotics-Future/docs/chapters/chapter1-93c": {
@@ -35,6 +35,10 @@
   "/Physical-AI-Humanoid-Robotics-Future/docs/chapters/chapter5-summary-475": {
     "__comp": "17896441",
     "content": "e1edbd48"
+  },
+  "/Physical-AI-Humanoid-Robotics-Future/docs/chapters/chapter6-2f7": {
+    "__comp": "17896441",
+    "content": "de460030"
   },
   "/Physical-AI-Humanoid-Robotics-Future/docs/chapters/template-c3a": {
     "__comp": "17896441",
@@ -167,6 +171,30 @@
   "/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter5-section6-490": {
     "__comp": "17896441",
     "content": "c6d46e1a"
+  },
+  "/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-section1-e0d": {
+    "__comp": "17896441",
+    "content": "ed607fea"
+  },
+  "/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-section2-8c2": {
+    "__comp": "17896441",
+    "content": "67db29e9"
+  },
+  "/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-section3-0ba": {
+    "__comp": "17896441",
+    "content": "3121a7e4"
+  },
+  "/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-section4-73a": {
+    "__comp": "17896441",
+    "content": "5a6b43cd"
+  },
+  "/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-section5-4ce": {
+    "__comp": "17896441",
+    "content": "9b36cad4"
+  },
+  "/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-sections-aa5": {
+    "__comp": "17896441",
+    "content": "f958d762"
   },
   "/Physical-AI-Humanoid-Robotics-Future/-702": {
     "__comp": "9dd8a0d2",

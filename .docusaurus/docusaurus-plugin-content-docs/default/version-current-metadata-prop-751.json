@@ -47,6 +47,13 @@
             "href": "/Physical-AI-Humanoid-Robotics-Future/docs/chapters/chapter5",
             "docId": "chapters/chapter5",
             "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Chapter 6 - Capstone Project",
+            "href": "/Physical-AI-Humanoid-Robotics-Future/docs/chapters/chapter6",
+            "docId": "chapters/chapter6",
+            "unlisted": false
           }
         ],
         "collapsed": true,
@@ -89,6 +96,12 @@
       "id": "chapters/chapter5-summary",
       "title": "Chapter 5: Vision–Language–Action Systems - Implementation Summary",
       "description": "I have successfully implemented Chapter 5 of the AI-native textbook titled \"Vision–Language–Action Systems\" following all specified requirements. Here's what was completed:"
+    },
+    "chapters/chapter6": {
+      "id": "chapters/chapter6",
+      "title": "Chapter 6 - Capstone Project - Simulated Autonomous Humanoid Robot",
+      "description": "Welcome to the final chapter of this textbook, where we bring together all the concepts you've learned to create a complete, simulated autonomous humanoid robot system. This capstone project demonstrates how all the components of Physical AI work together in a cohesive system.",
+      "sidebar": "tutorialSidebar"
     },
     "chapters/template": {
       "id": "chapters/template",
@@ -254,6 +267,36 @@
       "id": "quizzes/chapter5-section6",
       "title": "Chapter 5 Section 6 Quiz - Safety, Constraints, and Failure Modes",
       "description": "<MCQQuiz"
+    },
+    "quizzes/chapter6-section1": {
+      "id": "quizzes/chapter6-section1",
+      "title": "Chapter 6 - Capstone Project - Simulated Autonomous Humanoid Robot",
+      "description": "Chapter 6 Section 1 Quiz"
+    },
+    "quizzes/chapter6-section2": {
+      "id": "quizzes/chapter6-section2",
+      "title": "Chapter 6 - Capstone Project - Simulated Autonomous Humanoid Robot",
+      "description": "Chapter 6 Section 2 Quiz"
+    },
+    "quizzes/chapter6-section3": {
+      "id": "quizzes/chapter6-section3",
+      "title": "Chapter 6 - Capstone Project - Simulated Autonomous Humanoid Robot",
+      "description": "Chapter 6 Section 3 Quiz"
+    },
+    "quizzes/chapter6-section4": {
+      "id": "quizzes/chapter6-section4",
+      "title": "Chapter 6 - Capstone Project - Simulated Autonomous Humanoid Robot",
+      "description": "Chapter 6 Section 4 Quiz"
+    },
+    "quizzes/chapter6-section5": {
+      "id": "quizzes/chapter6-section5",
+      "title": "Chapter 6 - Capstone Project - Simulated Autonomous Humanoid Robot",
+      "description": "Chapter 6 Section 5 Quiz"
+    },
+    "quizzes/chapter6-sections": {
+      "id": "quizzes/chapter6-sections",
+      "title": "Chapter 6 - Capstone Project - Simulated Autonomous Humanoid Robot",
+      "description": "Chapter 6 Comprehensive Quiz"
     }
   }
 }

@@ -4,15 +4,15 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/Physical-AI-Humanoid-Robotics-Future/docs',
-    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs', '0a9'),
+    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs', '6b9'),
     routes: [
       {
         path: '/Physical-AI-Humanoid-Robotics-Future/docs',
-        component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs', '877'),
+        component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs', 'b7a'),
         routes: [
           {
             path: '/Physical-AI-Humanoid-Robotics-Future/docs',
-            component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs', 'c59'),
+            component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs', '855'),
             routes: [
               {
                 path: '/Physical-AI-Humanoid-Robotics-Future/docs/chapters/chapter1',
@@ -48,6 +48,12 @@ export default [
                 path: '/Physical-AI-Humanoid-Robotics-Future/docs/chapters/chapter5-summary',
                 component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs/chapters/chapter5-summary', '475'),
                 exact: true
+              },
+              {
+                path: '/Physical-AI-Humanoid-Robotics-Future/docs/chapters/chapter6',
+                component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs/chapters/chapter6', '2f7'),
+                exact: true,
+                sidebar: "tutorialSidebar"
               },
               {
                 path: '/Physical-AI-Humanoid-Robotics-Future/docs/chapters/template',
@@ -212,6 +218,36 @@ export default [
               {
                 path: '/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter5-section6',
                 component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter5-section6', '490'),
+                exact: true
+              },
+              {
+                path: '/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-section1',
+                component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-section1', 'e0d'),
+                exact: true
+              },
+              {
+                path: '/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-section2',
+                component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-section2', '8c2'),
+                exact: true
+              },
+              {
+                path: '/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-section3',
+                component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-section3', '0ba'),
+                exact: true
+              },
+              {
+                path: '/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-section4',
+                component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-section4', '73a'),
+                exact: true
+              },
+              {
+                path: '/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-section5',
+                component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-section5', '4ce'),
+                exact: true
+              },
+              {
+                path: '/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-sections',
+                component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-sections', 'aa5'),
                 exact: true
               }
             ]

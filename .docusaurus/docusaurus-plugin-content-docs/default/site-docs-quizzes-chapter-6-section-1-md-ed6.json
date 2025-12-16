@@ -1,0 +1,15 @@
+{
+  "id": "quizzes/chapter6-section1",
+  "title": "Chapter 6 - Capstone Project - Simulated Autonomous Humanoid Robot",
+  "description": "Chapter 6 Section 1 Quiz",
+  "source": "@site/docs/quizzes/chapter6-section1.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter6-section1",
+  "permalink": "/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-section1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/Physical-AI-Humanoid-Robotics-Future/edit/main/docs/quizzes/chapter6-section1.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

@@ -1,0 +1,678 @@
+---
+title: Chapter 6 - Capstone Project - Simulated Autonomous Humanoid Robot
+sidebar_label: Chapter 6 - Capstone Project
+---
+
+import MCQQuiz from '@site/src/components/MCQQuiz';
+
+# Chapter 6: Capstone Project - Simulated Autonomous Humanoid Robot
+
+Welcome to the final chapter of this textbook, where we bring together all the concepts you've learned to create a complete, simulated autonomous humanoid robot system. This capstone project demonstrates how all the components of Physical AI work together in a cohesive system.
+
+## Chapter Overview
+
+In this chapter, you'll learn how to integrate all the concepts from previous chapters into a complete simulation of an autonomous humanoid robot. The system will demonstrate:
+
+- Natural language command processing
+- Visual perception and object recognition
+- Planning and reasoning for complex tasks
+- Action execution with feedback loops
+- Safety considerations in physical systems
+
+This final project showcases the complete VLA (Vision-Language-Action) pipeline in a simulated environment, demonstrating how all components work together to create intelligent physical systems.
+
+<details>
+<summary>Quiz: Chapter Overview</summary>
+
+<MCQQuiz
+  title="Chapter Overview"
+  questions={[
+    {
+      question: "What is the main purpose of this capstone chapter?",
+      answers: [
+        { text: "To demonstrate how all textbook concepts integrate into a complete system", correct: true },
+        { text: "To introduce new concepts not covered in previous chapters", correct: false },
+        { text: "To focus only on vision systems", correct: false },
+        { text: "To eliminate the need for planning", correct: false }
+      ],
+      explanation: "This capstone demonstrates how all concepts from previous chapters integrate into a complete autonomous humanoid robot system."
+    },
+    {
+      question: "What key system components are demonstrated in this chapter?",
+      answers: [
+        { text: "Only vision systems", correct: false },
+        { text: "Natural language processing, visual perception, planning, and action execution", correct: true },
+        { text: "Only physical constraints", correct: false },
+        { text: "Only sensor integration", correct: false }
+      ],
+      explanation: "The capstone demonstrates the complete integration of language, vision, planning, and action execution systems."
+    },
+    {
+      question: "What is the primary benefit of this integrated approach?",
+      answers: [
+        { text: "It makes robots slower", correct: false },
+        { text: "It enables robots to understand human intent and respond appropriately", correct: true },
+        { text: "It eliminates the need for sensors", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "The integrated approach enables robots to understand human intent through natural language and respond appropriately in real-world environments."
+    },
+    {
+      question: "What does the capstone project demonstrate?",
+      answers: [
+        { text: "Only basic programming concepts", correct: false },
+        { text: "How all textbook components work together in a simulated humanoid robot", correct: true },
+        { text: "Only the limitations of humanoid robots", correct: false },
+        { text: "Only the cost of robotics", correct: false }
+      ],
+      explanation: "The capstone demonstrates how all concepts from previous chapters work together in a simulated autonomous humanoid robot system."
+    },
+    {
+      question: "What type of environment is used for the capstone project?",
+      answers: [
+        { text: "Real-world physical environment", correct: false },
+        { text: "Simulated environment with digital twins", correct: true },
+        { text: "Only laboratory settings", correct: false },
+        { text: "Only virtual reality", correct: false }
+      ],
+      explanation: "The capstone project uses a simulated environment with digital twins to demonstrate system capabilities safely."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 1: System Architecture Overview
+
+### The Complete Physical AI Stack
+
+The capstone project implements the complete Physical AI system architecture that we've studied throughout this textbook. This system combines all the elements from previous chapters into a unified framework:
+
+1. **Human Interaction Layer**: Natural language commands from users
+2. **Vision System**: Visual perception and object recognition
+3. **Vision-Language-Action Layer**: Integration of language understanding with visual context
+4. **Planning and Reasoning**: Hierarchical task decomposition and decision-making
+5. **AI Acceleration**: NVIDIA Isaac for perception and navigation acceleration
+6. **Robotic Communication**: ROS 2 as the communication backbone
+7. **Control and Actuation**: Motor control and physical execution
+8. **Feedback Mechanisms**: Continuous monitoring and adjustment
+9. **Simulation Environment**: Gazebo and Unity for safe testing
+
+### The Perception-Action Loop
+
+At the heart of this system lies the perception-action loop that we've discussed throughout the textbook:
+
+1. **Perception**: Vision and sensors gather environmental data
+2. **Processing**: Language understanding and planning algorithms interpret data
+3. **Planning**: High-level goals are broken down into actionable steps
+4. **Control**: Low-level commands are sent to actuators
+5. **Feedback**: Sensors monitor results and adjust
+
+This continuous loop enables the robot to adapt and improve its performance in real-time.
+
+<details>
+<summary>Quiz: System Architecture Overview</summary>
+
+<MCQQuiz
+  title="System Architecture Overview"
+  questions={[
+    {
+      question: "What are the nine main components of the Physical AI stack?",
+      answers: [
+        { text: "Human interaction, vision, VLA layer, planning, AI brain, ROS 2, control, sensors, simulation", correct: true },
+        { text: "Only sensors and actuators", correct: false },
+        { text: "Only planning and control", correct: false },
+        { text: "Only language and vision", correct: false }
+      ],
+      explanation: "The complete Physical AI stack includes human interaction, vision, VLA layer, planning, AI brain, ROS 2, control, sensors, and simulation."
+    },
+    {
+      question: "What is the core operating cycle of the humanoid robot system?",
+      answers: [
+        { text: "Planning → Action → Feedback → Perception", correct: false },
+        { text: "Perception → Planning → Action → Feedback", correct: true },
+        { text: "Action → Perception → Planning → Feedback", correct: false },
+        { text: "Feedback → Planning → Action → Perception", correct: false }
+      ],
+      explanation: "The core perception-planning-action-feedback loop is the main operating cycle of the humanoid robot system."
+    },
+    {
+      question: "What role does ROS 2 play in the system?",
+      answers: [
+        { text: "Only controls actuators", correct: false },
+        { text: "Serves as the communication backbone for all major components", correct: true },
+        { text: "Only handles language processing", correct: false },
+        { text: "Only manages vision systems", correct: false }
+      ],
+      explanation: "ROS 2 serves as the communication backbone that all major components rely on for message passing and coordination."
+    },
+    {
+      question: "What is the purpose of the perception-action loop?",
+      answers: [
+        { text: "To make robots slower", correct: false },
+        { text: "To enable continuous adaptation and improvement", correct: true },
+        { text: "To eliminate the need for planning", correct: false },
+        { text: "To reduce robot capabilities", correct: false }
+      ],
+      explanation: "The perception-action loop enables continuous adaptation and improvement through feedback mechanisms."
+    },
+    {
+      question: "What is the significance of the complete system integration?",
+      answers: [
+        { text: "It makes robots more expensive", correct: false },
+        { text: "It demonstrates how all components work together for intelligent behavior", correct: true },
+        { text: "It eliminates the need for sensors", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "Complete system integration demonstrates how all components work together to create intelligent physical behavior."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 2: Simulated Humanoid Robot Demonstration
+
+### Scenario: Following Voice Commands
+
+Let's walk through a complete scenario where a simulated humanoid robot receives a voice command and executes it:
+
+1. **User Input**: "Please bring me the blue book from the living room table"
+2. **Natural Language Processing**: The system interprets the command and extracts intent
+3. **Vision System**: Cameras identify the blue book and the living room table
+4. **Planning**: The robot decomposes the task into navigation, object identification, and grasping steps
+5. **Action Execution**: Motors move the robot and its arm to complete the task
+6. **Feedback**: Sensors confirm successful completion and return to idle state
+
+### The Complete Workflow
+
+This demonstration showcases how all the textbook concepts work together:
+
+#### Step 1: Human Interaction
+The user provides a natural language command through voice or text input. The system processes this input using natural language understanding techniques.
+
+#### Step 2: Vision and Object Recognition
+Cameras capture the environment and identify the requested object (blue book) and location (living room table) using computer vision techniques.
+
+#### Step 3: Planning and Reasoning
+The system breaks down the complex task into manageable steps:
+- Navigate to the living room
+- Locate the table
+- Identify the blue book
+- Plan the path to grasp the book
+- Execute the grasp
+
+#### Step 4: Control and Actuation
+The robot's control systems execute the planned actions through motor control and actuation.
+
+#### Step 5: Feedback and Adaptation
+Sensors monitor the execution and provide feedback to ensure successful completion.
+
+<details>
+<summary>Quiz: Simulated Humanoid Robot Demonstration</summary>
+
+<MCQQuiz
+  title="Simulated Humanoid Robot Demonstration"
+  questions={[
+    {
+      question: "What is the first step in the robot's workflow when receiving a voice command?",
+      answers: [
+        { text: "Vision and object recognition", correct: false },
+        { text: "Human interaction", correct: true },
+        { text: "Planning and reasoning", correct: false },
+        { text: "Control and actuation", correct: false }
+      ],
+      explanation: "The first step is human interaction, where the user provides the natural language command."
+    },
+    {
+      question: "What does the system do with the command 'Please bring me the blue book from the living room table'?",
+      answers: [
+        { text: "Only identifies the color blue", correct: false },
+        { text: "Extracts intent and identifies object and location", correct: true },
+        { text: "Only locates the table", correct: false },
+        { text: "Only grasps the book", correct: false }
+      ],
+      explanation: "The system extracts the intent (bring book), identifies the object (blue book), and location (living room table)."
+    },
+    {
+      question: "What is the role of vision in the demonstration?",
+      answers: [
+        { text: "Only processes language", correct: false },
+        { text: "Identifies objects and locations in the environment", correct: true },
+        { text: "Controls actuators", correct: false },
+        { text: "Plans actions", correct: false }
+      ],
+      explanation: "Vision identifies the blue book and living room table in the physical environment."
+    },
+    {
+      question: "What is one key component of the planning phase?",
+      answers: [
+        { text: "Only motor control", correct: false },
+        { text: "Task decomposition and step planning", correct: true },
+        { text: "Only visual recognition", correct: false },
+        { text: "Only sensor feedback", correct: false }
+      ],
+      explanation: "Planning involves decomposing the complex task into manageable steps like navigation, identification, and grasping."
+    },
+    {
+      question: "What happens during the feedback and adaptation phase?",
+      answers: [
+        { text: "Only executes actions", correct: false },
+        { text: "Sensors monitor results and adjust the system", correct: true },
+        { text: "Only processes language", correct: false },
+        { text: "Only plans future actions", correct: false }
+      ],
+      explanation: "Feedback mechanisms monitor results and adjust the system based on outcomes for improved performance."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 3: Integration of Previous Concepts
+
+### Bridging Chapters 1-5
+
+The capstone project demonstrates how all concepts from the previous chapters integrate:
+
+#### From Chapter 1: Foundations of Physical AI
+- Embodied intelligence concepts
+- Sensorimotor integration
+- Physical constraints and limitations
+
+#### From Chapter 2: The Robotic Nervous System (ROS 2)
+- ROS 2 nodes, topics, and services
+- Message passing infrastructure
+- Communication backbone for system coordination
+
+#### From Chapter 3: Digital Twins and Simulation
+- Gazebo and Unity simulation environments
+- Safe testing of perception, planning, and control
+- Sim-to-real transfer concepts
+
+#### From Chapter 4: Perception and Sensing
+- Camera systems and visual sensors
+- LiDAR and other sensing technologies
+- Environmental awareness capabilities
+
+#### From Chapter 5: Vision-Language-Action Systems
+- Natural language understanding
+- Vision as grounding for language commands
+- Planning and reasoning for action execution
+
+### System Integration Benefits
+
+The integration of all these components creates a robust, intelligent system that:
+
+1. **Understands Intent**: Through natural language processing
+2. **Perceives Environment**: Through advanced vision and sensor systems
+3. **Reasons About Actions**: Through planning and decision-making
+4. **Executes Tasks**: Through coordinated control systems
+5. **Adapts Continuously**: Through feedback mechanisms
+
+<details>
+<summary>Quiz: Integration of Previous Concepts</summary>
+
+<MCQQuiz
+  title="Integration of Previous Concepts"
+  questions={[
+    {
+      question: "Which chapter introduced the concept of embodied intelligence?",
+      answers: [
+        { text: "Chapter 2", correct: false },
+        { text: "Chapter 1", correct: true },
+        { text: "Chapter 3", correct: false },
+        { text: "Chapter 5", correct: false }
+      ],
+      explanation: "Chapter 1 introduced embodied intelligence concepts, which are fundamental to understanding physical AI systems."
+    },
+    {
+      question: "What role does ROS 2 play in system integration?",
+      answers: [
+        { text: "Only handles visual processing", correct: false },
+        { text: "Provides the communication backbone for all components", correct: true },
+        { text: "Only manages language understanding", correct: false },
+        { text: "Only coordinates planning", correct: false }
+      ],
+      explanation: "ROS 2 serves as the communication backbone that connects all system components through standardized messaging."
+    },
+    {
+      question: "What is the primary benefit of integrating concepts from all chapters?",
+      answers: [
+        { text: "It makes robots more expensive", correct: false },
+        { text: "It creates a robust, intelligent system that can understand, perceive, reason, and act", correct: true },
+        { text: "It eliminates the need for sensors", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "Integration creates a comprehensive system that can understand intent, perceive the environment, reason about actions, and execute them reliably."
+    },
+    {
+      question: "What does the simulation environment enable?",
+      answers: [
+        { text: "Only real-world testing", correct: false },
+        { text: "Safe testing of perception, planning, and control systems", correct: true },
+        { text: "Only visual recognition", correct: false },
+        { text: "Only language processing", correct: false }
+      ],
+      explanation: "The simulation environment enables safe testing of perception, planning, and control systems before real-world deployment."
+    },
+    {
+      question: "What is the role of the perception-action loop in integration?",
+      answers: [
+        { text: "It makes robots slower", correct: false },
+        { text: "It enables continuous adaptation and improvement", correct: true },
+        { text: "It eliminates the need for planning", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "The perception-action loop enables continuous adaptation and improvement through feedback mechanisms that tie all components together."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 4: Safety and Constraints in Practice
+
+### Robust System Design
+
+The capstone project incorporates safety and constraint management principles learned in Chapter 5:
+
+1. **Fail-Safe Operation**: The system handles unexpected situations gracefully
+2. **Constraint Management**: Balancing performance with safety requirements
+3. **Error Detection**: Identifying when plans fail or actions don't complete
+4. **Plan Revision**: Adjusting strategies when circumstances change
+
+### Practical Safety Measures
+
+The simulated humanoid robot implements several safety measures:
+
+- **Collision Avoidance**: Prevents damage to the robot or environment
+- **Speed Control**: Maintains safe operational speeds
+- **Force Limiting**: Prevents excessive force during manipulation
+- **Emergency Stop**: Immediate shutdown capability
+
+### Constraint Management
+
+The system balances competing requirements:
+
+- **Performance vs Safety**: Optimizing actions while maintaining safety
+- **Precision vs Speed**: Balancing accuracy with timeliness
+- **Resource Efficiency**: Managing power and computational resources
+- **Environmental Boundaries**: Respecting physical constraints
+
+<details>
+<summary>Quiz: Safety and Constraints in Practice</summary>
+
+<MCQQuiz
+  title="Safety and Constraints in Practice"
+  questions={[
+    {
+      question: "What is one key safety measure implemented in the capstone system?",
+      answers: [
+        { text: "Only visual recognition", correct: false },
+        { text: "Collision avoidance", correct: true },
+        { text: "Only language processing", correct: false },
+        { text: "Only planning", correct: false }
+      ],
+      explanation: "Collision avoidance is a key safety measure that prevents damage to the robot or environment."
+    },
+    {
+      question: "What is the primary purpose of constraint management?",
+      answers: [
+        { text: "To make robots slower", correct: false },
+        { text: "To balance competing requirements like performance vs safety", correct: true },
+        { text: "To eliminate all constraints", correct: false },
+        { text: "To reduce robot capabilities", correct: false }
+      ],
+      explanation: "Constraint management balances competing requirements such as performance vs safety, precision vs speed, and resource efficiency."
+    },
+    {
+      question: "What does fail-safe operation mean?",
+      answers: [
+        { text: "It makes robots less reliable", correct: false },
+        { text: "It enables graceful handling of unexpected situations", correct: true },
+        { text: "It eliminates all planning", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "Fail-safe operation enables graceful handling of unexpected situations through error detection and plan revision."
+    },
+    {
+      question: "What is one practical safety measure for the simulated robot?",
+      answers: [
+        { text: "Only speed control", correct: false },
+        { text: "Force limiting to prevent excessive force", correct: true },
+        { text: "Only visual sensors", correct: false },
+        { text: "Only audio sensors", correct: false }
+      ],
+      explanation: "Force limiting prevents excessive force during manipulation, protecting both the robot and objects."
+    },
+    {
+      question: "What is the significance of emergency stop capability?",
+      answers: [
+        { text: "It makes robots slower", correct: false },
+        { text: "It provides immediate shutdown capability for safety", correct: true },
+        { text: "It eliminates the need for sensors", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "Emergency stop capability provides immediate shutdown for safety in critical situations."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 5: Future Directions and Limitations
+
+### Current System Capabilities
+
+The capstone project demonstrates a comprehensive understanding of:
+
+1. **Language Understanding**: Processing natural language commands
+2. **Visual Perception**: Recognizing objects and environments
+3. **Planning and Reasoning**: Breaking down complex tasks
+4. **Physical Execution**: Controlling motors and actuators
+5. **Feedback Control**: Adapting to real-time changes
+
+### Known Limitations
+
+Despite the comprehensive implementation, there are important limitations to acknowledge:
+
+1. **Real-World Complexity**: Simulations cannot perfectly replicate real-world variability
+2. **Sensor Limitations**: Simulated sensors may not capture all real-world nuances
+3. **Processing Constraints**: Computational limitations in simulation environments
+4. **Physical Reality**: Some physical constraints are simplified in simulations
+
+### Future Improvements
+
+Potential enhancements for the system include:
+
+1. **Enhanced AI Models**: More sophisticated LLMs and perception algorithms
+2. **Improved Simulation Accuracy**: Better fidelity in simulation environments
+3. **Advanced Control Systems**: More precise motor control and actuation
+4. **Expanded Sensor Suite**: Additional sensor types for richer environmental awareness
+
+<details>
+<summary>Quiz: Future Directions and Limitations</summary>
+
+<MCQQuiz
+  title="Future Directions and Limitations"
+  questions={[
+    {
+      question: "What is one capability demonstrated by the current system?",
+      answers: [
+        { text: "Only visual recognition", correct: false },
+        { text: "Language understanding, visual perception, planning, and physical execution", correct: true },
+        { text: "Only planning", correct: false },
+        { text: "Only sensor integration", correct: false }
+      ],
+      explanation: "The current system demonstrates language understanding, visual perception, planning, and physical execution capabilities."
+    },
+    {
+      question: "What is one known limitation of the system?",
+      answers: [
+        { text: "Perfect real-world replication", correct: false },
+        { text: "Real-world complexity in simulations", correct: true },
+        { text: "Only visual sensors", correct: false },
+        { text: "Only language processing", correct: false }
+      ],
+      explanation: "One limitation is that simulations cannot perfectly replicate real-world variability and complexity."
+    },
+    {
+      question: "What is one potential future improvement?",
+      answers: [
+        { text: "Reduced sensor capabilities", correct: false },
+        { text: "Enhanced AI models", correct: true },
+        { text: "Simplified planning", correct: false },
+        { text: "Fewer sensors", correct: false }
+      ],
+      explanation: "Enhanced AI models could provide more sophisticated language understanding and perception capabilities."
+    },
+    {
+      question: "Why is it important to acknowledge system limitations?",
+      answers: [
+        { text: "It makes robots less capable", correct: false },
+        { text: "It helps identify areas for improvement", correct: true },
+        { text: "It eliminates the need for safety", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "Acknowledging limitations helps identify areas for improvement and realistic expectations for current capabilities."
+    },
+    {
+      question: "What is the significance of understanding future directions?",
+      answers: [
+        { text: "It makes robots slower", correct: false },
+        { text: "It guides continued research and development", correct: true },
+        { text: "It eliminates the need for safety", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "Understanding future directions guides continued research and development toward more advanced capabilities."
+    }
+  ]}
+/>
+
+</details>
+
+## Chapter Summary
+
+In this final chapter, you've learned how to integrate all concepts from the textbook into a complete simulated autonomous humanoid robot system. You've seen:
+
+1. **Complete System Architecture**: How all components work together in a unified framework
+2. **Real-World Application**: Practical demonstration of a humanoid robot following voice commands
+3. **Concept Integration**: How chapters 1-5 concepts come together in a cohesive system
+4. **Safety Considerations**: Importance of constraint management and fail-safe operations
+5. **Future Potential**: Recognition of current limitations and possibilities for advancement
+
+This capstone project demonstrates the full potential of Physical AI systems - where artificial intelligence moves from abstract algorithms to tangible, physical manifestations that can understand, perceive, reason, and act in the real world.
+
+The system you've implemented represents a significant milestone in your journey from understanding basic AI concepts to building sophisticated, physically embodied intelligent systems. As you continue your studies in AI and robotics, remember that the principles you've learned here form the foundation for the next generation of human-robot interaction.
+
+<details>
+<summary>Chapter 6 Comprehensive Quiz</summary>
+
+<MCQQuiz
+  title="Chapter 6 Comprehensive Quiz"
+  questions={[
+    {
+      question: "What is the main purpose of the capstone chapter?",
+      answers: [
+        { text: "To introduce new concepts", correct: false },
+        { text: "To demonstrate how all textbook concepts integrate into a complete system", correct: true },
+        { text: "To focus only on vision systems", correct: false },
+        { text: "To eliminate the need for planning", correct: false }
+      ],
+      explanation: "The capstone demonstrates how all concepts from previous chapters integrate into a complete autonomous humanoid robot system."
+    },
+    {
+      question: "What are the nine main components of the Physical AI stack?",
+      answers: [
+        { text: "Human interaction, vision, VLA layer, planning, AI brain, ROS 2, control, sensors, simulation", correct: true },
+        { text: "Only sensors and actuators", correct: false },
+        { text: "Only planning and control", correct: false },
+        { text: "Only language and vision", correct: false }
+      ],
+      explanation: "The complete Physical AI stack includes human interaction, vision, VLA layer, planning, AI brain, ROS 2, control, sensors, and simulation."
+    },
+    {
+      question: "What is the core operating cycle of the humanoid robot system?",
+      answers: [
+        { text: "Planning → Action → Feedback → Perception", correct: false },
+        { text: "Perception → Planning → Action → Feedback", correct: true },
+        { text: "Action → Perception → Planning → Feedback", correct: false },
+        { text: "Feedback → Planning → Action → Perception", correct: false }
+      ],
+      explanation: "The core perception-planning-action-feedback loop is the main operating cycle of the humanoid robot system."
+    },
+    {
+      question: "What is the primary benefit of integrating concepts from all chapters?",
+      answers: [
+        { text: "It makes robots more expensive", correct: false },
+        { text: "It creates a robust, intelligent system that can understand, perceive, reason, and act", correct: true },
+        { text: "It eliminates the need for sensors", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "Integration creates a comprehensive system that can understand intent, perceive the environment, reason about actions, and execute them reliably."
+    },
+    {
+      question: "What is one key safety measure in the system?",
+      answers: [
+        { text: "Only visual recognition", correct: false },
+        { text: "Collision avoidance", correct: true },
+        { text: "Only language processing", correct: false },
+        { text: "Only planning", correct: false }
+      ],
+      explanation: "Collision avoidance is a key safety measure that prevents damage to the robot or environment."
+    },
+    {
+      question: "What is one known limitation of the system?",
+      answers: [
+        { text: "Perfect real-world replication", correct: false },
+        { text: "Real-world complexity in simulations", correct: true },
+        { text: "Only visual sensors", correct: false },
+        { text: "Only language processing", correct: false }
+      ],
+      explanation: "One limitation is that simulations cannot perfectly replicate real-world variability and complexity."
+    },
+    {
+      question: "What is the significance of understanding future directions?",
+      answers: [
+        { text: "It makes robots slower", correct: false },
+        { text: "It guides continued research and development", correct: true },
+        { text: "It eliminates the need for safety", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "Understanding future directions guides continued research and development toward more advanced capabilities."
+    },
+    {
+      question: "What does the capstone project demonstrate about the relationship between concepts?",
+      answers: [
+        { text: "They operate independently", correct: false },
+        { text: "They integrate to create intelligent physical behavior", correct: true },
+        { text: "They are contradictory", correct: false },
+        { text: "They are irrelevant", correct: false }
+      ],
+      explanation: "The capstone demonstrates how all concepts integrate to create intelligent physical behavior through a unified system."
+    },
+    {
+      question: "What role does ROS 2 play in the integrated system?",
+      answers: [
+        { text: "Only handles visual processing", correct: false },
+        { text: "Provides the communication backbone for all components", correct: true },
+        { text: "Only manages language understanding", correct: false },
+        { text: "Only coordinates planning", correct: false }
+      ],
+      explanation: "ROS 2 serves as the communication backbone that connects all system components through standardized messaging."
+    },
+    {
+      question: "What is one key outcome of completing this capstone project?",
+      answers: [
+        { text: "Only basic programming knowledge", correct: false },
+        { text: "Understanding how all components work together in a simulated humanoid robot", correct: true },
+        { text: "Only the limitations of humanoid robots", correct: false },
+        { text: "Only the cost of robotics", correct: false }
+      ],
+      explanation: "Completing this capstone gives you understanding of how all components work together in a simulated humanoid robot system."
+    }
+  ]}
+/>
+
+</details>
