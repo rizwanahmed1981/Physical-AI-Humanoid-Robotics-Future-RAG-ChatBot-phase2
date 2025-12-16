@@ -27,7 +27,7 @@ export default {
       {
         "docs": {
           "sidebarPath": "./sidebars.js",
-          "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/"
+          "editUrl": "https://github.com/rizwanahmed1981/Physical-AI-Humanoid-Robotics-Future/edit/main/"
         },
         "blog": false,
         "theme": {
@@ -52,7 +52,7 @@ export default {
           "label": "Textbook"
         },
         {
-          "href": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future",
+          "href": "https://github.com/rizwanahmed1981/Physical-AI-Humanoid-Robotics-Future",
           "label": "GitHub",
           "position": "right"
         }
@@ -105,7 +105,7 @@ export default {
           "items": [
             {
               "label": "GitHub",
-              "href": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future"
+              "href": "https://github.com/rizwanahmed1981/Physical-AI-Humanoid-Robotics-Future"
             }
           ]
         }
