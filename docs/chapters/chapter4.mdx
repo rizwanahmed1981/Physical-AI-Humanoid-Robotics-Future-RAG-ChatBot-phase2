@@ -1,0 +1,704 @@
+---
+title: Chapter 4 - The AI Brain with NVIDIA Isaac
+sidebar_label: Chapter 4 - The AI Brain with NVIDIA Isaac
+---
+
+import MCQQuiz from '@site/src/components/MCQQuiz';
+
+# Chapter 4: The AI Brain with NVIDIA Isaac
+
+Welcome to Chapter 4, where we explore how the "AI brain" powers humanoid robots. Just as the human brain coordinates thoughts, perceptions, and actions, the AI brain in a robot integrates perception, planning, and control to create intelligent behavior. This chapter introduces NVIDIA Isaac, a powerful platform that provides the computational foundation for these AI systems.
+
+## Chapter Overview
+
+The AI brain in a humanoid robot serves as the central nervous system for intelligent behavior:
+- **Perception**: Processing sensor data to understand the environment
+- **Planning**: Determining goals and strategies based on that understanding
+- **Control**: Executing precise movements and actions
+- **Integration**: Coordinating all these functions seamlessly
+
+This chapter introduces NVIDIA Isaac as a platform that enables the development of sophisticated AI brains for robots, from simulation to real-world deployment.
+
+<details>
+<summary>Quiz: Chapter Overview</summary>
+
+<MCQQuiz
+  title="Chapter Overview"
+  questions={[
+    {
+      question: "What is the primary role of the AI brain in a humanoid robot?",
+      answers: [
+        { text: "To provide physical strength", correct: false },
+        { text: "To coordinate perception, planning, and control", correct: true },
+        { text: "To generate electricity", correct: false },
+        { text: "To store data permanently", correct: false }
+      ],
+      explanation: "The AI brain coordinates perception, planning, and control to create intelligent robot behavior."
+    },
+    {
+      question: "What are the four main functions of the AI brain?",
+      answers: [
+        { text: "Perception, Planning, Control, Integration", correct: true },
+        { text: "Movement, Sensors, Actuators, Power", correct: false },
+        { text: "Design, Build, Test, Deploy", correct: false },
+        { text: "Programming, Debugging, Testing, Deployment", correct: false }
+      ],
+      explanation: "The AI brain coordinates perception, planning, control, and integration to create intelligent behavior."
+    },
+    {
+      question: "What does NVIDIA Isaac provide for robot development?",
+      answers: [
+        { text: "Physical hardware only", correct: false },
+        { text: "A platform for developing AI brains for robots", correct: true },
+        { text: "Only simulation tools", correct: false },
+        { text: "Only control systems", correct: false }
+      ],
+      explanation: "NVIDIA Isaac provides a platform that enables the development of sophisticated AI brains for robots."
+    },
+    {
+      question: "What is one key advantage of the AI brain approach?",
+      answers: [
+        { text: "It makes robots more expensive", correct: false },
+        { text: "It enables seamless coordination of perception, planning, and control", correct: true },
+        { text: "It eliminates the need for sensors", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "The AI brain approach enables seamless coordination of perception, planning, and control functions."
+    },
+    {
+      question: "How does this chapter prepare learners for future content?",
+      answers: [
+        { text: "It introduces Vision-Language-Action systems", correct: true },
+        { text: "It teaches hardware assembly", correct: false },
+        { text: "It focuses only on sensors", correct: false },
+        { text: "It covers only control systems", correct: false }
+      ],
+      explanation: "This chapter prepares learners for Vision-Language-Action systems in the next chapter by introducing core AI concepts."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 1: The Brain of a Physical AI System
+
+### Difference Between Control Logic and Intelligence
+
+In robotics, we distinguish between:
+- **Control Logic**: The low-level, rule-based systems that directly command actuators (e.g., "move left 10cm")
+- **Intelligence**: The higher-level reasoning that makes decisions about what to do and why (e.g., "navigate to the kitchen")
+
+Control logic is like the muscle memory that executes commands, while intelligence is like the decision-making part of the brain that determines the commands.
+
+### Where Learning and Decision-Making Live
+
+The AI brain houses:
+- **Machine Learning Models**: For pattern recognition and decision-making
+- **Planning Algorithms**: For determining goals and strategies
+- **Behavior Controllers**: For executing complex sequences of actions
+- **Sensor Fusion**: For combining data from multiple sources
+
+This separation allows robots to be both precise in execution and flexible in decision-making.
+
+<details>
+<summary>Quiz: The Brain of a Physical AI System</summary>
+
+<MCQQuiz
+  title="The Brain of a Physical AI System"
+  questions={[
+    {
+      question: "What is the main difference between control logic and intelligence in robotics?",
+      answers: [
+        { text: "Control logic is for sensors, intelligence is for actuators", correct: false },
+        { text: "Control logic is low-level and rule-based, intelligence is high-level and decision-making", correct: true },
+        { text: "Control logic is for hardware, intelligence is for software", correct: false },
+        { text: "Control logic is faster, intelligence is slower", correct: false }
+      ],
+      explanation: "Control logic is low-level and rule-based, executing direct commands, while intelligence is high-level and handles decision-making."
+    },
+    {
+      question: "What is one function of the AI brain?",
+      answers: [
+        { text: "Only physical movement", correct: false },
+        { text: "Coordination of perception, planning, and control", correct: true },
+        { text: "Only sensor data collection", correct: false },
+        { text: "Only actuator control", correct: false }
+      ],
+      explanation: "The AI brain coordinates perception, planning, and control to create intelligent robot behavior."
+    },
+    {
+      question: "Where do learning and decision-making primarily occur in a robot?",
+      answers: [
+        { text: "In the actuators", correct: false },
+        { text: "In the sensors", correct: false },
+        { text: "In the AI brain", correct: true },
+        { text: "In the power supply", correct: false }
+      ],
+      explanation: "Learning and decision-making primarily occur in the AI brain, which processes information and makes decisions."
+    },
+    {
+      question: "What is one component of the AI brain?",
+      answers: [
+        { text: "Only physical actuators", correct: false },
+        { text: "Machine Learning Models", correct: true },
+        { text: "Only mechanical parts", correct: false },
+        { text: "Only electrical circuits", correct: false }
+      ],
+      explanation: "The AI brain includes machine learning models, planning algorithms, and behavior controllers."
+    },
+    {
+      question: "What does sensor fusion do in the AI brain?",
+      answers: [
+        { text: "It eliminates the need for sensors", correct: false },
+        { text: "It combines data from multiple sensors", correct: true },
+        { text: "It makes sensors more expensive", correct: false },
+        { text: "It reduces sensor capabilities", correct: false }
+      ],
+      explanation: "Sensor fusion combines data from multiple sensors to create a more complete picture of the environment."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 2: Introduction to NVIDIA Isaac
+
+### What Isaac Is and Why It Exists
+
+NVIDIA Isaac is a comprehensive robotics platform designed to accelerate the development of AI-powered robots. It exists to bridge the gap between research and real-world deployment by providing:
+- **Simulation Tools**: For testing and training in virtual environments
+- **AI Frameworks**: For perception, planning, and control
+- **Hardware Acceleration**: For real-time performance
+- **End-to-End Solutions**: From development to deployment
+
+### Relationship Between Isaac Sim and Isaac ROS
+
+Isaac consists of several interconnected components:
+- **Isaac Sim**: A photorealistic simulation platform
+- **Isaac ROS**: ROS 2 packages for robot development
+- **Isaac SDK**: Core libraries and tools
+
+These components work together to provide a complete development environment from simulation to deployment.
+
+<details>
+<summary>Quiz: Introduction to NVIDIA Isaac</summary>
+
+<MCQQuiz
+  title="Introduction to NVIDIA Isaac"
+  questions={[
+    {
+      question: "What is NVIDIA Isaac?",
+      answers: [
+        { text: "A type of robot hardware", correct: false },
+        { text: "A comprehensive robotics platform for AI-powered robots", correct: true },
+        { text: "Only a simulation tool", correct: false },
+        { text: "Only a control system", correct: false }
+      ],
+      explanation: "NVIDIA Isaac is a comprehensive robotics platform designed to accelerate development of AI-powered robots."
+    },
+    {
+      question: "What is one purpose of NVIDIA Isaac?",
+      answers: [
+        { text: "To eliminate the need for simulation", correct: false },
+        { text: "To bridge research and real-world deployment", correct: true },
+        { text: "To make robots more expensive", correct: false },
+        { text: "To reduce robot capabilities", correct: false }
+      ],
+      explanation: "Isaac bridges the gap between research and real-world deployment by providing tools for testing and training."
+    },
+    {
+      question: "What are two key components of Isaac?",
+      answers: [
+        { text: "Isaac Sim and Isaac ROS", correct: true },
+        { text: "Isaac Sim and Isaac SDK", correct: false },
+        { text: "Isaac ROS and Isaac SDK", correct: false },
+        { text: "Isaac Hardware and Isaac Software", correct: false }
+      ],
+      explanation: "Isaac consists of components like Isaac Sim (simulation) and Isaac ROS (ROS 2 packages)."
+    },
+    {
+      question: "What is one benefit of using Isaac?",
+      answers: [
+        { text: "It makes robots slower", correct: false },
+        { text: "It accelerates development of AI-powered robots", correct: true },
+        { text: "It eliminates all testing", correct: false },
+        { text: "It requires more hardware", correct: false }
+      ],
+      explanation: "Isaac accelerates development of AI-powered robots by providing simulation, AI frameworks, and hardware acceleration."
+    },
+    {
+      question: "What does the Isaac SDK provide?",
+      answers: [
+        { text: "Only simulation capabilities", correct: false },
+        { text: "Core libraries and tools for robotics development", correct: true },
+        { text: "Only hardware components", correct: false },
+        { text: "Only user interfaces", correct: false }
+      ],
+      explanation: "The Isaac SDK provides core libraries and tools that form the foundation for robotics development."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 3: Isaac Sim and Intelligent Environments
+
+### Photorealistic Simulation
+
+Isaac Sim provides photorealistic simulation environments that closely mimic real-world conditions:
+- **Realistic Graphics**: High-quality rendering of scenes and objects
+- **Accurate Physics**: Realistic movement and interactions
+- **Sensor Simulation**: Accurate simulation of camera, LiDAR, and other sensors
+- **Environmental Conditions**: Weather, lighting, and other real-world factors
+
+This realism allows developers to train AI models in environments that closely resemble reality.
+
+### Synthetic Data Generation
+
+Isaac Sim enables the generation of synthetic data for training:
+- **Massive Datasets**: Generate thousands of scenarios quickly
+- **Controlled Variables**: Precisely control conditions for specific testing
+- **Edge Cases**: Easily create rare but important scenarios
+- **Privacy**: No real-world privacy concerns with synthetic data
+
+This approach allows for rapid iteration and testing of AI models.
+
+### Training Before Deployment
+
+The simulation-first approach means:
+- **Safe Training**: AI models can be trained without risk of damage
+- **Fast Iteration**: Quickly test and refine algorithms
+- **Cost Efficiency**: Reduced need for physical prototypes
+- **Preparation**: AI systems are ready for real-world deployment
+
+<details>
+<summary>Quiz: Isaac Sim and Intelligent Environments</summary>
+
+<MCQQuiz
+  title="Isaac Sim and Intelligent Environments"
+  questions={[
+    {
+      question: "What is one feature of Isaac Sim?",
+      answers: [
+        { text: "Only basic graphics", correct: false },
+        { text: "Photorealistic simulation with realistic physics", correct: true },
+        { text: "Only simple shapes", correct: false },
+        { text: "No sensor simulation", correct: false }
+      ],
+      explanation: "Isaac Sim provides photorealistic simulation with realistic graphics and physics."
+    },
+    {
+      question: "What is one benefit of synthetic data generation?",
+      answers: [
+        { text: "It makes data generation slower", correct: false },
+        { text: "It allows rapid generation of massive datasets", correct: true },
+        { text: "It eliminates all testing", correct: false },
+        { text: "It reduces data quality", correct: false }
+      ],
+      explanation: "Synthetic data generation allows rapid creation of massive datasets for AI training."
+    },
+    {
+      question: "What is one advantage of training in simulation?",
+      answers: [
+        { text: "It's more expensive", correct: false },
+        { text: "It's safer and faster", correct: true },
+        { text: "It eliminates all testing", correct: false },
+        { text: "It makes robots slower", correct: false }
+      ],
+      explanation: "Training in simulation is safer and faster than physical testing."
+    },
+    {
+      question: "What is one key aspect of Isaac Sim's sensor simulation?",
+      answers: [
+        { text: "It's inaccurate", correct: false },
+        { text: "It accurately simulates camera, LiDAR, and other sensors", correct: true },
+        { text: "It only simulates one type of sensor", correct: false },
+        { text: "It eliminates sensors", correct: false }
+      ],
+      explanation: "Isaac Sim accurately simulates various sensors including cameras and LiDAR."
+    },
+    {
+      question: "What does the simulation-first approach enable?",
+      answers: [
+        { text: "Faster iteration and safer training", correct: true },
+        { text: "Slower development cycles", correct: false },
+        { text: "More physical testing", correct: false },
+        { text: "Higher costs", correct: false }
+      ],
+      explanation: "The simulation-first approach enables faster iteration and safer training of AI systems."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 4: Isaac ROS and Accelerated Perception
+
+### Perception Pipelines
+
+Isaac ROS provides optimized perception pipelines that process sensor data efficiently:
+- **Object Detection**: Identifying and locating objects in the environment
+- **Semantic Segmentation**: Understanding what each part of the scene represents
+- **Depth Estimation**: Calculating distances to objects
+- **Pose Estimation**: Determining the position and orientation of objects
+
+These pipelines are designed to work efficiently with NVIDIA's hardware acceleration.
+
+### Hardware Acceleration Concepts
+
+Isaac leverages NVIDIA's GPU acceleration for:
+- **Parallel Processing**: Multiple operations running simultaneously
+- **Real-time Performance**: Processing data as it arrives
+- **Energy Efficiency**: Better performance per watt
+- **Scalability**: Handling increasingly complex tasks
+
+This acceleration is crucial for real-time robot operation.
+
+<details>
+<summary>Quiz: Isaac ROS and Accelerated Perception</summary>
+
+<MCQQuiz
+  title="Isaac ROS and Accelerated Perception"
+  questions={[
+    {
+      question: "What is one function of Isaac ROS perception pipelines?",
+      answers: [
+        { text: "Only detecting objects", correct: false },
+        { text: "Processing sensor data efficiently", correct: true },
+        { text: "Only processing images", correct: false },
+        { text: "Only working with LiDAR", correct: false }
+      ],
+      explanation: "Isaac ROS provides optimized perception pipelines for processing sensor data efficiently."
+    },
+    {
+      question: "What is one type of perception task?",
+      answers: [
+        { text: "Only depth estimation", correct: false },
+        { text: "Object detection and semantic segmentation", correct: true },
+        { text: "Only actuator control", correct: false },
+        { text: "Only power management", correct: false }
+      ],
+      explanation: "Perception tasks include object detection, semantic segmentation, and depth estimation."
+    },
+    {
+      question: "What is one benefit of GPU acceleration in Isaac?",
+      answers: [
+        { text: "It makes processing slower", correct: false },
+        { text: "It enables parallel processing and real-time performance", correct: true },
+        { text: "It eliminates the need for sensors", correct: false },
+        { text: "It reduces computational power", correct: false }
+      ],
+      explanation: "GPU acceleration enables parallel processing and real-time performance for robot operations."
+    },
+    {
+      question: "What is a key advantage of hardware acceleration?",
+      answers: [
+        { text: "It makes robots more expensive", correct: false },
+        { text: "It provides better performance per watt", correct: true },
+        { text: "It eliminates all processing", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "Hardware acceleration provides better performance per watt, making it energy efficient."
+    },
+    {
+      question: "What does scalability mean in this context?",
+      answers: [
+        { text: "It makes systems more expensive", correct: false },
+        { text: "It allows handling increasingly complex tasks", correct: true },
+        { text: "It eliminates all complexity", correct: false },
+        { text: "It reduces system capabilities", correct: false }
+      ],
+      explanation: "Scalability means the system can handle increasingly complex tasks as needed."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 5: Navigation and Motion Planning
+
+### Path Planning vs Motion Execution
+
+Navigation in robotics involves two distinct processes:
+- **Path Planning**: Determining the optimal route from point A to point B
+- **Motion Execution**: Actually moving along that path with precise control
+
+Path planning considers global obstacles and goals, while motion execution handles local adjustments and safety.
+
+### Constraints and Safety
+
+Robotic navigation must account for:
+- **Physical Constraints**: Robot size, movement capabilities
+- **Environmental Constraints**: Obstacles, terrain, weather
+- **Safety Requirements**: Collision avoidance, emergency stops
+- **Performance Constraints**: Speed, precision, energy consumption
+
+These constraints ensure robots operate reliably and safely in real-world environments.
+
+<details>
+<summary>Quiz: Navigation and Motion Planning</summary>
+
+<MCQQuiz
+  title="Navigation and Motion Planning"
+  questions={[
+    {
+      question: "What is the difference between path planning and motion execution?",
+      answers: [
+        { text: "They are the same thing", correct: false },
+        { text: "Path planning determines routes, motion execution moves along them", correct: true },
+        { text: "Path planning is for sensors, motion execution is for actuators", correct: false },
+        { text: "Path planning is faster, motion execution is slower", correct: false }
+      ],
+      explanation: "Path planning determines the optimal route, while motion execution carries out that route with precise control."
+    },
+    {
+      question: "What is one factor that affects path planning?",
+      answers: [
+        { text: "Only robot size", correct: false },
+        { text: "Physical and environmental constraints", correct: true },
+        { text: "Only sensor capabilities", correct: false },
+        { text: "Only actuator power", correct: false }
+      ],
+      explanation: "Path planning must consider physical constraints, environmental factors, and safety requirements."
+    },
+    {
+      question: "What is one safety requirement in navigation?",
+      answers: [
+        { text: "It eliminates all obstacles", correct: false },
+        { text: "Collision avoidance and emergency stops", correct: true },
+        { text: "It only works in ideal conditions", correct: false },
+        { text: "It requires no sensors", correct: false }
+      ],
+      explanation: "Safety requirements include collision avoidance and emergency stopping capabilities."
+    },
+    {
+      question: "What is one constraint in robotic navigation?",
+      answers: [
+        { text: "Only speed limitations", correct: false },
+        { text: "Physical, environmental, and performance constraints", correct: true },
+        { text: "Only software limitations", correct: false },
+        { text: "Only sensor limitations", correct: false }
+      ],
+      explanation: "Robotic navigation must account for physical, environmental, and performance constraints."
+    },
+    {
+      question: "What is one benefit of separating path planning and motion execution?",
+      answers: [
+        { text: "It makes systems more complex", correct: false },
+        { text: "It allows for more precise control and reliable operation", correct: true },
+        { text: "It eliminates the need for sensors", correct: false },
+        { text: "It makes robots slower", correct: false }
+      ],
+      explanation: "Separating these functions allows for more precise control and reliable operation in complex environments."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 6: From Perception to Action
+
+### End-to-End Flow Inside a Humanoid Robot
+
+The complete AI brain flow involves:
+1. **Perception**: Sensors gather environmental data
+2. **Processing**: AI models analyze and understand the environment
+3. **Planning**: Decisions are made about what to do
+4. **Control**: Commands are sent to actuators to execute actions
+5. **Feedback**: Sensors monitor the results and adjust
+
+This creates a continuous loop that enables intelligent, adaptive behavior.
+
+### Integration Into a Mental Model
+
+Think of this as a three-stage process:
+- **Seeing** (Perception): What the robot observes
+- **Thinking** (Planning): What decisions are made
+- **Doing** (Control): How the robot acts
+
+This mental model helps understand how all components work together to create intelligent behavior.
+
+<details>
+<summary>Quiz: From Perception to Action</summary>
+
+<MCQQuiz
+  title="From Perception to Action"
+  questions={[
+    {
+      question: "What is the first stage in the end-to-end AI brain flow?",
+      answers: [
+        { text: "Control", correct: false },
+        { text: "Planning", correct: false },
+        { text: "Perception", correct: true },
+        { text: "Feedback", correct: false }
+      ],
+      explanation: "The first stage is perception, where sensors gather environmental data."
+    },
+    {
+      question: "What is the correct order of the AI brain flow?",
+      answers: [
+        { text: "Perception → Planning → Control → Feedback", correct: true },
+        { text: "Control → Perception → Planning → Feedback", correct: false },
+        { text: "Feedback → Perception → Planning → Control", correct: false },
+        { text: "Planning → Perception → Control → Feedback", correct: false }
+      ],
+      explanation: "The correct flow is: Perception → Processing → Planning → Control → Feedback."
+    },
+    {
+      question: "What is one function of the feedback stage?",
+      answers: [
+        { text: "It eliminates all processing", correct: false },
+        { text: "It monitors results and adjusts", correct: true },
+        { text: "It only collects data", correct: false },
+        { text: "It makes all decisions", correct: false }
+      ],
+      explanation: "The feedback stage monitors results and adjusts the system based on outcomes."
+    },
+    {
+      question: "What does the 'seeing-think-doing' mental model represent?",
+      answers: [
+        { text: "Only physical actions", correct: false },
+        { text: "Perception-thinking-control stages", correct: true },
+        { text: "Only sensor data", correct: false },
+        { text: "Only actuator control", correct: false }
+      ],
+      explanation: "The seeing-think-doing model represents the three stages: perception (seeing), planning (thinking), and control (doing)."
+    },
+    {
+      question: "What is one benefit of the end-to-end flow?",
+      answers: [
+        { text: "It makes robots slower", correct: false },
+        { text: "It enables intelligent, adaptive behavior", correct: true },
+        { text: "It eliminates all complexity", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "The end-to-end flow enables intelligent, adaptive behavior by creating a continuous loop of perception, planning, and action."
+    }
+  ]}
+/>
+
+</details>
+
+## Chapter Summary
+
+In this chapter, we've explored how the AI brain powers humanoid robots through NVIDIA Isaac:
+
+1. **AI Brain Functions**: Perception, planning, control, and integration
+2. **NVIDIA Isaac Platform**: Simulation tools, AI frameworks, and hardware acceleration
+3. **Isaac Sim**: Photorealistic simulation and synthetic data generation
+4. **Isaac ROS**: Accelerated perception pipelines
+5. **Navigation**: Path planning and motion execution with safety constraints
+6. **End-to-End Flow**: Perception to action integration
+
+These concepts prepare us for the next chapter, where we'll explore Vision-Language-Action systems that further advance AI capabilities in robotics.
+
+<details>
+<summary>Chapter 4 Comprehensive Quiz</summary>
+
+<MCQQuiz
+  title="Chapter 4 Comprehensive Quiz"
+  questions={[
+    {
+      question: "What is the primary role of the AI brain in a humanoid robot?",
+      answers: [
+        { text: "To provide physical strength", correct: false },
+        { text: "To coordinate perception, planning, and control", correct: true },
+        { text: "To generate electricity", correct: false },
+        { text: "To store data permanently", correct: false }
+      ],
+      explanation: "The AI brain coordinates perception, planning, and control to create intelligent robot behavior."
+    },
+    {
+      question: "What is the main difference between control logic and intelligence in robotics?",
+      answers: [
+        { text: "Control logic is for sensors, intelligence is for actuators", correct: false },
+        { text: "Control logic is low-level and rule-based, intelligence is high-level and decision-making", correct: true },
+        { text: "Control logic is for hardware, intelligence is for software", correct: false },
+        { text: "Control logic is faster, intelligence is slower", correct: false }
+      ],
+      explanation: "Control logic is low-level and rule-based, executing direct commands, while intelligence is high-level and handles decision-making."
+    },
+    {
+      question: "What is NVIDIA Isaac?",
+      answers: [
+        { text: "A type of robot hardware", correct: false },
+        { text: "A comprehensive robotics platform for AI-powered robots", correct: true },
+        { text: "Only a simulation tool", correct: false },
+        { text: "Only a control system", correct: false }
+      ],
+      explanation: "NVIDIA Isaac is a comprehensive robotics platform designed to accelerate development of AI-powered robots."
+    },
+    {
+      question: "What is one feature of Isaac Sim?",
+      answers: [
+        { text: "Only basic graphics", correct: false },
+        { text: "Photorealistic simulation with realistic physics", correct: true },
+        { text: "Only simple shapes", correct: false },
+        { text: "No sensor simulation", correct: false }
+      ],
+      explanation: "Isaac Sim provides photorealistic simulation with realistic graphics and physics."
+    },
+    {
+      question: "What is one function of Isaac ROS perception pipelines?",
+      answers: [
+        { text: "Only detecting objects", correct: false },
+        { text: "Processing sensor data efficiently", correct: true },
+        { text: "Only processing images", correct: false },
+        { text: "Only working with LiDAR", correct: false }
+      ],
+      explanation: "Isaac ROS provides optimized perception pipelines for processing sensor data efficiently."
+    },
+    {
+      question: "What is the difference between path planning and motion execution?",
+      answers: [
+        { text: "They are the same thing", correct: false },
+        { text: "Path planning determines routes, motion execution moves along them", correct: true },
+        { text: "Path planning is for sensors, motion execution is for actuators", correct: false },
+        { text: "Path planning is faster, motion execution is slower", correct: false }
+      ],
+      explanation: "Path planning determines the optimal route, while motion execution carries out that route with precise control."
+    },
+    {
+      question: "What is the first stage in the end-to-end AI brain flow?",
+      answers: [
+        { text: "Control", correct: false },
+        { text: "Planning", correct: false },
+        { text: "Perception", correct: true },
+        { text: "Feedback", correct: false }
+      ],
+      explanation: "The first stage is perception, where sensors gather environmental data."
+    },
+    {
+      question: "What does the 'seeing-think-doing' mental model represent?",
+      answers: [
+        { text: "Only physical actions", correct: false },
+        { text: "Perception-thinking-control stages", correct: true },
+        { text: "Only sensor data", correct: false },
+        { text: "Only actuator control", correct: false }
+      ],
+      explanation: "The seeing-think-doing model represents the three stages: perception (seeing), planning (thinking), and control (doing)."
+    },
+    {
+      question: "What is one benefit of using NVIDIA Isaac?",
+      answers: [
+        { text: "It makes robots slower", correct: false },
+        { text: "It accelerates development of AI-powered robots", correct: true },
+        { text: "It eliminates all testing", correct: false },
+        { text: "It requires more hardware", correct: false }
+      ],
+      explanation: "Isaac accelerates development of AI-powered robots by providing simulation, AI frameworks, and hardware acceleration."
+    },
+    {
+      question: "What is one constraint in robotic navigation?",
+      answers: [
+        { text: "Only speed limitations", correct: false },
+        { text: "Physical, environmental, and performance constraints", correct: true },
+        { text: "Only software limitations", correct: false },
+        { text: "Only sensor limitations", correct: false }
+      ],
+      explanation: "Robotic navigation must account for physical, environmental, and performance constraints."
+    }
+  ]}
+/>
+
+</details>

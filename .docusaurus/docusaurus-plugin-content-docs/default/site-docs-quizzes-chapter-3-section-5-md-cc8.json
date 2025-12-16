@@ -1,0 +1,18 @@
+{
+  "id": "quizzes/chapter3-section5",
+  "title": "Chapter 3 Section 5 Quiz - Simulated Sensors and Data",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter3-section5.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter3-section5",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-section5",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter3-section5.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 3 Section 5 Quiz - Simulated Sensors and Data",
+    "sidebar_label": "Chapter 3 Section 5 Quiz"
+  }
+}

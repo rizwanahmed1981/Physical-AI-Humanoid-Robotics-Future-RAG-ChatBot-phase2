@@ -1,0 +1,18 @@
+{
+  "id": "quizzes/chapter4-section2",
+  "title": "Chapter 4 Section 2 Quiz - Introduction to NVIDIA Isaac",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter4-section2.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter4-section2",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter4-section2.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 4 Section 2 Quiz - Introduction to NVIDIA Isaac",
+    "sidebar_label": "Chapter 4 Section 2 Quiz"
+  }
+}

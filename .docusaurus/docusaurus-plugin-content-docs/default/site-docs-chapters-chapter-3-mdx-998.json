@@ -1,0 +1,18 @@
+{
+  "id": "chapters/chapter3",
+  "title": "Chapter 3 - Digital Twins and Simulation",
+  "description": "Welcome to Chapter 3, where we explore how digital twins and simulation enable the safe, efficient, and iterative development of Physical AI systems. Just as architects create digital models before building physical structures, roboticists use digital twins and simulation to test and refine AI algorithms before deploying them on real robots.",
+  "source": "@site/docs/chapters/chapter3.mdx",
+  "sourceDirName": "chapters",
+  "slug": "/chapters/chapter3",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter3",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/chapters/chapter3.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 3 - Digital Twins and Simulation",
+    "sidebar_label": "Chapter 3 - Digital Twins and Simulation"
+  }
+}

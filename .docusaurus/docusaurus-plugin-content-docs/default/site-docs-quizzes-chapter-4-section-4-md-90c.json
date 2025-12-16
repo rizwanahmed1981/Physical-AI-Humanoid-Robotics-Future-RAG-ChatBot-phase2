@@ -1,0 +1,18 @@
+{
+  "id": "quizzes/chapter4-section4",
+  "title": "Chapter 4 Section 4 Quiz - Isaac ROS and Accelerated Perception",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter4-section4.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter4-section4",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section4",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter4-section4.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 4 Section 4 Quiz - Isaac ROS and Accelerated Perception",
+    "sidebar_label": "Chapter 4 Section 4 Quiz"
+  }
+}

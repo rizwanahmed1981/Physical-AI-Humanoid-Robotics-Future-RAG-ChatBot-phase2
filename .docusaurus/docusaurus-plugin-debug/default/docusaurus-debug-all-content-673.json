@@ -66,6 +66,42 @@
               }
             },
             {
+              "id": "chapters/chapter3",
+              "title": "Chapter 3 - Digital Twins and Simulation",
+              "description": "Welcome to Chapter 3, where we explore how digital twins and simulation enable the safe, efficient, and iterative development of Physical AI systems. Just as architects create digital models before building physical structures, roboticists use digital twins and simulation to test and refine AI algorithms before deploying them on real robots.",
+              "source": "@site/docs/chapters/chapter3.mdx",
+              "sourceDirName": "chapters",
+              "slug": "/chapters/chapter3",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter3",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/chapters/chapter3.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 3 - Digital Twins and Simulation",
+                "sidebar_label": "Chapter 3 - Digital Twins and Simulation"
+              }
+            },
+            {
+              "id": "chapters/chapter4",
+              "title": "Chapter 4 - The AI Brain with NVIDIA Isaac",
+              "description": "Welcome to Chapter 4, where we explore how the \"AI brain\" powers humanoid robots. Just as the human brain coordinates thoughts, perceptions, and actions, the AI brain in a robot integrates perception, planning, and control to create intelligent behavior. This chapter introduces NVIDIA Isaac, a powerful platform that provides the computational foundation for these AI systems.",
+              "source": "@site/docs/chapters/chapter4.mdx",
+              "sourceDirName": "chapters",
+              "slug": "/chapters/chapter4",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter4",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/chapters/chapter4.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 4 - The AI Brain with NVIDIA Isaac",
+                "sidebar_label": "Chapter 4 - The AI Brain with NVIDIA Isaac"
+              }
+            },
+            {
               "id": "chapters/template",
               "title": "Chapter Template",
               "description": "This is a template for textbook chapters.",
@@ -291,6 +327,258 @@
               "frontMatter": {
                 "title": "Chapter 2 Comprehensive Quiz",
                 "sidebar_label": "Chapter 2 Comprehensive Quiz"
+              }
+            },
+            {
+              "id": "quizzes/chapter3-section1",
+              "title": "Chapter 3 Section 1 Quiz - What Is a Digital Twin",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter3-section1.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter3-section1",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-section1",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter3-section1.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 3 Section 1 Quiz - What Is a Digital Twin",
+                "sidebar_label": "Chapter 3 Section 1 Quiz"
+              }
+            },
+            {
+              "id": "quizzes/chapter3-section2",
+              "title": "Chapter 3 Section 2 Quiz - Why Simulation Comes Before Reality",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter3-section2.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter3-section2",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-section2",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter3-section2.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 3 Section 2 Quiz - Why Simulation Comes Before Reality",
+                "sidebar_label": "Chapter 3 Section 2 Quiz"
+              }
+            },
+            {
+              "id": "quizzes/chapter3-section3",
+              "title": "Chapter 3 Section 3 Quiz - Physics-Based Simulation with Gazebo",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter3-section3.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter3-section3",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-section3",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter3-section3.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 3 Section 3 Quiz - Physics-Based Simulation with Gazebo",
+                "sidebar_label": "Chapter 3 Section 3 Quiz"
+              }
+            },
+            {
+              "id": "quizzes/chapter3-section4",
+              "title": "Chapter 3 Section 4 Quiz - Visualization and Interaction with Unity",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter3-section4.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter3-section4",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-section4",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter3-section4.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 3 Section 4 Quiz - Visualization and Interaction with Unity",
+                "sidebar_label": "Chapter 3 Section 4 Quiz"
+              }
+            },
+            {
+              "id": "quizzes/chapter3-section5",
+              "title": "Chapter 3 Section 5 Quiz - Simulated Sensors and Data",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter3-section5.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter3-section5",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-section5",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter3-section5.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 3 Section 5 Quiz - Simulated Sensors and Data",
+                "sidebar_label": "Chapter 3 Section 5 Quiz"
+              }
+            },
+            {
+              "id": "quizzes/chapter3-section6",
+              "title": "Chapter 3 Section 6 Quiz - Sim-to-Real Transfer",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter3-section6.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter3-section6",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-section6",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter3-section6.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 3 Section 6 Quiz - Sim-to-Real Transfer",
+                "sidebar_label": "Chapter 3 Section 6 Quiz"
+              }
+            },
+            {
+              "id": "quizzes/chapter3-sections",
+              "title": "Chapter 3 Comprehensive Quiz",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter3-sections.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter3-sections",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-sections",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter3-sections.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 3 Comprehensive Quiz",
+                "sidebar_label": "Chapter 3 Comprehensive Quiz"
+              }
+            },
+            {
+              "id": "quizzes/chapter4-section1",
+              "title": "Chapter 4 Section 1 Quiz - The Brain of a Physical AI System",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter4-section1.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter4-section1",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section1",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter4-section1.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 4 Section 1 Quiz - The Brain of a Physical AI System",
+                "sidebar_label": "Chapter 4 Section 1 Quiz"
+              }
+            },
+            {
+              "id": "quizzes/chapter4-section2",
+              "title": "Chapter 4 Section 2 Quiz - Introduction to NVIDIA Isaac",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter4-section2.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter4-section2",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section2",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter4-section2.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 4 Section 2 Quiz - Introduction to NVIDIA Isaac",
+                "sidebar_label": "Chapter 4 Section 2 Quiz"
+              }
+            },
+            {
+              "id": "quizzes/chapter4-section3",
+              "title": "Chapter 4 Section 3 Quiz - Isaac Sim and Intelligent Environments",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter4-section3.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter4-section3",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section3",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter4-section3.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 4 Section 3 Quiz - Isaac Sim and Intelligent Environments",
+                "sidebar_label": "Chapter 4 Section 3 Quiz"
+              }
+            },
+            {
+              "id": "quizzes/chapter4-section4",
+              "title": "Chapter 4 Section 4 Quiz - Isaac ROS and Accelerated Perception",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter4-section4.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter4-section4",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section4",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter4-section4.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 4 Section 4 Quiz - Isaac ROS and Accelerated Perception",
+                "sidebar_label": "Chapter 4 Section 4 Quiz"
+              }
+            },
+            {
+              "id": "quizzes/chapter4-section5",
+              "title": "Chapter 4 Section 5 Quiz - Navigation and Motion Planning",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter4-section5.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter4-section5",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section5",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter4-section5.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 4 Section 5 Quiz - Navigation and Motion Planning",
+                "sidebar_label": "Chapter 4 Section 5 Quiz"
+              }
+            },
+            {
+              "id": "quizzes/chapter4-section6",
+              "title": "Chapter 4 Section 6 Quiz - From Perception to Action",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter4-section6.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter4-section6",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section6",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter4-section6.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 4 Section 6 Quiz - From Perception to Action",
+                "sidebar_label": "Chapter 4 Section 6 Quiz"
+              }
+            },
+            {
+              "id": "quizzes/chapter4-sections",
+              "title": "Chapter 4 Comprehensive Quiz",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter4-sections.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter4-sections",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-sections",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter4-sections.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 4 Comprehensive Quiz",
+                "sidebar_label": "Chapter 4 Comprehensive Quiz"
               }
             }
           ],

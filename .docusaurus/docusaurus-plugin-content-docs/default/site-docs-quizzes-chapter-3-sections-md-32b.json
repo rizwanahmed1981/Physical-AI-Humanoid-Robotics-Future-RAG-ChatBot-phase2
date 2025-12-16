@@ -1,0 +1,18 @@
+{
+  "id": "quizzes/chapter3-sections",
+  "title": "Chapter 3 Comprehensive Quiz",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter3-sections.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter3-sections",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-sections",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter3-sections.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 3 Comprehensive Quiz",
+    "sidebar_label": "Chapter 3 Comprehensive Quiz"
+  }
+}

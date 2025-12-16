@@ -3,7 +3,8 @@
     "allow": [
       "Bash(.specify/scripts/bash/check-prerequisites.sh --json)",
       "Bash(.specify/scripts/bash/create-phr.sh --title \"Chapter-2-Tasks-Generation\" --stage tasks --feature \"002-chapter-2-ros2\" --json)",
-      "Bash(/specify/scripts/bash/check-prerequisites.sh --json --require-tasks --include-tasks)"
+      "Bash(/specify/scripts/bash/check-prerequisites.sh --json --require-tasks --include-tasks)",
+      "Bash(npm run serve)"
     ]
   }
 }

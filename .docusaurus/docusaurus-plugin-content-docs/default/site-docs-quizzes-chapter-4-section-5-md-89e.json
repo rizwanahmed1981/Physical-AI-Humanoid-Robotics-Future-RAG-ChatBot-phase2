@@ -1,0 +1,18 @@
+{
+  "id": "quizzes/chapter4-section5",
+  "title": "Chapter 4 Section 5 Quiz - Navigation and Motion Planning",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter4-section5.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter4-section5",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section5",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter4-section5.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 4 Section 5 Quiz - Navigation and Motion Planning",
+    "sidebar_label": "Chapter 4 Section 5 Quiz"
+  }
+}

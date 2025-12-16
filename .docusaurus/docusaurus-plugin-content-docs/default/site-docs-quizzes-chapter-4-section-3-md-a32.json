@@ -1,0 +1,18 @@
+{
+  "id": "quizzes/chapter4-section3",
+  "title": "Chapter 4 Section 3 Quiz - Isaac Sim and Intelligent Environments",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter4-section3.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter4-section3",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section3",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter4-section3.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 4 Section 3 Quiz - Isaac Sim and Intelligent Environments",
+    "sidebar_label": "Chapter 4 Section 3 Quiz"
+  }
+}

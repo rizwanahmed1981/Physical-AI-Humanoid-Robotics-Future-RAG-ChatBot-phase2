@@ -21,6 +21,14 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "chapters/chapter3",
+              "path": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter3"
+            },
+            {
+              "id": "chapters/chapter4",
+              "path": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter4"
+            },
+            {
               "id": "chapters/template",
               "path": "/physical-ai-humanoid-robotics-future/docs/chapters/template"
             },
@@ -71,6 +79,62 @@
             {
               "id": "quizzes/chapter2-sections",
               "path": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter2-sections"
+            },
+            {
+              "id": "quizzes/chapter3-section1",
+              "path": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-section1"
+            },
+            {
+              "id": "quizzes/chapter3-section2",
+              "path": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-section2"
+            },
+            {
+              "id": "quizzes/chapter3-section3",
+              "path": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-section3"
+            },
+            {
+              "id": "quizzes/chapter3-section4",
+              "path": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-section4"
+            },
+            {
+              "id": "quizzes/chapter3-section5",
+              "path": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-section5"
+            },
+            {
+              "id": "quizzes/chapter3-section6",
+              "path": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-section6"
+            },
+            {
+              "id": "quizzes/chapter3-sections",
+              "path": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-sections"
+            },
+            {
+              "id": "quizzes/chapter4-section1",
+              "path": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section1"
+            },
+            {
+              "id": "quizzes/chapter4-section2",
+              "path": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section2"
+            },
+            {
+              "id": "quizzes/chapter4-section3",
+              "path": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section3"
+            },
+            {
+              "id": "quizzes/chapter4-section4",
+              "path": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section4"
+            },
+            {
+              "id": "quizzes/chapter4-section5",
+              "path": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section5"
+            },
+            {
+              "id": "quizzes/chapter4-section6",
+              "path": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section6"
+            },
+            {
+              "id": "quizzes/chapter4-sections",
+              "path": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-sections"
             }
           ],
           "draftIds": [],

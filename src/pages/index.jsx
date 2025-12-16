@@ -71,7 +71,7 @@ export default function Home() {
                   <p>This textbook explores the intersection of artificial intelligence and robotics, focusing on embodied intelligence and the practical implementation of AI in physical systems.</p>
                 </div>
                 <div className="card__footer">
-                  <Link to="/docs/" className="button button--secondary">
+                  <Link to="/docs/chapters/chapter1" className="button button--secondary">
                     View All Chapters
                   </Link>
                 </div>

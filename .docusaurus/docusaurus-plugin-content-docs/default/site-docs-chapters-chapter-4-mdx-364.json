@@ -1,0 +1,18 @@
+{
+  "id": "chapters/chapter4",
+  "title": "Chapter 4 - The AI Brain with NVIDIA Isaac",
+  "description": "Welcome to Chapter 4, where we explore how the \"AI brain\" powers humanoid robots. Just as the human brain coordinates thoughts, perceptions, and actions, the AI brain in a robot integrates perception, planning, and control to create intelligent behavior. This chapter introduces NVIDIA Isaac, a powerful platform that provides the computational foundation for these AI systems.",
+  "source": "@site/docs/chapters/chapter4.mdx",
+  "sourceDirName": "chapters",
+  "slug": "/chapters/chapter4",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter4",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/chapters/chapter4.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 4 - The AI Brain with NVIDIA Isaac",
+    "sidebar_label": "Chapter 4 - The AI Brain with NVIDIA Isaac"
+  }
+}

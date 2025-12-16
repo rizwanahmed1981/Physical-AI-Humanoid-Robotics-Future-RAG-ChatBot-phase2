@@ -1,0 +1,18 @@
+{
+  "id": "quizzes/chapter3-section1",
+  "title": "Chapter 3 Section 1 Quiz - What Is a Digital Twin",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter3-section1.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter3-section1",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-section1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter3-section1.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 3 Section 1 Quiz - What Is a Digital Twin",
+    "sidebar_label": "Chapter 3 Section 1 Quiz"
+  }
+}

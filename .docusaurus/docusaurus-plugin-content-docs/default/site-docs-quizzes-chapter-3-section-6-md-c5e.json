@@ -1,0 +1,18 @@
+{
+  "id": "quizzes/chapter3-section6",
+  "title": "Chapter 3 Section 6 Quiz - Sim-to-Real Transfer",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter3-section6.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter3-section6",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-section6",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter3-section6.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 3 Section 6 Quiz - Sim-to-Real Transfer",
+    "sidebar_label": "Chapter 3 Section 6 Quiz"
+  }
+}

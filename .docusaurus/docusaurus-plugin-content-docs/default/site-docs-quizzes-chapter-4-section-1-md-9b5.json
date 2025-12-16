@@ -1,0 +1,18 @@
+{
+  "id": "quizzes/chapter4-section1",
+  "title": "Chapter 4 Section 1 Quiz - The Brain of a Physical AI System",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter4-section1.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter4-section1",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter4-section1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter4-section1.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 4 Section 1 Quiz - The Brain of a Physical AI System",
+    "sidebar_label": "Chapter 4 Section 1 Quiz"
+  }
+}

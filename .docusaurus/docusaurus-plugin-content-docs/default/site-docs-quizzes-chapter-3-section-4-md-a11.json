@@ -1,0 +1,18 @@
+{
+  "id": "quizzes/chapter3-section4",
+  "title": "Chapter 3 Section 4 Quiz - Visualization and Interaction with Unity",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter3-section4.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter3-section4",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter3-section4",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter3-section4.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 3 Section 4 Quiz - Visualization and Interaction with Unity",
+    "sidebar_label": "Chapter 3 Section 4 Quiz"
+  }
+}
