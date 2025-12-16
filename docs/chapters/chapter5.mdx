@@ -1,0 +1,688 @@
+---
+title: Chapter 5 - Vision–Language–Action Systems
+sidebar_label: Chapter 5 - Vision–Language–Action Systems
+---
+
+import MCQQuiz from '@site/src/components/MCQQuiz';
+
+# Chapter 5: Vision–Language–Action Systems
+
+Welcome to Chapter 5, where we explore how robots can understand and act upon natural language commands through the integration of vision, language, and action. This convergence of modalities represents a significant leap in making robots more intuitive and accessible to human users.
+
+## Chapter Overview
+
+Vision–Language–Action (VLA) systems represent the next evolution in humanoid robotics, where robots can:
+- Understand natural language commands
+- Perceive and interpret their environment through vision
+- Plan and execute complex sequences of actions
+- Adapt to unexpected situations through feedback
+
+This chapter explains how these three components work together to create robots that can understand human intent and respond appropriately in real-world environments.
+
+<details>
+<summary>Quiz: Chapter Overview</summary>
+
+<MCQQuiz
+  title="Chapter Overview"
+  questions={[
+    {
+      question: "What is the main purpose of Vision–Language–Action (VLA) systems?",
+      answers: [
+        { text: "To make robots faster", correct: false },
+        { text: "To enable robots to understand and act upon natural language commands", correct: true },
+        { text: "To eliminate the need for sensors", correct: false },
+        { text: "To reduce robot capabilities", correct: false }
+      ],
+      explanation: "VLA systems enable robots to understand natural language commands, perceive their environment, and execute appropriate actions."
+    },
+    {
+      question: "What are the three core components of VLA systems?",
+      answers: [
+        { text: "Vision, Language, Action", correct: true },
+        { text: "Perception, Planning, Control", correct: false },
+        { text: "Sensors, Actuators, Power", correct: false },
+        { text: "Hardware, Software, Network", correct: false }
+      ],
+      explanation: "VLA systems integrate Vision (perception), Language (understanding), and Action (execution) components."
+    },
+    {
+      question: "What is one benefit of VLA systems for humanoid robots?",
+      answers: [
+        { text: "They make robots less intuitive to use", correct: false },
+        { text: "They enable robots to understand human intent", correct: true },
+        { text: "They eliminate the need for planning", correct: false },
+        { text: "They reduce robot capabilities", correct: false }
+      ],
+      explanation: "VLA systems enable robots to understand human intent through natural language commands."
+    },
+    {
+      question: "What makes VLA systems significant for humanoid robotics?",
+      answers: [
+        { text: "They only work with simple commands", correct: false },
+        { text: "They represent a convergence of modalities for more intuitive interaction", correct: true },
+        { text: "They eliminate the need for vision", correct: false },
+        { text: "They only work in controlled environments", correct: false }
+      ],
+      explanation: "VLA systems represent a convergence of vision, language, and action that enables more intuitive human-robot interaction."
+    },
+    {
+      question: "What is one key capability of VLA systems?",
+      answers: [
+        { text: "They only process simple commands", correct: false },
+        { text: "They enable robots to adapt to unexpected situations", correct: true },
+        { text: "They eliminate the need for planning", correct: false },
+        { text: "They make robots slower", correct: false }
+      ],
+      explanation: "VLA systems enable robots to adapt to unexpected situations through feedback and continuous learning."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 1: From Commands to Actions
+
+### Natural Language as an Interface
+
+Natural language serves as an intuitive interface between humans and robots. Instead of programming specific commands, humans can simply say "please bring me the red cup from the kitchen table" and the robot understands the request.
+
+### Why Language Alone Is Not Enough
+
+Language provides intent but lacks the context needed for execution:
+- **Ambiguity**: "Bring it" could refer to any object
+- **Context**: "Kitchen table" needs to be understood in the robot's spatial context
+- **Execution**: Understanding how to manipulate objects requires physical capabilities
+- **Feedback**: Real-world situations require adjustment and correction
+
+This is why VLA systems combine language understanding with perception and action capabilities.
+
+<details>
+<summary>Quiz: From Commands to Actions</summary>
+
+<MCQQuiz
+  title="From Commands to Actions"
+  questions={[
+    {
+      question: "What is the primary advantage of using natural language as an interface?",
+      answers: [
+        { text: "It makes robots slower", correct: false },
+        { text: "It provides an intuitive way for humans to communicate with robots", correct: true },
+        { text: "It eliminates the need for sensors", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "Natural language provides an intuitive interface that humans can easily use to communicate with robots."
+    },
+    {
+      question: "What is one limitation of language alone in robotics?",
+      answers: [
+        { text: "It provides too much context", correct: false },
+        { text: "It lacks the context needed for execution", correct: true },
+        { text: "It makes robots more expensive", correct: false },
+        { text: "It eliminates the need for planning", correct: false }
+      ],
+      explanation: "Language provides intent but lacks the spatial and contextual information needed for physical execution."
+    },
+    {
+      question: "What does ambiguity mean in the context of natural language commands?",
+      answers: [
+        { text: "Commands that are very clear", correct: false },
+        { text: "Commands that could refer to multiple objects or actions", correct: true },
+        { text: "Commands that are too complex", correct: false },
+        { text: "Commands that are too simple", correct: false }
+      ],
+      explanation: "Ambiguity occurs when language commands could refer to multiple interpretations, such as 'Bring it.'"
+    },
+    {
+      question: "Why is context important for language commands?",
+      answers: [
+        { text: "It makes commands more confusing", correct: false },
+        { text: "It helps robots understand spatial and situational information", correct: true },
+        { text: "It eliminates the need for vision", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "Context helps robots understand spatial relationships like 'kitchen table' in the robot's environment."
+    },
+    {
+      question: "What is one key requirement for executing language commands?",
+      answers: [
+        { text: "Only language understanding", correct: false },
+        { text: "Physical manipulation capabilities", correct: true },
+        { text: "Only visual sensors", correct: false },
+        { text: "Only audio sensors", correct: false }
+      ],
+      explanation: "Executing language commands requires physical capabilities to manipulate objects and perform actions."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 2: Vision as Grounding
+
+### Seeing the World
+
+Vision provides the robot with a window into the physical world. Through cameras and other visual sensors, robots can:
+- Identify objects and their locations
+- Understand spatial relationships
+- Track movements and changes
+- Recognize environmental conditions
+
+### Connecting Objects, Spaces, and Language
+
+Vision serves as the bridge between language and action:
+- **Objects**: "red cup" is identified through visual recognition
+- **Spaces**: "kitchen table" is located using spatial understanding
+- **Language**: Commands are grounded in visual reality
+
+This grounding ensures that language commands are interpreted accurately within the robot's physical environment.
+
+<details>
+<summary>Quiz: Vision as Grounding</summary>
+
+<MCQQuiz
+  title="Vision as Grounding"
+  questions={[
+    {
+      question: "What is one primary function of vision in VLA systems?",
+      answers: [
+        { text: "To make robots faster", correct: false },
+        { text: "To provide the robot with a window into the physical world", correct: true },
+        { text: "To eliminate the need for language", correct: false },
+        { text: "To reduce robot capabilities", correct: false }
+      ],
+      explanation: "Vision provides the robot with a window into the physical world through cameras and visual sensors."
+    },
+    {
+      question: "What can vision help robots identify?",
+      answers: [
+        { text: "Only colors", correct: false },
+        { text: "Objects, locations, and environmental conditions", correct: true },
+        { text: "Only sounds", correct: false },
+        { text: "Only temperatures", correct: false }
+      ],
+      explanation: "Vision helps robots identify objects, their locations, and environmental conditions in the physical world."
+    },
+    {
+      question: "What is the role of vision in connecting language to action?",
+      answers: [
+        { text: "It eliminates the need for language", correct: false },
+        { text: "It serves as the bridge between language and physical execution", correct: true },
+        { text: "It only recognizes colors", correct: false },
+        { text: "It makes robots slower", correct: false }
+      ],
+      explanation: "Vision serves as the bridge by grounding language commands in visual reality for accurate execution."
+    },
+    {
+      question: "What does 'grounding' mean in the context of VLA systems?",
+      answers: [
+        { text: "Making commands more confusing", correct: false },
+        { text: "Providing visual references for language commands", correct: true },
+        { text: "Eliminating the need for planning", correct: false },
+        { text: "Reducing robot capabilities", correct: false }
+      ],
+      explanation: "Grounding means providing visual references that help robots understand what language commands refer to in the physical world."
+    },
+    {
+      question: "How does vision help with spatial understanding?",
+      answers: [
+        { text: "It only recognizes colors", correct: false },
+        { text: "It helps locate objects and understand spatial relationships", correct: true },
+        { text: "It makes robots less intuitive", correct: false },
+        { text: "It eliminates the need for language", correct: false }
+      ],
+      explanation: "Vision helps robots locate objects and understand spatial relationships like 'kitchen table' in the environment."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 3: Planning and Reasoning
+
+### High-Level Goals vs Low-Level Actions
+
+VLA systems operate at multiple levels of abstraction:
+- **High-level**: "Bring me the red cup from the kitchen table"
+- **Mid-level**: "Navigate to kitchen table, locate red cup, grasp cup"
+- **Low-level**: "Move arm to position X, activate gripper, lift object"
+
+### Decomposition and Sequencing
+
+Planning involves breaking down complex goals into manageable steps:
+- **Decomposition**: Breaking "bring cup" into navigation, identification, grasping
+- **Sequencing**: Determining the order of actions
+- **Constraint Handling**: Considering physical limitations and safety
+- **Adaptation**: Adjusting plans when circumstances change
+
+This hierarchical approach allows robots to tackle complex tasks systematically.
+
+<details>
+<summary>Quiz: Planning and Reasoning</summary>
+
+<MCQQuiz
+  title="Planning and Reasoning"
+  questions={[
+    {
+      question: "What is one key difference between high-level and low-level planning?",
+      answers: [
+        { text: "High-level focuses on physical movement, low-level on abstract goals", correct: false },
+        { text: "High-level deals with abstract goals, low-level with physical actions", correct: true },
+        { text: "They are the same thing", correct: false },
+        { text: "High-level is simpler, low-level is more complex", correct: false }
+      ],
+      explanation: "High-level planning deals with abstract goals like 'bring me the cup,' while low-level planning handles physical actions like moving arms."
+    },
+    {
+      question: "What is decomposition in planning?",
+      answers: [
+        { text: "Combining simple actions into complex tasks", correct: false },
+        { text: "Breaking complex tasks into manageable steps", correct: true },
+        { text: "Eliminating planning steps", correct: false },
+        { text: "Making planning more complicated", correct: false }
+      ],
+      explanation: "Decomposition breaks down complex tasks like 'bring cup' into manageable steps like navigation, identification, and grasping."
+    },
+    {
+      question: "What is one key aspect of sequencing in planning?",
+      answers: [
+        { text: "It makes robots slower", correct: false },
+        { text: "It determines the order of actions", correct: true },
+        { text: "It eliminates the need for planning", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "Sequencing determines the logical order in which actions should be performed to achieve a goal."
+    },
+    {
+      question: "What is one constraint that planning must consider?",
+      answers: [
+        { text: "Only software limitations", correct: false },
+        { text: "Physical limitations and safety", correct: true },
+        { text: "Only visual sensors", correct: false },
+        { text: "Only language processing", correct: false }
+      ],
+      explanation: "Planning must consider physical limitations like robot reach and safety constraints."
+    },
+    {
+      question: "What is one benefit of hierarchical planning?",
+      answers: [
+        { text: "It makes robots less capable", correct: false },
+        { text: "It allows robots to tackle complex tasks systematically", correct: true },
+        { text: "It eliminates the need for vision", correct: false },
+        { text: "It makes planning more difficult", correct: false }
+      ],
+      explanation: "Hierarchical planning allows robots to break down complex tasks and tackle them systematically."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 4: Large Language Models in Robotics
+
+### What LLMs Do Well
+
+Large Language Models (LLMs) excel at:
+- **Pattern Recognition**: Understanding language patterns and structures
+- **Contextual Understanding**: Interpreting meaning based on context
+- **Creative Problem Solving**: Generating novel solutions to problems
+- **Multimodal Integration**: Connecting different types of information
+
+### What LLMs Cannot Do Alone
+
+However, LLMs have limitations:
+- **Physical Understanding**: They don't inherently understand physics or spatial relationships
+- **Real-Time Decision Making**: They cannot directly control actuators or sensors
+- **Environmental Awareness**: They lack real-time perception of the physical world
+- **Execution Capabilities**: They cannot directly manipulate objects or move
+
+This is why LLMs work best when integrated with perception and control systems.
+
+<details>
+<summary>Quiz: Large Language Models in Robotics</summary>
+
+<MCQQuiz
+  title="Large Language Models in Robotics"
+  questions={[
+    {
+      question: "What is one strength of Large Language Models?",
+      answers: [
+        { text: "They understand physics directly", correct: false },
+        { text: "They excel at pattern recognition and contextual understanding", correct: true },
+        { text: "They can directly control actuators", correct: false },
+        { text: "They understand spatial relationships naturally", correct: false }
+      ],
+      explanation: "LLMs excel at pattern recognition and contextual understanding of language."
+    },
+    {
+      question: "What is one limitation of LLMs in robotics?",
+      answers: [
+        { text: "They can directly control actuators", correct: false },
+        { text: "They lack physical understanding", correct: true },
+        { text: "They understand physics naturally", correct: false },
+        { text: "They understand spatial relationships directly", correct: false }
+      ],
+      explanation: "LLMs lack inherent physical understanding of physics and spatial relationships."
+    },
+    {
+      question: "What is one capability that LLMs cannot do alone?",
+      answers: [
+        { text: "Recognize language patterns", correct: false },
+        { text: "Directly control actuators or sensors", correct: true },
+        { text: "Understand contextual meaning", correct: false },
+        { text: "Generate creative solutions", correct: false }
+      ],
+      explanation: "LLMs cannot directly control actuators or sensors - they need integration with physical systems."
+    },
+    {
+      question: "Why are LLMs most effective when integrated with other systems?",
+      answers: [
+        { text: "Because they work better alone", correct: false },
+        { text: "Because they complement perception and control capabilities", correct: true },
+        { text: "Because they eliminate the need for planning", correct: false },
+        { text: "Because they make robots slower", correct: false }
+      ],
+      explanation: "LLMs complement perception and control systems by providing language understanding that physical systems lack."
+    },
+    {
+      question: "What does multimodal integration mean in this context?",
+      answers: [
+        { text: "Only processing text", correct: false },
+        { text: "Connecting different types of information like language and vision", correct: true },
+        { text: "Only processing audio", correct: false },
+        { text: "Only processing visual information", correct: false }
+      ],
+      explanation: "Multimodal integration connects different types of information such as language, vision, and sensor data."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 5: Coordinating Perception, Planning, and Control
+
+### End-to-End Decision Flow
+
+The VLA system operates through a continuous loop:
+1. **Perception**: Vision and sensors gather environmental data
+2. **Processing**: Language understanding and planning algorithms interpret data
+3. **Planning**: High-level goals are broken down into actionable steps
+4. **Control**: Low-level commands are sent to actuators
+5. **Feedback**: Sensors monitor results and adjust
+
+This creates a closed-loop system where robots can adapt and improve their performance.
+
+### Feedback and Correction
+
+Feedback mechanisms are crucial for robust operation:
+- **Sensor Feedback**: Monitoring the success of actions
+- **Error Detection**: Identifying when plans fail
+- **Plan Revision**: Adjusting strategies when necessary
+- **Learning**: Improving performance over time
+
+This feedback loop enables robots to handle unexpected situations gracefully.
+
+<details>
+<summary>Quiz: Coordinating Perception, Planning, and Control</summary>
+
+<MCQQuiz
+  title="Coordinating Perception, Planning, and Control"
+  questions={[
+    {
+      question: "What is the correct order in the end-to-end decision flow?",
+      answers: [
+        { text: "Perception → Planning → Control → Feedback", correct: true },
+        { text: "Control → Perception → Planning → Feedback", correct: false },
+        { text: "Feedback → Perception → Planning → Control", correct: false },
+        { text: "Planning → Perception → Control → Feedback", correct: false }
+      ],
+      explanation: "The correct flow is Perception → Processing → Planning → Control → Feedback for continuous operation."
+    },
+    {
+      question: "What is one function of the feedback mechanism?",
+      answers: [
+        { text: "It makes robots slower", correct: false },
+        { text: "It monitors results and adjusts the system", correct: true },
+        { text: "It eliminates all planning", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "Feedback mechanisms monitor results and adjust the system based on outcomes for improved performance."
+    },
+    {
+      question: "What is one benefit of the closed-loop system?",
+      answers: [
+        { text: "It makes robots less adaptable", correct: false },
+        { text: "It enables robots to adapt and improve their performance", correct: true },
+        { text: "It eliminates the need for planning", correct: false },
+        { text: "It makes robots slower", correct: false }
+      ],
+      explanation: "The closed-loop system enables robots to adapt and improve their performance through continuous feedback."
+    },
+    {
+      question: "What is one way feedback improves robot performance?",
+      answers: [
+        { text: "It makes robots slower", correct: false },
+        { text: "It allows error detection and plan revision", correct: true },
+        { text: "It eliminates the need for sensors", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "Feedback allows robots to detect errors and revise plans when circumstances change."
+    },
+    {
+      question: "What does the continuous loop enable in VLA systems?",
+      answers: [
+        { text: "It makes robots less reliable", correct: false },
+        { text: "It enables graceful handling of unexpected situations", correct: true },
+        { text: "It eliminates the need for planning", correct: false },
+        { text: "It makes robots more expensive", correct: false }
+      ],
+      explanation: "The continuous loop enables graceful handling of unexpected situations through feedback and correction."
+    }
+  ]}
+/>
+
+</details>
+
+## Section 6: Safety, Constraints, and Failure Modes
+
+### Why Mistakes Matter More in the Physical World
+
+Unlike digital systems, physical robots must:
+- **Prevent Harm**: Avoid injury to people and damage to property
+- **Maintain Stability**: Keep themselves operational through failures
+- **Handle Unexpected Situations**: Adapt to unforeseen circumstances
+- **Ensure Reliability**: Operate consistently under varying conditions
+
+### Constraint Management
+
+Robots must constantly balance:
+- **Performance vs Safety**: Optimizing actions while staying safe
+- **Precision vs Speed**: Balancing accuracy with timeliness
+- **Resource Usage**: Efficiently managing power and computational resources
+- **Environmental Limits**: Respecting physical boundaries and constraints
+
+These constraints make VLA systems more complex but also more robust.
+
+<details>
+<summary>Quiz: Safety, Constraints, and Failure Modes</summary>
+
+<MCQQuiz
+  title="Safety, Constraints, and Failure Modes"
+  questions={[
+    {
+      question: "Why are mistakes more critical in the physical world?",
+      answers: [
+        { text: "They don't matter as much", correct: false },
+        { text: "They can cause harm to people and damage to property", correct: true },
+        { text: "They make robots faster", correct: false },
+        { text: "They eliminate the need for safety", correct: false }
+      ],
+      explanation: "Mistakes in the physical world can cause harm to people and damage to property, making safety critical."
+    },
+    {
+      question: "What is one constraint that robots must manage?",
+      answers: [
+        { text: "Only performance constraints", correct: false },
+        { text: "Performance vs safety balance", correct: true },
+        { text: "Only speed constraints", correct: false },
+        { text: "Only visual constraints", correct: false }
+      ],
+      explanation: "Robots must balance performance against safety to operate effectively and safely."
+    },
+    {
+      question: "What is one challenge in constraint management?",
+      answers: [
+        { text: "It makes robots faster", correct: false },
+        { text: "It requires balancing competing requirements", correct: true },
+        { text: "It eliminates the need for planning", correct: false },
+        { text: "It reduces robot capabilities", correct: false }
+      ],
+      explanation: "Constraint management requires balancing competing requirements like performance vs safety."
+    },
+    {
+      question: "What does reliability mean for physical robots?",
+      answers: [
+        { text: "It means robots are always perfect", correct: false },
+        { text: "It means robots operate consistently under varying conditions", correct: true },
+        { text: "It means robots don't need sensors", correct: false },
+        { text: "It means robots are always fast", correct: false }
+      ],
+      explanation: "Reliability means robots operate consistently under varying conditions and environmental factors."
+    },
+    {
+      question: "What is one key characteristic of robust VLA systems?",
+      answers: [
+        { text: "They are always perfect", correct: false },
+        { text: "They handle unexpected situations gracefully", correct: true },
+        { text: "They eliminate all constraints", correct: false },
+        { text: "They make robots slower", correct: false }
+      ],
+      explanation: "Robust VLA systems handle unexpected situations gracefully through feedback and adaptation."
+    }
+  ]}
+/>
+
+</details>
+
+## Chapter Summary
+
+In this chapter, we've explored Vision–Language–Action systems, which represent a significant advancement in humanoid robotics:
+
+1. **From Commands to Actions**: Natural language as an intuitive interface with limitations that require vision and action capabilities
+2. **Vision as Grounding**: Visual perception that connects language to physical reality
+3. **Planning and Reasoning**: Hierarchical planning that breaks down complex tasks
+4. **Large Language Models**: Their strengths and limitations when integrated with physical systems
+5. **Coordination**: End-to-end systems that link perception, planning, and control
+6. **Safety and Constraints**: Why physical systems require robust constraint management
+
+These concepts prepare us for the capstone chapter, where we'll explore how all these components work together in a complete system.
+
+<details>
+<summary>Chapter 5 Comprehensive Quiz</summary>
+
+<MCQQuiz
+  title="Chapter 5 Comprehensive Quiz"
+  questions={[
+    {
+      question: "What is the main purpose of Vision–Language–Action (VLA) systems?",
+      answers: [
+        { text: "To make robots faster", correct: false },
+        { text: "To enable robots to understand and act upon natural language commands", correct: true },
+        { text: "To eliminate the need for sensors", correct: false },
+        { text: "To reduce robot capabilities", correct: false }
+      ],
+      explanation: "VLA systems enable robots to understand natural language commands, perceive their environment, and execute appropriate actions."
+    },
+    {
+      question: "What is one limitation of language alone in robotics?",
+      answers: [
+        { text: "It provides too much context", correct: false },
+        { text: "It lacks the context needed for execution", correct: true },
+        { text: "It makes robots more expensive", correct: false },
+        { text: "It eliminates the need for planning", correct: false }
+      ],
+      explanation: "Language provides intent but lacks the spatial and contextual information needed for physical execution."
+    },
+    {
+      question: "What is the role of vision in VLA systems?",
+      answers: [
+        { text: "To make robots slower", correct: false },
+        { text: "To provide the robot with a window into the physical world", correct: true },
+        { text: "To eliminate the need for language", correct: false },
+        { text: "To reduce robot capabilities", correct: false }
+      ],
+      explanation: "Vision provides the robot with a window into the physical world through cameras and visual sensors."
+    },
+    {
+      question: "What is one key difference between high-level and low-level planning?",
+      answers: [
+        { text: "High-level focuses on physical movement, low-level on abstract goals", correct: false },
+        { text: "High-level deals with abstract goals, low-level with physical actions", correct: true },
+        { text: "They are the same thing", correct: false },
+        { text: "High-level is simpler, low-level is more complex", correct: false }
+      ],
+      explanation: "High-level planning deals with abstract goals like 'bring me the cup,' while low-level planning handles physical actions like moving arms."
+    },
+    {
+      question: "What is one strength of Large Language Models?",
+      answers: [
+        { text: "They understand physics directly", correct: false },
+        { text: "They excel at pattern recognition and contextual understanding", correct: true },
+        { text: "They can directly control actuators", correct: false },
+        { text: "They understand spatial relationships naturally", correct: false }
+      ],
+      explanation: "LLMs excel at pattern recognition and contextual understanding of language."
+    },
+    {
+      question: "What is the correct order in the end-to-end decision flow?",
+      answers: [
+        { text: "Perception → Planning → Control → Feedback", correct: true },
+        { text: "Control → Perception → Planning → Feedback", correct: false },
+        { text: "Feedback → Perception → Planning → Control", correct: false },
+        { text: "Planning → Perception → Control → Feedback", correct: false }
+      ],
+      explanation: "The correct flow is Perception → Processing → Planning → Control → Feedback for continuous operation."
+    },
+    {
+      question: "Why are mistakes more critical in the physical world?",
+      answers: [
+        { text: "They don't matter as much", correct: false },
+        { text: "They can cause harm to people and damage to property", correct: true },
+        { text: "They make robots faster", correct: false },
+        { text: "They eliminate the need for safety", correct: false }
+      ],
+      explanation: "Mistakes in the physical world can cause harm to people and damage to property, making safety critical."
+    },
+    {
+      question: "What is one constraint that robots must manage?",
+      answers: [
+        { text: "Only performance constraints", correct: false },
+        { text: "Performance vs safety balance", correct: true },
+        { text: "Only speed constraints", correct: false },
+        { text: "Only visual constraints", correct: false }
+      ],
+      explanation: "Robots must balance performance against safety to operate effectively and safely."
+    },
+    {
+      question: "What is one benefit of the closed-loop system?",
+      answers: [
+        { text: "It makes robots less adaptable", correct: false },
+        { text: "It enables robots to adapt and improve their performance", correct: true },
+        { text: "It eliminates the need for planning", correct: false },
+        { text: "It makes robots slower", correct: false }
+      ],
+      explanation: "The closed-loop system enables robots to adapt and improve their performance through continuous feedback."
+    },
+    {
+      question: "What does multimodal integration mean in this context?",
+      answers: [
+        { text: "Only processing text", correct: false },
+        { text: "Connecting different types of information like language and vision", correct: true },
+        { text: "Only processing audio", correct: false },
+        { text: "Only processing visual information", correct: false }
+      ],
+      explanation: "Multimodal integration connects different types of information such as language, vision, and sensor data."
+    }
+  ]}
+/>
+
+</details>

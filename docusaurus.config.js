@@ -94,6 +94,10 @@ const config = {
                 label: 'Chapter 4: The AI Brain with NVIDIA Isaac',
                 to: '/docs/chapters/chapter4',
               },
+              {
+                label: 'Chapter 5: Vision–Language–Action Systems',
+                to: '/docs/chapters/chapter5',
+              },
             ],
           },
           {

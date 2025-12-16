@@ -1,0 +1,15 @@
+{
+  "id": "chapters/chapter5-summary",
+  "title": "Chapter 5: Vision–Language–Action Systems - Implementation Summary",
+  "description": "I have successfully implemented Chapter 5 of the AI-native textbook titled \"Vision–Language–Action Systems\" following all specified requirements. Here's what was completed:",
+  "source": "@site/docs/chapters/chapter5-summary.md",
+  "sourceDirName": "chapters",
+  "slug": "/chapters/chapter5-summary",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter5-summary",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/chapters/chapter5-summary.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

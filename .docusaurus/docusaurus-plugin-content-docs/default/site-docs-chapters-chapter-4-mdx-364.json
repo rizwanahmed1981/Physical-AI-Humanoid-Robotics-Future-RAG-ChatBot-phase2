@@ -19,5 +19,9 @@
   "previous": {
     "title": "Chapter 3 - Digital Twins and Simulation",
     "permalink": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter3"
+  },
+  "next": {
+    "title": "Chapter 5 - Vision–Language–Action Systems",
+    "permalink": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter5"
   }
 }

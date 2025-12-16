@@ -1,0 +1,17 @@
+{
+  "id": "quizzes/chapter5-section3.2",
+  "title": "Chapter 5 Section 3.2 Quiz - Decomposition and Sequencing",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter5-section3.2.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter5-section3.2",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section3.2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section3.2.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 5 Section 3.2 Quiz - Decomposition and Sequencing"
+  }
+}

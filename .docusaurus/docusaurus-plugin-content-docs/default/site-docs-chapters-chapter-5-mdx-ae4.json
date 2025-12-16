@@ -1,0 +1,23 @@
+{
+  "id": "chapters/chapter5",
+  "title": "Chapter 5 - Vision–Language–Action Systems",
+  "description": "Welcome to Chapter 5, where we explore how robots can understand and act upon natural language commands through the integration of vision, language, and action. This convergence of modalities represents a significant leap in making robots more intuitive and accessible to human users.",
+  "source": "@site/docs/chapters/chapter5.mdx",
+  "sourceDirName": "chapters",
+  "slug": "/chapters/chapter5",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter5",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/chapters/chapter5.mdx",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 5 - Vision–Language–Action Systems",
+    "sidebar_label": "Chapter 5 - Vision–Language–Action Systems"
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Chapter 4 - The AI Brain with NVIDIA Isaac",
+    "permalink": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter4"
+  }
+}

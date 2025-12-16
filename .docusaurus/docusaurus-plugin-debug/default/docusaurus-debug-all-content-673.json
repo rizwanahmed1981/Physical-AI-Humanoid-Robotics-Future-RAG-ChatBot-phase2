@@ -117,7 +117,50 @@
               "previous": {
                 "title": "Chapter 3 - Digital Twins and Simulation",
                 "permalink": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter3"
+              },
+              "next": {
+                "title": "Vision–Language–Action Systems",
+                "permalink": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter5"
               }
+            },
+            {
+              "id": "chapters/chapter5",
+              "title": "Vision–Language–Action Systems",
+              "description": "Chapter Overview",
+              "source": "@site/docs/chapters/chapter5.mdx",
+              "sourceDirName": "chapters",
+              "slug": "/chapters/chapter5",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter5",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/chapters/chapter5.mdx",
+              "tags": [],
+              "version": "current",
+              "sidebarPosition": 5,
+              "frontMatter": {
+                "title": "Vision–Language–Action Systems",
+                "sidebar_position": 5
+              },
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Chapter 4 - The AI Brain with NVIDIA Isaac",
+                "permalink": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter4"
+              }
+            },
+            {
+              "id": "chapters/chapter5-summary",
+              "title": "Chapter 5: Vision–Language–Action Systems - Implementation Summary",
+              "description": "I have successfully implemented Chapter 5 of the AI-native textbook titled \"Vision–Language–Action Systems\" following all specified requirements. Here's what was completed:",
+              "source": "@site/docs/chapters/chapter5-summary.md",
+              "sourceDirName": "chapters",
+              "slug": "/chapters/chapter5-summary",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter5-summary",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/chapters/chapter5-summary.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
             },
             {
               "id": "chapters/template",
@@ -598,6 +641,363 @@
                 "title": "Chapter 4 Comprehensive Quiz",
                 "sidebar_label": "Chapter 4 Comprehensive Quiz"
               }
+            },
+            {
+              "id": "quizzes/chapter5-section1",
+              "title": "Chapter 5 Section 1 Quiz - From Commands to Actions",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section1.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section1",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section1",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section1.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 1 Quiz - From Commands to Actions"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section1.1",
+              "title": "Chapter 5 Section 1.1 Quiz - The Challenge of Ambiguity",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section1.1.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section1.1",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section1.1",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section1.1.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 1.1 Quiz - The Challenge of Ambiguity"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section1.2",
+              "title": "Chapter 5 Section 1.2 Quiz - The Need for Context",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section1.2.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section1.2",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section1.2",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section1.2.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 1.2 Quiz - The Need for Context"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section1.3",
+              "title": "Chapter 5 Section 1.3 Quiz - From Intent to Execution",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section1.3.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section1.3",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section1.3",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section1.3.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 1.3 Quiz - From Intent to Execution"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section2",
+              "title": "Chapter 5 Section 2 Quiz - Vision as Grounding",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section2.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section2",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section2",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section2.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 2 Quiz - Vision as Grounding"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section2.1",
+              "title": "Chapter 5 Section 2.1 Quiz - Seeing the World",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section2.1.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section2.1",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section2.1",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section2.1.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 2.1 Quiz - Seeing the World"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section2.2",
+              "title": "Chapter 5 Section 2.2 Quiz - Connecting Objects, Spaces, and Language",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section2.2.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section2.2",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section2.2",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section2.2.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 2.2 Quiz - Connecting Objects, Spaces, and Language"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section2.3",
+              "title": "Chapter 5 Section 2.3 Quiz - The Role of Attention and Focus",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section2.3.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section2.3",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section2.3",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section2.3.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 2.3 Quiz - The Role of Attention and Focus"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section3",
+              "title": "Chapter 5 Section 3 Quiz - Planning and Reasoning",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section3.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section3",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section3",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section3.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 3 Quiz - Planning and Reasoning"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section3.1",
+              "title": "Chapter 5 Section 3.1 Quiz - High-Level Goals vs Low-Level Actions",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section3.1.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section3.1",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section3.1",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section3.1.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 3.1 Quiz - High-Level Goals vs Low-Level Actions"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section3.2",
+              "title": "Chapter 5 Section 3.2 Quiz - Decomposition and Sequencing",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section3.2.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section3.2",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section3.2",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section3.2.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 3.2 Quiz - Decomposition and Sequencing"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section3.3",
+              "title": "Chapter 5 Section 3.3 Quiz - Reasoning Under Uncertainty",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section3.3.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section3.3",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section3.3",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section3.3.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 3.3 Quiz - Reasoning Under Uncertainty"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section4",
+              "title": "Chapter 5 Section 4 Quiz - Large Language Models in Robotics",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section4.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section4",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section4",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section4.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 4 Quiz - Large Language Models in Robotics"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section4.1",
+              "title": "Chapter 5 Section 4.1 Quiz - What LLMs Do Well",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section4.1.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section4.1",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section4.1",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section4.1.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 4.1 Quiz - What LLMs Do Well"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section4.2",
+              "title": "Chapter 5 Section 4.2 Quiz - What LLMs Cannot Do Alone",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section4.2.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section4.2",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section4.2",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section4.2.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 4.2 Quiz - What LLMs Cannot Do Alone"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section4.3",
+              "title": "Chapter 5 Section 4.3 Quiz - Integration with Perception and Control",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section4.3.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section4.3",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section4.3",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section4.3.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 4.3 Quiz - Integration with Perception and Control"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section5",
+              "title": "Chapter 5 Section 5 Quiz - Coordinating Perception, Planning, and Control",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section5.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section5",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section5",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section5.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 5 Quiz - Coordinating Perception, Planning, and Control"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section5.1",
+              "title": "Chapter 5 Section 5.1 Quiz - End-to-End Decision Flow",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section5.1.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section5.1",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section5.1",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section5.1.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 5.1 Quiz - End-to-End Decision Flow"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section5.2",
+              "title": "Chapter 5 Section 5.2 Quiz - Feedback and Correction",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section5.2.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section5.2",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section5.2",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section5.2.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 5.2 Quiz - Feedback and Correction"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section5.3",
+              "title": "Chapter 5 Section 5.3 Quiz - System Integration Challenges",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section5.3.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section5.3",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section5.3",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section5.3.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 5.3 Quiz - System Integration Challenges"
+              }
+            },
+            {
+              "id": "quizzes/chapter5-section6",
+              "title": "Chapter 5 Section 6 Quiz - Safety, Constraints, and Failure Modes",
+              "description": "<MCQQuiz",
+              "source": "@site/docs/quizzes/chapter5-section6.md",
+              "sourceDirName": "quizzes",
+              "slug": "/quizzes/chapter5-section6",
+              "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section6",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section6.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "title": "Chapter 5 Section 6 Quiz - Safety, Constraints, and Failure Modes"
+              }
             }
           ],
           "drafts": [],
@@ -622,6 +1022,10 @@
                   {
                     "type": "doc",
                     "id": "chapters/chapter4"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "chapters/chapter5"
                   }
                 ],
                 "collapsed": true,

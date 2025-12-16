@@ -95,6 +95,23 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="row" style={{marginTop: '20px'}}>
+            <div className="col col--6">
+              <div className="card">
+                <div className="card__header">
+                  <h3>Chapter 5: Vision–Language–Action Systems</h3>
+                </div>
+                <div className="card__body">
+                  <p>Understand how vision, language, and action work together in modern robotics to enable robots to perceive, understand, and interact with physical environments through natural language commands.</p>
+                </div>
+                <div className="card__footer">
+                  <Link to="/docs/chapters/chapter5" className="button button--secondary">
+                    Read Chapter 5
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </div>

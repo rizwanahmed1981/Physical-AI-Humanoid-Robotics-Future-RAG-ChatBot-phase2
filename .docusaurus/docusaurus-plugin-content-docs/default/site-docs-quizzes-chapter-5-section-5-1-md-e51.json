@@ -1,0 +1,17 @@
+{
+  "id": "quizzes/chapter5-section5.1",
+  "title": "Chapter 5 Section 5.1 Quiz - End-to-End Decision Flow",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter5-section5.1.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter5-section5.1",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section5.1",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section5.1.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 5 Section 5.1 Quiz - End-to-End Decision Flow"
+  }
+}

@@ -40,6 +40,13 @@
             "href": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter4",
             "docId": "chapters/chapter4",
             "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Chapter 5 - Vision–Language–Action Systems",
+            "href": "/physical-ai-humanoid-robotics-future/docs/chapters/chapter5",
+            "docId": "chapters/chapter5",
+            "unlisted": false
           }
         ],
         "collapsed": true,
@@ -71,6 +78,17 @@
       "title": "Chapter 4 - The AI Brain with NVIDIA Isaac",
       "description": "Welcome to Chapter 4, where we explore how the \"AI brain\" powers humanoid robots. Just as the human brain coordinates thoughts, perceptions, and actions, the AI brain in a robot integrates perception, planning, and control to create intelligent behavior. This chapter introduces NVIDIA Isaac, a powerful platform that provides the computational foundation for these AI systems.",
       "sidebar": "tutorialSidebar"
+    },
+    "chapters/chapter5": {
+      "id": "chapters/chapter5",
+      "title": "Chapter 5 - Vision–Language–Action Systems",
+      "description": "Welcome to Chapter 5, where we explore how robots can understand and act upon natural language commands through the integration of vision, language, and action. This convergence of modalities represents a significant leap in making robots more intuitive and accessible to human users.",
+      "sidebar": "tutorialSidebar"
+    },
+    "chapters/chapter5-summary": {
+      "id": "chapters/chapter5-summary",
+      "title": "Chapter 5: Vision–Language–Action Systems - Implementation Summary",
+      "description": "I have successfully implemented Chapter 5 of the AI-native textbook titled \"Vision–Language–Action Systems\" following all specified requirements. Here's what was completed:"
     },
     "chapters/template": {
       "id": "chapters/template",
@@ -205,6 +223,36 @@
     "quizzes/chapter4-sections": {
       "id": "quizzes/chapter4-sections",
       "title": "Chapter 4 Comprehensive Quiz",
+      "description": "<MCQQuiz"
+    },
+    "quizzes/chapter5-section1": {
+      "id": "quizzes/chapter5-section1",
+      "title": "Chapter 5 Section 1 Quiz - From Commands to Actions",
+      "description": "<MCQQuiz"
+    },
+    "quizzes/chapter5-section2": {
+      "id": "quizzes/chapter5-section2",
+      "title": "Chapter 5 Section 2 Quiz - Vision as Grounding",
+      "description": "<MCQQuiz"
+    },
+    "quizzes/chapter5-section3": {
+      "id": "quizzes/chapter5-section3",
+      "title": "Chapter 5 Section 3 Quiz - Planning and Reasoning",
+      "description": "<MCQQuiz"
+    },
+    "quizzes/chapter5-section4": {
+      "id": "quizzes/chapter5-section4",
+      "title": "Chapter 5 Section 4 Quiz - Large Language Models in Robotics",
+      "description": "<MCQQuiz"
+    },
+    "quizzes/chapter5-section5": {
+      "id": "quizzes/chapter5-section5",
+      "title": "Chapter 5 Section 5 Quiz - Coordinating Perception, Planning, and Control",
+      "description": "<MCQQuiz"
+    },
+    "quizzes/chapter5-section6": {
+      "id": "quizzes/chapter5-section6",
+      "title": "Chapter 5 Section 6 Quiz - Safety, Constraints, and Failure Modes",
       "description": "<MCQQuiz"
     }
   }

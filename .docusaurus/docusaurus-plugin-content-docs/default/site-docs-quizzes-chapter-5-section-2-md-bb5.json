@@ -1,0 +1,18 @@
+{
+  "id": "quizzes/chapter5-section2",
+  "title": "Chapter 5 Section 2 Quiz - Vision as Grounding",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter5-section2.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter5-section2",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section2",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section2.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 5 Section 2 Quiz - Vision as Grounding",
+    "sidebar_label": "Chapter 5 Section 2 Quiz"
+  }
+}

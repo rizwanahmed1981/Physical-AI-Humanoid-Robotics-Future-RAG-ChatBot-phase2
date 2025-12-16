@@ -1,0 +1,18 @@
+{
+  "id": "quizzes/chapter5-section5",
+  "title": "Chapter 5 Section 5 Quiz - Coordinating Perception, Planning, and Control",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter5-section5.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter5-section5",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section5",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section5.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 5 Section 5 Quiz - Coordinating Perception, Planning, and Control",
+    "sidebar_label": "Chapter 5 Section 5 Quiz"
+  }
+}

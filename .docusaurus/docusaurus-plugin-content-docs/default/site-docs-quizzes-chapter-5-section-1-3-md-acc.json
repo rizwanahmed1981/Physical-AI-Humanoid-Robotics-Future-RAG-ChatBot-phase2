@@ -1,0 +1,17 @@
+{
+  "id": "quizzes/chapter5-section1.3",
+  "title": "Chapter 5 Section 1.3 Quiz - From Intent to Execution",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter5-section1.3.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter5-section1.3",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section1.3",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section1.3.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 5 Section 1.3 Quiz - From Intent to Execution"
+  }
+}

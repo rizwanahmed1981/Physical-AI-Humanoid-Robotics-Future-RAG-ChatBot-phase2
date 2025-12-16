@@ -1,0 +1,18 @@
+{
+  "id": "quizzes/chapter5-section3",
+  "title": "Chapter 5 Section 3 Quiz - Planning and Reasoning",
+  "description": "<MCQQuiz",
+  "source": "@site/docs/quizzes/chapter5-section3.md",
+  "sourceDirName": "quizzes",
+  "slug": "/quizzes/chapter5-section3",
+  "permalink": "/physical-ai-humanoid-robotics-future/docs/quizzes/chapter5-section3",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/physical-ai-humanoid-robotics-future/edit/main/docs/quizzes/chapter5-section3.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Chapter 5 Section 3 Quiz - Planning and Reasoning",
+    "sidebar_label": "Chapter 5 Section 3 Quiz"
+  }
+}
