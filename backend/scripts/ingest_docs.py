@@ -1,13 +1,67 @@
 import os
+import sys
 import asyncio
 import glob
 import uuid
 from typing import List, Dict, Any
+import logging
+
+# Set up logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+# Load environment variables from the .env file
+try:
+    from dotenv import load_dotenv
+    # Try to load from different possible locations
+    env_paths = [
+        '.env',
+        '../.env',
+        '../../.env',
+        '../../../.env',
+        '/home/ecomw/Physical-AI-Humanoid-Robotics-Future-RAG-ChatBot/Physical-AI-Humanoid-Robotics-Future-phase-2/backend/.env'
+    ]
+
+    env_loaded = False
+    for env_path in env_paths:
+        if os.path.exists(env_path):
+            load_dotenv(env_path)
+            logger.info(f"Loaded environment variables from {env_path}")
+            env_loaded = True
+            break
+
+    if not env_loaded:
+        logger.warning("No .env file found. Please ensure environment variables are set.")
+
+except ImportError:
+    logger.warning("python-dotenv not installed. Environment variables must be set manually.")
+
+def validate_environment():
+    """
+    Validate that required environment variables are set.
+
+    Raises:
+        ValueError: If required environment variables are missing
+    """
+    required_vars = ['COHERE_API_KEY']
+
+    missing_vars = []
+    for var in required_vars:
+        if not os.getenv(var):
+            missing_vars.append(var)
+
+    if missing_vars:
+        raise ValueError(f"Missing required environment variables: {', '.join(missing_vars)}")
+
+    logger.info("All required environment variables are present")
+
+# Add the backend directory to Python path to enable imports
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
 
 # Import the services
-from ..app.services.embedding_service import CohereEmbeddingService
-from ..app.services.qdrant_service import QdrantService
-from ..app.services.neon_service import NeonDBService
+from app.services.embedding_service import CohereEmbeddingService
+from app.services.qdrant_service import QdrantService
+from app.services.neon_service import NeonDBService
 
 # Constants
 DOCS_PATH = "../../docs/chapters/"
@@ -153,9 +207,13 @@ async def ingest_document(file_path: str, cohere_service: CohereEmbeddingService
 async def main():
     """Main ingestion function."""
     try:
-        print("Starting document ingestion...")
+        logger.info("Starting document ingestion...")
+
+        # Validate environment variables
+        validate_environment()
 
         # Initialize services
+        logger.info("Initializing services...")
         cohere_service = CohereEmbeddingService()
         qdrant_service = QdrantService()
         neon_service = NeonDBService()
@@ -163,29 +221,55 @@ async def main():
         # Create metadata table if it doesn't exist
         try:
             neon_service.create_metadata_table()
-            print("Metadata table created successfully")
+            logger.info("Metadata table created successfully")
         except Exception as e:
-            print(f"Error creating metadata table: {str(e)}")
+            logger.error(f"Error creating metadata table: {str(e)}")
             return
+
+        # Create Qdrant collection if it doesn't exist
+        try:
+            await qdrant_service.create_collection(vector_size=1024)  # Cohere embeddings are 1024-dimensional
+            logger.info("Qdrant collection created successfully")
+        except Exception as e:
+            logger.warning(f"Error creating Qdrant collection: {str(e)}")
+            # The collection might already exist, so we'll continue
 
         # Find all MDX files
         search_pattern = os.path.join(DOCS_PATH, "*.mdx")
         mdx_files = glob.glob(search_pattern)
 
         if not mdx_files:
-            print("No MDX files found in the docs/chapters directory")
-            return
+            logger.info("No MDX files found in the docs/chapters directory")
+            # Let's also try looking for .md files since we have some
+            md_search_pattern = os.path.join(DOCS_PATH, "*.md")
+            md_files = glob.glob(md_search_pattern)
+            logger.info(f"Found {len(md_files)} MD files to process")
+            mdx_files = md_files  # Use MD files as fallback
+        else:
+            # Also include MD files if they exist
+            md_search_pattern = os.path.join(DOCS_PATH, "*.md")
+            md_files = glob.glob(md_search_pattern)
+            all_files = mdx_files + md_files
+            logger.info(f"Found {len(mdx_files)} MDX files and {len(md_files)} MD files to process")
+            mdx_files = all_files
 
-        print(f"Found {len(mdx_files)} MDX files to process")
+        logger.info(f"Found {len(mdx_files)} files to process")
+
+        if not mdx_files:
+            logger.warning("No documentation files found to process. Please check the docs/chapters directory.")
+            return
 
         # Process each file
         for file_path in mdx_files:
             await ingest_document(file_path, cohere_service, qdrant_service, neon_service)
 
-        print("Document ingestion completed successfully!")
+        logger.info("Document ingestion completed successfully!")
 
+    except ValueError as ve:
+        logger.error(f"Configuration error: {ve}")
+        sys.exit(1)
     except Exception as e:
-        print(f"Error in main ingestion process: {str(e)}")
+        logger.error(f"Error in main ingestion process: {str(e)}")
 
 if __name__ == "__main__":
     asyncio.run(main())

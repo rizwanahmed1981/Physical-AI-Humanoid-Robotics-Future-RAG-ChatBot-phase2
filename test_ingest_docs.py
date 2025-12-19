@@ -200,6 +200,13 @@ async def main():
             md_files = glob.glob(md_search_pattern)
             print(f"Found {len(md_files)} MD files to process")
             mdx_files = md_files  # Use MD files as fallback
+        else:
+            # Also include MD files if they exist
+            md_search_pattern = os.path.join(DOCS_PATH, "*.md")
+            md_files = glob.glob(md_search_pattern)
+            all_files = mdx_files + md_files
+            print(f"Found {len(mdx_files)} MDX files and {len(md_files)} MD files to process")
+            mdx_files = all_files
 
         print(f"Found {len(mdx_files)} files to process")
 
