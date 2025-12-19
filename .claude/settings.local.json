@@ -6,7 +6,9 @@
       "Bash(/specify/scripts/bash/check-prerequisites.sh --json --require-tasks --include-tasks)",
       "Bash(npm run serve)",
       "Bash(.specify/scripts/bash/check-prerequisites.sh --json --require-tasks --include-tasks)",
-      "Bash(npm run build)"
+      "Bash(npm run build)",
+      "Bash(mkdir -p backend/app/api backend/app/services backend/app/core scripts)",
+      "Bash(touch backend/app/main.py backend/app/api/health.py backend/app/api/rag.py backend/app/services/embedding_service.py backend/app/services/qdrant_service.py backend/app/core/config.py scripts/ingest_docs.py backend/requirements.txt backend/.env.example backend/README.md)"
     ]
   }
 }

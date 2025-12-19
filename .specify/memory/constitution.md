@@ -1,77 +1,45 @@
 <!--
 Sync Impact Report:
-Version change: 1.0.0 → 2.0.0
+Version change: 2.0.0 → 3.0.0
 List of modified principles:
-- [PRINCIPLE_1_NAME] → Source Fidelity and Truthfulness
-- [PRINCIPLE_2_NAME] → Core Educational Mission
-- [PRINCIPLE_3_NAME] → Audience Awareness
-- [PRINCIPLE_4_NAME] → Clarity Over Cleverness
-- [PRINCIPLE_5_NAME] → AI-Native Writing Principles
-- [PRINCIPLE_6_NAME] → Emotional and Motivational Resonance
-Added sections: Sections 7-18 covering consistency, tool discipline, assessment standards, agent governance, etc.
-Removed sections: None
+- Source Fidelity and Truthfulness → Clean Separation of Frontend and Backend
+- Core Educational Mission → Spec-First Development Before Implementation
+- Audience Awareness → Modular, Testable, API-First Backend
+- Clarity Over Cleverness → Explainable and Reproducible AI Features
+- AI-Native Writing Principles → Simplicity and Clarity Over Premature Optimization
+- Emotional and Motivational Resonance → AI Behavior Grounded in Textbook Content
+Added sections: New principles supporting future extensions (auth, personalization, multilingual content)
+Removed sections: Previous educational-focused principles
 Templates requiring updates: ⚠ pending - .specify/templates/plan-template.md, .specify/templates/spec-template.md, .specify/templates/tasks-template.md
 Follow-up TODOs: None
 -->
-# Physical-AI-Humanoid-Robotics-Future Constitution
+
+# Physical AI & Humanoid Robotics AI-Native Textbook Platform Constitution
 
 ## Core Principles
 
-### Source Fidelity and Truthfulness
-All factual claims must be grounded strictly in the provided course documents and officially documented technologies. Never invent hardware capabilities, software features, benchmarks, timelines, or outcomes. If information is missing or unclear in the source, explicitly state uncertainty instead of guessing. Preserve the original intent, scope, and promises of the Physical AI & Humanoid Robotics course 100%.
+### Clean Separation of Frontend and Backend
+The Docusaurus frontend and FastAPI backend must remain in completely separate directories with no intermingling of concerns. The frontend must interact with the backend exclusively through well-defined API endpoints. No shared code, assets, or configurations between frontend and backend unless explicitly designed as shared libraries. This separation enables independent development, testing, and deployment cycles.
 
-### Core Educational Mission
-The primary goal is to bridge digital AI systems with embodied intelligence in the physical world. Every chapter must help the reader understand how intelligence moves from models to machines. Content must always connect theory to real-world robotic systems, simulations, or deployment contexts. Avoid purely abstract discussions unless they directly support physical execution.
+### Spec-First Development Before Implementation
+All features must be fully specified in formal API contracts, data models, and behavioral requirements before any implementation begins. Specifications must include: API schemas, expected inputs/outputs, error handling, performance requirements, and integration points. Implementation teams must validate their work against these specifications before merging. This ensures predictable development and reduces rework.
 
-### Audience Awareness
-The target audience is AI learners who understand programming and basic AI concepts but are new to robotics. Assume familiarity with Python and AI fundamentals. Reduce intimidation and build confidence. Teach as a calm, experienced mentor guiding a motivated junior engineer.
+### Modular, Testable, API-First Backend
+The FastAPI backend must be architected as independent, loosely-coupled modules that can be tested in isolation. Each module must expose well-documented RESTful APIs with comprehensive OpenAPI schemas. Backend services must follow clean architecture principles with clear separation between controllers, services, and data access layers. All functionality must be thoroughly unit-tested and integration-tested.
 
-### Clarity Over Cleverness
-Prefer simple language over complex jargon. Explain "why" before "how" in every major section. Introduce mental models before tools, APIs, or commands. Avoid hype, marketing language, or exaggerated claims.
+### Explainable and Reproducible AI Features
+All AI behaviors in the RAG system must be transparent, traceable, and reproducible. The system must provide clear attribution showing which textbook content informed each AI response. AI decision-making processes must be logged and auditable. Results must be deterministic for identical inputs, with randomness explicitly controlled through seed values where appropriate. Users must understand how and why the AI reached conclusions.
 
-### AI-Native Writing Principles
-Structure content for both human readers and AI agents. Use clear headings, focused sections, and isolated concepts to support Retrieval-Augmented Generation. Each section should answer one core question. Avoid mixing multiple major concepts in a single section.
+### Simplicity and Clarity Over Premature Optimization
+Backend implementations must prioritize clean, readable, and maintainable code over performance optimizations unless profiling indicates bottlenecks. Features should be implemented with the simplest viable approach that meets requirements. Complexity should only be introduced when justified by measurable performance needs or functional requirements. Code must be self-documenting through clear naming and structure.
 
-### Emotional and Motivational Resonance
-Reinforce why Physical AI matters for the future of work and human-robot collaboration. Inspire curiosity, responsibility, and long-term skill building. Emphasize systems thinking and real-world impact over novelty.
+### AI Behavior Grounded in Textbook Content
+All AI responses must be strictly grounded in the provided textbook content and related course materials. The RAG system must not generate hallucinated facts, fabricated examples, or speculative information not present in the source materials. AI responses must include citations or references to specific textbook sections when providing answers. The system must explicitly indicate when requested information is not available in the knowledge base.
 
-### Consistency Across Chapters
-Use consistent terminology throughout the book. Build progressively on previously introduced concepts. Keep hardware, software stacks, and architectural assumptions aligned.
-
-### Tool and Platform Discipline
-ROS 2, Gazebo, Unity, NVIDIA Isaac, and Vision-Language-Action must be presented as parts of one integrated humanoid system. Avoid isolated tool tutorials. Always explain how each tool maps to the robot's nervous system, brain, or body.
-
-### Structured Assessment as a Core Feature
-Learning assessment is mandatory, not optional. Every subsection must end with a short formative quiz of exactly 5 multiple-choice questions. Every main section must end with a comprehensive quiz of exactly 10 multiple-choice questions.
-
-### Quiz Design Standards
-All quiz questions must be directly answerable from the immediately preceding content. Questions must test understanding, not memorization. Avoid trick questions or ambiguous wording. Each question must have exactly one correct answer.
-
-### Interactive Answer Reveal Requirement
-Quiz answers must not be immediately visible. Each quiz must include a clearly labeled "Reveal Answers" button. Answer reveals should match modern learning platforms such as Coursera, Udemy, and Cisco. When answers are revealed, include brief explanations explaining why the answer is correct.
-
-### Pedagogical Flow Control
-Quizzes must reinforce key ideas before the learner moves forward. Do not introduce new concepts inside quizzes. Use quizzes to surface misunderstandings early.
-
-### Agent-Oriented Content Development
-AI agents must be used intentionally and explicitly, not implicitly. Each agent must have a clearly defined role such as: Content Author, Technical Reviewer, Quiz Generator, Pedagogy Reviewer, RAG Optimization Agent. No agent may operate outside its defined responsibility.
-
-### Reusable Agent Skills
-Repetitive intellectual tasks must be abstracted into reusable agent skills. Examples include: Generating MCQs from a section, Validating factual consistency against source material, Converting content into RAG-friendly chunks, Creating learner-friendly explanations. Skills must be reusable across chapters and not hardcoded to a single section.
-
-### MCP Server Usage Guidelines
-MCP servers must be used where external knowledge, tools, or structured validation is required. MCP usage must be: Explicit, Justified, Limited to well-defined tasks. MCP servers must never introduce new facts that are not present in the source documents. MCP servers should support verification, retrieval, formatting, or orchestration, not creative invention.
-
-### Agent Governance and Safety
-Agents must follow this constitution at all times. If an agent encounters ambiguity, it must request clarification instead of making assumptions. Agents must prefer correctness over completeness. Any output that violates source fidelity must be rejected or revised.
-
-### No Scope Creep
-Do not expand beyond the defined course modules and learning outcomes. Advanced topics or future directions must be explicitly labeled as optional or exploratory. The book must remain teachable within the defined course timeline.
-
-### Review and Self-Audit Requirement
-Before finalizing any chapter, quiz, or agent-generated output, review it against this constitution. Explicitly check for invented facts, unclear assumptions, or misalignment with learning outcomes. When in doubt, prioritize correctness, clarity, and learner comprehension over completeness.
+### Support for Future Extensions
+The backend architecture must accommodate planned extensions: user authentication systems, personalized learning experiences, and multilingual content delivery. APIs must be designed with extensibility in mind, allowing new features to be added without breaking existing functionality. Authentication and authorization must be planned from the start, even if initially disabled. Internationalization support must be built in from the foundation.
 
 ## Governance
-This constitution overrides all other stylistic, generative, or tool-specific preferences and must be followed by all AI agents, skills, MCP servers, and contributors involved in this project. All PRs/reviews must verify compliance with these principles. Amendments require documentation, approval, and migration plan.
+This constitution overrides all other architectural, development, or operational preferences and must be followed by all contributors, AI agents, and automated systems involved in this project. All PRs and code reviews must verify compliance with these principles. Amendments require documentation, approval, and migration planning. The backend and frontend directories must remain completely independent with clearly defined API contracts governing their interaction.
 
-**Version**: 2.0.0 | **Ratified**: 2025-06-13 | **Last Amended**: 2025-12-15
+**Version**: 3.0.0 | **Ratified**: 2025-06-13 | **Last Amended**: 2025-12-19
