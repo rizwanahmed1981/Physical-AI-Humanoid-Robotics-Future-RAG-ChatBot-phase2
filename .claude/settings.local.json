@@ -11,7 +11,8 @@
       "Bash(touch backend/app/main.py backend/app/api/health.py backend/app/api/rag.py backend/app/services/embedding_service.py backend/app/services/qdrant_service.py backend/app/core/config.py scripts/ingest_docs.py backend/requirements.txt backend/.env.example backend/README.md)",
       "mcp__plugin_context7_context7__get-library-docs",
       "Bash(source venv/bin/activate)",
-      "Bash(timeout 300 python test_ingest_docs.py)"
+      "Bash(timeout 300 python test_ingest_docs.py)",
+      "Bash(/home/ecomw/Physical-AI-Humanoid-Robotics-Future-RAG-ChatBot/Physical-AI-Humanoid-Robotics-Future-phase-2/backend/venv/bin/python3 test_search_functionality.py)"
     ]
   }
 }

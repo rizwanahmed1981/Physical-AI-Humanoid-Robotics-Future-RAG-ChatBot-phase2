@@ -99,16 +99,16 @@ class QdrantService:
             List of dictionaries containing payload and score for each match
         """
         try:
-            # Perform search operation
-            results = self.client.search(
+            # Perform search operation using query_points (replaces deprecated search method)
+            results = self.client.query_points(
                 collection_name=self.collection_name,
-                query_vector=query_vector,
+                query=query_vector,
                 limit=limit
             )
 
-            # Format results
+            # Format results - query_points returns QueryResponse with points attribute
             formatted_results = []
-            for result in results:
+            for result in results.points:  # Access the points from the QueryResponse object
                 formatted_results.append({
                     "payload": result.payload,
                     "score": result.score
