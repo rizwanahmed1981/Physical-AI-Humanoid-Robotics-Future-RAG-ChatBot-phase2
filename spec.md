@@ -2,7 +2,7 @@
 
 **Feature Branch**: `002-backend-rag-service`
 **Created**: 2025-12-19
-**Status**: Draft
+**Status**: Updated
 **Input**: User description: "FastAPI backend for RAG-based AI assistance over textbook content"
 
 ## Scope Definition
@@ -121,3 +121,14 @@ A student wants to ask questions about a specific passage or selected text from 
 - **SC-004**: API handles 100 concurrent users without performance degradation
 - **SC-005**: 90% of generated answers are properly grounded in textbook content with accurate citations
 - **SC-006**: System maintains 99% uptime during peak usage hours
+
+## Cohere Embeddings Implementation Details
+
+This specification explicitly defines the use of Cohere as the primary embedding provider for the RAG pipeline:
+
+1. **Embedding Provider**: Cohere is designated as the primary embedding provider for all text processing in the system
+2. **Ownership**: The "agent-cohare-coding-agent" sub-agent is explicitly responsible for implementing and maintaining all embedding logic
+3. **Usage Scenarios**:
+   - Document ingestion: Text from markdown/MDX files is converted to vector embeddings using Cohere services
+   - Query-time vectorization: User queries are converted to vectors using the same Cohere-based service
+4. **Future Extensibility**: While Cohere is the current provider, the system maintains provider-agnostic interfaces to allow for potential future changes
