@@ -14,6 +14,7 @@
 - Metadata storage using Neon Serverless Postgres (future-ready)
 - Chapter-level and selected-text query support
 - Stateless API design for scalability
+- Embedding generation using Cohere services
 
 ### Explicitly Out of Scope
 - Frontend UI implementation (handled by existing Docusaurus book)
@@ -24,7 +25,7 @@
 
 ### High-Level Inputs and Outputs
 - **Inputs**: Textbook content (markdown/MDX files), user queries
-- **Outputs**: AI-generated answers grounded in textbook content, vector embeddings, API responses
+- **Outputs**: AI-generated answers grounded in textbook content, Cohere-generated vector embeddings, API responses
 
 ## User Scenarios & Testing *(mandatory)*
 
@@ -90,7 +91,7 @@ A student wants to ask questions about a specific passage or selected text from 
 ### Functional Requirements
 
 - **FR-001**: System MUST provide a RESTful API endpoint for submitting questions and receiving RAG-based answers
-- **FR-002**: System MUST ingest markdown/MDX textbook content and convert it to vector embeddings for storage in Qdrant Cloud
+- **FR-002**: System MUST ingest markdown/MDX textbook content and convert it to vector embeddings using Cohere services for storage in Qdrant Cloud
 - **FR-003**: System MUST retrieve relevant textbook content based on semantic similarity to user queries
 - **FR-004**: System MUST generate answers that are grounded in the textbook content and include proper citations
 - **FR-005**: System MUST support chapter-level filtering for targeted queries
@@ -99,12 +100,16 @@ A student wants to ask questions about a specific passage or selected text from 
 - **FR-008**: System MUST handle errors gracefully and return appropriate HTTP status codes
 - **FR-009**: System MUST be stateless and horizontally scalable
 - **FR-010**: System MUST support selected-text context queries
+- **FR-011**: System MUST use Cohere-based embeddings for both document ingestion and query-time vectorization
+- **FR-012**: Embedding logic MUST be owned and maintained by the "agent-cohare-coding-agent" sub-agent
+- **FR-013**: System SHOULD maintain provider-agnostic interfaces to allow for potential embedding provider changes in the future
 
 ### Key Entities
 
-- **TextbookContent**: Represents the textbook chapters and sections, with attributes including chapter_id, title, content, metadata, and vector embeddings
+- **TextbookContent**: Represents the textbook chapters and sections, with attributes including chapter_id, title, content, metadata, and Cohere-generated vector embeddings
 - **Query**: Represents user questions with attributes including question_text, context, chapter_filter, and selected_text
 - **Answer**: Represents AI-generated responses with attributes including answer_text, source_citations, confidence_score, and related_content
+- **EmbeddingService**: Represents the Cohere-based embedding service managed by "agent-cohare-coding-agent", responsible for both document ingestion and query-time vectorization
 
 ## Success Criteria *(mandatory)*
 
