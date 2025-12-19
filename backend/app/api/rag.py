@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 from app.models.schemas import QueryRequest, QueryResponse
+from app.services.rag_service import RAGService
 from app.services.embedding_service import CohereEmbeddingService
 from app.services.qdrant_service import QdrantService
 from app.services.neon_service import NeonDBService
@@ -19,46 +20,26 @@ async def rag_ask(query_request: QueryRequest) -> QueryResponse:
     Returns:
         QueryResponse: The RAG response with answer and sources
     """
-    # Initialize services
-    embedding_service = CohereEmbeddingService()
-    qdrant_service = QdrantService()
-    neon_service = NeonDBService()
-
     try:
-        # Step 1: Generate embedding for the query
-        query_embedding = await embedding_service.get_embeddings([query_request.query])
-        query_vector = query_embedding[0]  # Get the first (and only) embedding
+        # Initialize individual services
+        embedding_service = CohereEmbeddingService()
+        qdrant_service = QdrantService()
+        neon_service = NeonDBService()
 
-        # Step 2: Search for similar vectors in Qdrant
-        search_results = await qdrant_service.search_vectors(query_vector, limit=5)
+        # Create the RAG service with the initialized services
+        rag_service = RAGService(embedding_service, qdrant_service, neon_service)
 
-        # Step 3: Retrieve metadata from Neon DB and format sources
-        sources = []
-        for result in search_results:
-            payload = result["payload"]
-            score = result["score"]
+        # Retrieve relevant chunks using the RAG service
+        sources = await rag_service.retrieve_relevant_chunks(
+            query=query_request.query,
+            chapter_filter=query_request.chapter_filter,
+            selected_text=query_request.selected_text,
+            limit=5
+        )
 
-            # Extract embedding_id from payload to get detailed metadata
-            embedding_id = payload.get("embedding_id", "")
-            if embedding_id:
-                metadata = neon_service.get_metadata_by_embedding_id(embedding_id)
-                if metadata:
-                    from app.models.schemas import Source
-                    source = Source(
-                        chapter_id=metadata["chapter_id"],
-                        title=metadata["title"],
-                        file_path=metadata["file_path"],
-                        chunk_text_preview=metadata["chunk_text_preview"],
-                        score=score
-                    )
-                    sources.append(source)
-
-        # Step 4: For now, return a simple response based on the retrieved sources
-        # In a real implementation, you would send the sources to an LLM to generate the answer
+        # Generate answer using LLM based on retrieved sources
         if sources:
-            answer = f"Based on the textbook content, I found {len(sources)} relevant sources for your query: '{query_request.query}'. Here's what I found:"
-            for i, source in enumerate(sources, 1):
-                answer += f"\n\n{i}. {source.title}: {source.chunk_text_preview[:200]}..."
+            answer = await rag_service.generate_answer(query_request.query, sources)
         else:
             answer = f"I couldn't find relevant information in the textbook for your query: '{query_request.query}'. Please try rephrasing your question."
 

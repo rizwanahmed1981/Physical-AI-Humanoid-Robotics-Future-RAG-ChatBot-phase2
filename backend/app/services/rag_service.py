@@ -6,6 +6,8 @@ from app.services.embedding_service import CohereEmbeddingService
 from app.services.qdrant_service import QdrantService
 from app.services.neon_service import NeonDBService
 from app.models.schemas import Source
+import google.generativeai as genai
+import os
 
 
 class RAGService:
@@ -26,6 +28,14 @@ class RAGService:
         self.cohere_service = cohere_service
         self.qdrant_service = qdrant_service
         self.neon_service = neon_service
+
+        # Initialize Gemini client
+        google_api_key = os.getenv("GOOGLE_API_KEY")
+        if not google_api_key:
+            raise ValueError("GOOGLE_API_KEY environment variable is not set")
+
+        genai.configure(api_key=google_api_key)
+        self.llm_model = genai.GenerativeModel('gemini-pro')
 
     async def retrieve_relevant_chunks(
         self,
@@ -80,3 +90,50 @@ class RAGService:
         except Exception as e:
             # Handle any errors in the RAG process
             raise ValueError(f"Error in RAG retrieval process: {str(e)}")
+
+    async def generate_answer(self, query: str, retrieved_sources: List[Source]) -> str:
+        """
+        Generate an answer using the Gemini LLM based on the retrieved sources and query.
+
+        Args:
+            query: The user's query string
+            retrieved_sources: List of Source objects containing relevant context
+
+        Returns:
+            Generated answer string from the LLM
+        """
+        try:
+            # Format the retrieved sources into a context string
+            context_str = ""
+            if retrieved_sources:
+                context_str = "Context:\n"
+                for i, source in enumerate(retrieved_sources, 1):
+                    context_str += f"Source {i}:\n"
+                    context_str += f"Chapter ID: {source.chapter_id}\n"
+                    context_str += f"Title: {source.title}\n"
+                    context_str += f"Text: {source.chunk_text_preview}\n"
+                    context_str += f"Score: {source.score}\n"
+                    context_str += "---\n"
+
+            # Create the prompt for the LLM
+            prompt = f"""You are an expert assistant specializing in answering questions based on textbook content.
+
+            Please answer the following question based *only* on the provided textbook context.
+            If the answer cannot be found in the provided context, clearly state that.
+
+            Question: {query}
+
+            Context:
+            {context_str if context_str else 'No context provided.'}
+
+            Answer:"""
+
+            # Call the Gemini API
+            response = self.llm_model.generate_content(prompt)
+
+            # Extract the generated answer
+            answer = response.text.strip()
+            return answer
+
+        except Exception as e:
+            raise ValueError(f"Error generating answer with LLM: {str(e)}")
