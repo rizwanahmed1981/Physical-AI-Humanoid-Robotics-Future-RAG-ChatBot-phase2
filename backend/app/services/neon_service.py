@@ -2,15 +2,19 @@ import os
 import psycopg2
 from psycopg2.extras import Json
 from typing import Dict, Optional, Any
+from app.core import logging_config
 
 class NeonDBService:
     def __init__(self):
         """Initialize the Neon database service with connection URL from environment."""
+        self.logger = logging_config.get_logger(__name__)
+
         # Get database URL from environment variable
         self.db_url = os.getenv("NEON_DB_URL")
 
         # Validate required environment variable
         if not self.db_url:
+            self.logger.error("NEON_DB_URL environment variable is not set")
             raise ValueError("NEON_DB_URL environment variable is not set")
 
     def _get_connection(self):
@@ -23,10 +27,13 @@ class NeonDBService:
         Raises:
             ValueError: If connection fails
         """
+        self.logger.debug("Attempting to connect to Neon database")
         try:
             connection = psycopg2.connect(self.db_url)
+            self.logger.info("Successfully connected to Neon database")
             return connection
         except Exception as e:
+            self.logger.error("Failed to connect to Neon database", extra={"error": str(e)})
             raise ValueError(f"Failed to connect to Neon database: {str(e)}")
 
     def create_metadata_table(self):
@@ -36,6 +43,7 @@ class NeonDBService:
         Raises:
             ValueError: If table creation fails
         """
+        self.logger.info("Creating metadata table in Neon database")
         connection = None
         try:
             connection = self._get_connection()
@@ -56,8 +64,10 @@ class NeonDBService:
 
             cursor.execute(create_table_query)
             connection.commit()
+            self.logger.info("Metadata table created successfully")
 
         except Exception as e:
+            self.logger.error("Failed to create metadata table", extra={"error": str(e)})
             raise ValueError(f"Failed to create metadata table: {str(e)}")
         finally:
             if connection:
@@ -79,6 +89,7 @@ class NeonDBService:
         Raises:
             ValueError: If insertion fails
         """
+        self.logger.info("Inserting metadata record", extra={"chapter_id": chapter_id, "embedding_id": embedding_id})
         connection = None
         try:
             connection = self._get_connection()
@@ -101,8 +112,10 @@ class NeonDBService:
             ))
 
             connection.commit()
+            self.logger.info("Metadata record inserted successfully")
 
         except Exception as e:
+            self.logger.error("Failed to insert metadata", extra={"error": str(e)})
             raise ValueError(f"Failed to insert metadata: {str(e)}")
         finally:
             if connection:
@@ -122,6 +135,7 @@ class NeonDBService:
         Raises:
             ValueError: If retrieval fails
         """
+        self.logger.debug("Retrieving metadata by embedding ID", extra={"embedding_id": embedding_id})
         connection = None
         try:
             connection = self._get_connection()
@@ -139,7 +153,7 @@ class NeonDBService:
 
             if result:
                 # Convert to dictionary
-                return {
+                metadata = {
                     "id": result[0],
                     "chapter_id": result[1],
                     "title": result[2],
@@ -148,10 +162,14 @@ class NeonDBService:
                     "chunk_text_preview": result[5],
                     "embedding_id": result[6]
                 }
+                self.logger.debug("Metadata retrieved successfully", extra={"metadata_keys": list(metadata.keys())})
+                return metadata
             else:
+                self.logger.debug("No metadata found for embedding ID", extra={"embedding_id": embedding_id})
                 return None
 
         except Exception as e:
+            self.logger.error("Failed to retrieve metadata", extra={"error": str(e), "embedding_id": embedding_id})
             raise ValueError(f"Failed to retrieve metadata: {str(e)}")
         finally:
             if connection:

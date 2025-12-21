@@ -8,6 +8,7 @@ from app.services.neon_service import NeonDBService
 from app.models.schemas import Source
 import google.generativeai as genai
 import os
+from app.core import logging_config
 
 
 class RAGService:
@@ -28,10 +29,12 @@ class RAGService:
         self.cohere_service = cohere_service
         self.qdrant_service = qdrant_service
         self.neon_service = neon_service
+        self.logger = logging_config.get_logger(__name__)
 
         # Initialize Gemini client
         google_api_key = os.getenv("GOOGLE_API_KEY")
         if not google_api_key:
+            self.logger.error("GOOGLE_API_KEY environment variable is not set")
             raise ValueError("GOOGLE_API_KEY environment variable is not set")
 
         genai.configure(api_key=google_api_key)
@@ -56,17 +59,23 @@ class RAGService:
         Returns:
             List of Source objects containing relevant chunks and metadata
         """
+        self.logger.info("Starting RAG retrieval process", extra={"query": query, "limit": limit})
+
         try:
             # Step 1: Generate embedding for the query
             # Using input_type="search_query" for query embeddings (as opposed to "search_document" for documents)
+            self.logger.debug("Generating embeddings for query", extra={"query_length": len(query)})
             query_embedding = await self.cohere_service.get_embeddings([query])
             query_vector = query_embedding[0]  # Get the first (and only) embedding
 
             # Step 2: Search for similar vectors in Qdrant
+            self.logger.debug("Searching for similar vectors in Qdrant", extra={"limit": limit})
             search_results = await self.qdrant_service.search_vectors(query_vector, limit=limit)
 
             # Step 3: Retrieve metadata from Neon DB and format sources
             sources = []
+            self.logger.debug("Retrieving metadata from Neon DB", extra={"result_count": len(search_results)})
+
             for result in search_results:
                 payload = result["payload"]
                 score = result["score"]
@@ -85,10 +94,12 @@ class RAGService:
                         )
                         sources.append(source)
 
+            self.logger.info("RAG retrieval completed successfully", extra={"source_count": len(sources)})
             return sources
 
         except Exception as e:
             # Handle any errors in the RAG process
+            self.logger.error("Error in RAG retrieval process", extra={"error": str(e)})
             raise ValueError(f"Error in RAG retrieval process: {str(e)}")
 
     async def generate_answer(self, query: str, retrieved_sources: List[Source]) -> str:
@@ -102,6 +113,8 @@ class RAGService:
         Returns:
             Generated answer string from the LLM
         """
+        self.logger.info("Starting LLM answer generation", extra={"query": query, "source_count": len(retrieved_sources)})
+
         try:
             # Format the retrieved sources into a context string
             context_str = ""
@@ -129,11 +142,14 @@ class RAGService:
             Answer:"""
 
             # Call the Gemini API
+            self.logger.debug("Calling Gemini API for content generation")
             response = self.llm_model.generate_content(prompt)
 
             # Extract the generated answer
             answer = response.text.strip()
+            self.logger.info("LLM answer generation completed successfully")
             return answer
 
         except Exception as e:
+            self.logger.error("Error generating answer with LLM", extra={"error": str(e)})
             raise ValueError(f"Error generating answer with LLM: {str(e)}")

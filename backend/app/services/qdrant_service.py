@@ -2,18 +2,23 @@ import os
 from qdrant_client import QdrantClient
 from qdrant_client.models import VectorParams, Distance, Filter, FieldCondition
 from typing import List, Dict, Any
+from app.core import logging_config
 
 class QdrantService:
     def __init__(self, collection_name: str = "textbook_chapters"):
         """Initialize the Qdrant service with client and collection name."""
+        self.logger = logging_config.get_logger(__name__)
+
         # Get environment variables
         host = os.getenv("QDRANT_HOST")
         api_key = os.getenv("QDRANT_API_KEY")
 
         # Validate required environment variables
         if not host:
+            self.logger.error("QDRANT_HOST environment variable is not set")
             raise ValueError("QDRANT_HOST environment variable is not set")
         if not api_key:
+            self.logger.error("QDRANT_API_KEY environment variable is not set")
             raise ValueError("QDRANT_API_KEY environment variable is not set")
 
         # Initialize Qdrant client based on whether host contains protocol
@@ -44,14 +49,18 @@ class QdrantService:
         Returns:
             True if collection was created successfully, False otherwise
         """
+        self.logger.info("Creating Qdrant collection", extra={"collection_name": self.collection_name, "vector_size": vector_size})
+
         try:
             # Create collection with cosine distance
             self.client.recreate_collection(
                 collection_name=self.collection_name,
                 vectors_config=VectorParams(size=vector_size, distance=Distance.COSINE)
             )
+            self.logger.info("Qdrant collection created successfully")
             return True
         except Exception as e:
+            self.logger.error("Failed to create Qdrant collection", extra={"error": str(e)})
             raise ValueError(f"Failed to create collection: {str(e)}")
 
     async def upsert_vectors(self, vectors: List[List[float]], payloads: List[Dict[str, Any]], ids: List[str] = None) -> bool:
@@ -66,6 +75,8 @@ class QdrantService:
         Returns:
             True if upsert was successful, False otherwise
         """
+        self.logger.info("Upserting vectors to Qdrant", extra={"collection_name": self.collection_name, "vector_count": len(vectors)})
+
         try:
             # Prepare points for upsert
             points = []
@@ -83,8 +94,10 @@ class QdrantService:
                 collection_name=self.collection_name,
                 points=points
             )
+            self.logger.info("Vectors upserted successfully to Qdrant")
             return True
         except Exception as e:
+            self.logger.error("Failed to upsert vectors to Qdrant", extra={"error": str(e)})
             raise ValueError(f"Failed to upsert vectors: {str(e)}")
 
     async def search_vectors(self, query_vector: List[float], limit: int = 5) -> List[Dict[str, Any]]:
@@ -98,6 +111,8 @@ class QdrantService:
         Returns:
             List of dictionaries containing payload and score for each match
         """
+        self.logger.info("Searching vectors in Qdrant", extra={"collection_name": self.collection_name, "limit": limit})
+
         try:
             # Perform search operation using query_points (replaces deprecated search method)
             results = self.client.query_points(
@@ -114,6 +129,8 @@ class QdrantService:
                     "score": result.score
                 })
 
+            self.logger.info("Vector search completed successfully", extra={"result_count": len(formatted_results)})
             return formatted_results
         except Exception as e:
+            self.logger.error("Failed to search vectors in Qdrant", extra={"error": str(e)})
             raise ValueError(f"Failed to search vectors: {str(e)}")
