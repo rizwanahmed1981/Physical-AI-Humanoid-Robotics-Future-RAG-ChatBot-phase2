@@ -1,4 +1,4 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Depends
 from app.services.qdrant_service import QdrantService
 from app.services.neon_service import NeonDBService
 from app.services.embedding_service import CohereEmbeddingService
@@ -6,6 +6,19 @@ import google.generativeai as genai
 import os
 
 health_router = APIRouter(prefix="/health", tags=["Health"])
+
+# Dependency injection functions for health check services
+async def get_cohere_service() -> CohereEmbeddingService:
+    return CohereEmbeddingService()
+
+async def get_qdrant_service() -> QdrantService:
+    return QdrantService()
+
+async def get_neon_service() -> NeonDBService:
+    # IMPORTANT: NeonDBService's get_metadata_by_embedding_id is synchronous
+    # If you wish to make it truly async, you'd wrap it in an executor.
+    # For hackathon simplicity, we'll use it directly, but be aware of blocking.
+    return NeonDBService()
 
 @health_router.get("/",
                    summary="Health check endpoint",
@@ -40,13 +53,16 @@ health_router = APIRouter(prefix="/health", tags=["Health"])
                            }
                        }
                    })
-async def health_check():
+async def health_check(
+    cohere_service: CohereEmbeddingService = Depends(get_cohere_service),
+    qdrant_service: QdrantService = Depends(get_qdrant_service),
+    neon_service: NeonDBService = Depends(get_neon_service)
+):
     # Basic health check
     health_status = {"status": "ok", "checks": {}}
 
     # Check Qdrant connection
     try:
-        qdrant_service = QdrantService()
         # Try to list collections to verify connection
         collections = qdrant_service.client.get_collections()
         health_status["checks"]["qdrant"] = {"status": "healthy", "message": "Connected successfully"}
@@ -56,7 +72,6 @@ async def health_check():
 
     # Check Neon connection
     try:
-        neon_service = NeonDBService()
         # Try to get a connection to verify database connectivity
         conn = neon_service._get_connection()
         conn.close()
@@ -67,7 +82,6 @@ async def health_check():
 
     # Check Cohere connection
     try:
-        cohere_service = CohereEmbeddingService()
         # Try a simple API call to verify connection (using a minimal embedding request)
         test_response = cohere_service.client.embed(
             texts=["health check"],
