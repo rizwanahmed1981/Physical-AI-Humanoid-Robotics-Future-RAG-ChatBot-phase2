@@ -114,16 +114,16 @@ class QdrantService:
         self.logger.info("Searching vectors in Qdrant", extra={"collection_name": self.collection_name, "limit": limit})
 
         try:
-            # Perform search operation using query_points (replaces deprecated search method)
-            results = self.client.query_points(
+            # Perform search operation using the standard search method
+            results = self.client.search(
                 collection_name=self.collection_name,
-                query=query_vector,
+                query_vector=query_vector,
                 limit=limit
             )
 
-            # Format results - query_points returns QueryResponse with points attribute
+            # Format results - search returns a list of ScoredPoint objects
             formatted_results = []
-            for result in results.points:  # Access the points from the QueryResponse object
+            for result in results:  # results is already a list of ScoredPoint objects
                 formatted_results.append({
                     "payload": result.payload,
                     "score": result.score

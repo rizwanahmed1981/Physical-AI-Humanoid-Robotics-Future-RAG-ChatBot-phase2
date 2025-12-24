@@ -2,10 +2,13 @@ from fastapi import APIRouter, Depends
 from app.services.qdrant_service import QdrantService
 from app.services.neon_service import NeonDBService
 from app.services.embedding_service import CohereEmbeddingService
-import google.generativeai as genai
+from google import genai
 import os
 
-health_router = APIRouter(prefix="/health", tags=["Health"])
+health_router = APIRouter(
+    prefix="/health",
+    tags=["Health"]
+)
 
 # Dependency injection functions for health check services
 async def get_cohere_service() -> CohereEmbeddingService:
@@ -21,8 +24,8 @@ async def get_neon_service() -> NeonDBService:
     return NeonDBService()
 
 @health_router.get("/",
-                   summary="Health check endpoint",
-                   description="Performs health checks on all system dependencies including Qdrant, Neon, Cohere, and Gemini services.",
+                   summary="Check overall application and dependency health",
+                   description="Returns the current operational status of the FastAPI application and its integrated services (Qdrant, Neon, Cohere, Gemini).",
                    responses={
                        200: {
                            "description": "Health check completed successfully",
@@ -99,11 +102,11 @@ async def health_check(
         if not google_api_key:
             raise ValueError("GOOGLE_API_KEY environment variable is not set")
 
-        genai.configure(api_key=google_api_key)
-        model = genai.GenerativeModel('gemini-pro')
+        # Initialize client with the new SDK
+        client = genai.Client(api_key=google_api_key)
 
         # Try a simple API call to verify connection
-        response = model.generate_content("Say 'health check' in one word")
+        response = client.models.generate_content(model='gemini-1.5-flash', contents="Say 'health check' in one word")
         health_status["checks"]["gemini"] = {"status": "healthy", "message": "Connected successfully"}
     except Exception as e:
         health_status["checks"]["gemini"] = {"status": "unhealthy", "message": f"Connection failed: {str(e)}"}

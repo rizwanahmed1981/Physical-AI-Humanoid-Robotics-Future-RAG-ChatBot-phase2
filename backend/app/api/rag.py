@@ -6,7 +6,10 @@ from app.services.qdrant_service import QdrantService
 from app.services.neon_service import NeonDBService
 
 # Create the RAG router with prefix and tags
-rag_router = APIRouter(prefix="/rag", tags=["RAG"])
+rag_router = APIRouter(
+    prefix="/rag",
+    tags=["RAG"]
+)
 
 # Dependency injection functions
 async def get_cohere_service() -> CohereEmbeddingService:
@@ -29,22 +32,22 @@ async def get_rag_service(
     return RAGService(cohere_service, qdrant_service, neon_service)
 
 @rag_router.post("/ask",
-                 summary="Ask a question using RAG",
-                 description="Submit a query to the RAG system to retrieve relevant information from the textbook and generate an answer using the LLM.",
+                 summary="Ask a question about the Physical AI textbook",
+                 description="Processes a user query using Retrieval Augmented Generation (RAG) to find relevant content from the textbook and generate a grounded answer with sources.",
                  responses={
                      200: {
                          "description": "Successfully retrieved relevant information and generated an answer",
                          "content": {
                              "application/json": {
                                  "example": {
-                                     "answer": "The answer to your question based on the textbook content.",
+                                     "answer": "According to Chapter 5, the ethical considerations of humanoid robotics include bias in AI systems, accountability for AI actions, and the potential for job displacement.",
                                      "sources": [
                                          {
-                                             "chapter_id": "ch_01",
-                                             "title": "Introduction to Robotics",
-                                             "file_path": "/path/to/chapter1.pdf",
-                                             "chunk_text_preview": "Preview of the relevant text chunk...",
-                                             "score": 0.85
+                                             "chapter_id": "chapter-5-ethics",
+                                             "title": "Ethical AI and Robotics",
+                                             "file_path": "docs/chapters/chapter-5.mdx",
+                                             "chunk_text_preview": "Ethical considerations include bias, accountability, and job displacement.",
+                                             "score": 0.87
                                          }
                                      ]
                                  }

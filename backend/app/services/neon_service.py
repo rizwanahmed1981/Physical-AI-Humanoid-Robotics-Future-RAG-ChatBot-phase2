@@ -175,3 +175,39 @@ class NeonDBService:
             if connection:
                 cursor.close()
                 connection.close()
+
+    def clear_metadata_table(self):
+        """
+        Clear all records from the chapter_metadata table.
+
+        Raises:
+            ValueError: If clearing the table fails
+        """
+        self.logger.info("Clearing metadata table in Neon database")
+        connection = None
+        try:
+            connection = self._get_connection()
+            cursor = connection.cursor()
+
+            # Clear all records from the table
+            clear_table_query = "TRUNCATE TABLE chapter_metadata;"
+
+            cursor.execute(clear_table_query)
+            connection.commit()
+            self.logger.info("Metadata table cleared successfully")
+
+        except Exception as e:
+            self.logger.error("Failed to clear metadata table", extra={"error": str(e)})
+            # If TRUNCATE fails, try DELETE as an alternative
+            try:
+                clear_table_query = "DELETE FROM chapter_metadata;"
+                cursor.execute(clear_table_query)
+                connection.commit()
+                self.logger.info("Metadata table cleared successfully using DELETE")
+            except Exception as delete_error:
+                self.logger.error("Failed to clear metadata table with DELETE", extra={"error": str(delete_error)})
+                raise ValueError(f"Failed to clear metadata table: {str(delete_error)}")
+        finally:
+            if connection:
+                cursor.close()
+                connection.close()

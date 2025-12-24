@@ -218,6 +218,13 @@ async def main():
         qdrant_service = QdrantService()
         neon_service = NeonDBService()
 
+        # Clean up old data before ingesting new data
+        print("Cleaning up old data...")
+        await qdrant_service.create_collection(vector_size=1024)  # Recreate collection to wipe old vectors
+        neon_service.clear_metadata_table()  # Clear existing metadata
+
+        logger.info("Starting document ingestion...")
+
         # Create metadata table if it doesn't exist
         try:
             neon_service.create_metadata_table()

@@ -12,6 +12,42 @@
   - Implemented comprehensive service checks for Qdrant, Neon, Cohere, and Gemini services
   - Added proper error handling and structured responses
 
+### T002 - Implement OpenAPI/Swagger documentation improvements
+- **Status**: ✅ COMPLETED
+- **Description**: Improved OpenAPI/Swagger documentation with detailed titles, descriptions, and examples for all API endpoints
+- **Files**: backend/app/main.py, backend/app/api/health.py, backend/app/api/rag.py, backend/app/models/schemas.py
+- **Changes Made**:
+  - Added application metadata (title, description, version) in main.py
+  - Added summary and description to health_router and rag_router
+  - Added detailed summary and description to health and RAG endpoints
+  - Added example request and response bodies for all endpoints
+  - Added example payloads to Pydantic models in schemas.py
+
+### T003 - Design and implement global error handling middleware
+- **Status**: ✅ COMPLETED
+- **Description**: Created a global error handling middleware that catches exceptions, logs them appropriately, and returns standardized error responses
+- **Files**: backend/app/main.py, backend/app/middleware/error_handler.py
+- **Changes Made**:
+  - Integrated ErrorHandlerMiddleware in main.py
+  - Enhanced error handling to return consistent JSON error responses
+
+### T004 - Set up basic structured logging
+- **Status**: ✅ COMPLETED
+- **Description**: Configured structured logging for the application with appropriate log levels, formats, and handlers
+- **Files**: backend/app/main.py, backend/app/core/logging_config.py
+- **Changes Made**:
+  - Integrated structured logging setup in main.py
+  - Utilized existing logging_config.py for JSON formatted logging
+
+### T005 - Implement request/response logging middleware
+- **Status**: ✅ COMPLETED
+- **Description**: Added middleware to log all incoming requests and outgoing responses for debugging and monitoring
+- **Files**: backend/app/main.py, backend/app/middleware/request_logger.py
+- **Changes Made**:
+  - Created RequestLoggingMiddleware to log request/response details
+  - Integrated middleware in main.py
+  - Added structured logging for request/response information
+
 ### T007 - Create health check test suite
 - **Status**: ✅ COMPLETED
 - **Description**: Developed automated tests for the enhanced health check endpoint to verify all dependency checks work correctly
@@ -22,22 +58,6 @@
   - Implemented tests for health endpoint structure and response format
 
 ## Remaining Tasks (Not Yet Implemented)
-
-### T002 - Implement OpenAPI/Swagger documentation improvements
-- **Status**: ⏳ NOT STARTED
-- **Description**: Improve OpenAPI/Swagger documentation with detailed titles, descriptions, and examples for all API endpoints
-
-### T003 - Design and implement global error handling middleware
-- **Status**: ⏳ NOT STARTED
-- **Description**: Create a global error handling middleware that catches exceptions, logs them appropriately, and returns standardized error responses
-
-### T004 - Set up basic structured logging
-- **Status**: ⏳ NOT STARTED
-- **Description**: Configure structured logging for the application with appropriate log levels, formats, and handlers
-
-### T005 - Implement request/response logging middleware
-- **Status**: ⏳ NOT STARTED
-- **Description**: Add middleware to log all incoming requests and outgoing responses for debugging and monitoring
 
 ### T006 - Add comprehensive API documentation to OpenAPI spec
 - **Status**: ⏳ NOT STARTED

@@ -6,7 +6,7 @@ from app.services.embedding_service import CohereEmbeddingService
 from app.services.qdrant_service import QdrantService
 from app.services.neon_service import NeonDBService
 from app.models.schemas import Source
-import google.generativeai as genai
+from google import genai
 import os
 from app.core import logging_config
 
@@ -37,8 +37,7 @@ class RAGService:
             self.logger.error("GOOGLE_API_KEY environment variable is not set")
             raise ValueError("GOOGLE_API_KEY environment variable is not set")
 
-        genai.configure(api_key=google_api_key)
-        self.llm_model = genai.GenerativeModel('gemini-pro')
+        self.client = genai.Client(api_key=google_api_key)
 
     async def retrieve_relevant_chunks(
         self,
@@ -141,9 +140,9 @@ class RAGService:
 
             Answer:"""
 
-            # Call the Gemini API
+            # Call the Gemini API using the new SDK
             self.logger.debug("Calling Gemini API for content generation")
-            response = self.llm_model.generate_content(prompt)
+            response = self.client.models.generate_content(model='gemini-1.5-flash', contents=prompt)
 
             # Extract the generated answer
             answer = response.text.strip()
