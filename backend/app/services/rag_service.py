@@ -142,7 +142,7 @@ class RAGService:
 
             # Call the Gemini API using the new SDK
             self.logger.debug("Calling Gemini API for content generation")
-            response = self.client.models.generate_content(model='gemini-1.5-flash', contents=prompt)
+            response = self.client.models.generate_content(model='gemini-2.5-pro', contents=prompt)
 
             # Extract the generated answer
             answer = response.text.strip()

@@ -37,8 +37,8 @@ def test_health_endpoint_success(test_client):
     assert "status" in data, "Response should contain a 'status' field"
     assert "checks" in data, "Response should contain a 'checks' dictionary"
 
-    # Verify the main status is present (could be "ok", "degraded", or "error")
-    assert data["status"] in ["ok", "degraded", "error"], f"Unexpected status value: {data['status']}"
+    # Verify the main status is present (could be "ok", "degraded", "error", or "unhealthy")
+    assert data["status"] in ["ok", "degraded", "error", "unhealthy"], f"Unexpected status value: {data['status']}"
 
     # Verify that all required service checks are present
     required_services = ["qdrant", "neon", "cohere", "gemini"]

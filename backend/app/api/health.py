@@ -6,7 +6,6 @@ from google import genai
 import os
 
 health_router = APIRouter(
-    prefix="/health",
     tags=["Health"]
 )
 
@@ -105,8 +104,8 @@ async def health_check(
         # Initialize client with the new SDK
         client = genai.Client(api_key=google_api_key)
 
-        # Try a simple API call to verify connection
-        response = client.models.generate_content(model='gemini-1.5-flash', contents="Say 'health check' in one word")
+        # Try to get model info to verify availability (lightweight check)
+        model = client.models.get(model='gemini-2.5-pro')
         health_status["checks"]["gemini"] = {"status": "healthy", "message": "Connected successfully"}
     except Exception as e:
         health_status["checks"]["gemini"] = {"status": "unhealthy", "message": f"Connection failed: {str(e)}"}
