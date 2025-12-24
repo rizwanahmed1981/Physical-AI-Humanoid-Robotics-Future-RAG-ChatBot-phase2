@@ -2,8 +2,9 @@ from dotenv import load_dotenv
 from fastapi import FastAPI
 from app.api.health import health_router
 from app.api.rag import rag_router
-from app.middleware.error_handler import ErrorHandlerMiddleware
-from app.middleware.request_logger import RequestLoggingMiddleware
+from app.middleware.cors import setup_cors
+from app.middleware.error_handler import GlobalErrorHandler
+from app.middleware.request_logger import RequestLogger
 from app.core.logging_config import setup_logging, get_logger
 
 # Load environment variables from .env file
@@ -13,9 +14,9 @@ load_dotenv()
 setup_logging()
 
 app = FastAPI(
-    title="Physical AI Textbook RAG Backend",
-    description="A FastAPI backend for the Physical AI & Humanoid Robotics AI-Native Textbook Platform, featuring RAG-based question answering using Cohere, Qdrant, Neon, and Google Gemini.",
-    version="0.1.0",
+    title="Physical AI & Humanoid Robotics Textbook API",
+    description="AI-Native Backend for RAG-based textbook interaction.",
+    version="1.0.0",
     contact={
         "name": "Physical AI Development Team",
         "url": "https://github.com/ecomw/Physical-AI-Humanoid-Robotics-Future-RAG-ChatBot",
@@ -27,11 +28,14 @@ app = FastAPI(
     },
 )
 
-# Add error handling middleware
-app.add_middleware(ErrorHandlerMiddleware)
+# Setup CORS middleware
+setup_cors(app)
 
 # Add request logging middleware
-app.add_middleware(RequestLoggingMiddleware)
+app.add_middleware(RequestLogger)
+
+# Add error handling middleware
+app.add_middleware(GlobalErrorHandler)
 
 # Include health router
 app.include_router(health_router, prefix="/health", tags=["Health"])
