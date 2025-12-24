@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './cinematic-homepage.module.css';
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import ChatWidget from '../components/ChatWidget';
 
 
 // Simple particle animation component
@@ -127,6 +128,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <ChatWidget />
     </div>
   );
 }
