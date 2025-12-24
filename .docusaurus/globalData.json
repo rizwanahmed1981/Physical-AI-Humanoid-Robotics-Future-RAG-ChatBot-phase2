@@ -199,6 +199,14 @@
             {
               "id": "quizzes/chapter6-sections",
               "path": "/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-sections"
+            },
+            {
+              "id": "specs/phase1/tasks",
+              "path": "/Physical-AI-Humanoid-Robotics-Future/docs/specs/phase1/tasks"
+            },
+            {
+              "id": "specs/phase2/tasks",
+              "path": "/Physical-AI-Humanoid-Robotics-Future/docs/specs/phase2/tasks"
             }
           ],
           "draftIds": [],

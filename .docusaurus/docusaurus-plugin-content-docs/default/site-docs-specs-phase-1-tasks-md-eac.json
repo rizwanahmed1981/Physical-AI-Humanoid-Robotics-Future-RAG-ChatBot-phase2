@@ -1,0 +1,15 @@
+{
+  "id": "specs/phase1/tasks",
+  "title": "Tasks for Phase 1: UI Component Creation",
+  "description": "Overview",
+  "source": "@site/docs/specs/phase1/tasks.md",
+  "sourceDirName": "specs/phase1",
+  "slug": "/specs/phase1/tasks",
+  "permalink": "/Physical-AI-Humanoid-Robotics-Future/docs/specs/phase1/tasks",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/Physical-AI-Humanoid-Robotics-Future/edit/main/docs/specs/phase1/tasks.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

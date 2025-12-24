@@ -198,6 +198,31 @@
   60%, 100% { content: '...'; }
 }
 
+/* Sources styling */
+.sourcesContainer {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #eee;
+  font-size: 0.85em;
+}
+
+.sourceTitle {
+  font-weight: bold;
+  color: #666;
+}
+
+.sourceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sourceItem {
+  color: #25c2a0;
+  font-size: 0.8em;
+  margin-bottom: 2px;
+}
+
 /* Accessibility: Screen reader only text */
 .sr-only {
   position: absolute;

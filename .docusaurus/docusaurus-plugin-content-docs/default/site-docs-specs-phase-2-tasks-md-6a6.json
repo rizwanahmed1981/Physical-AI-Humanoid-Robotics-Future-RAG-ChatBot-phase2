@@ -1,0 +1,15 @@
+{
+  "id": "specs/phase2/tasks",
+  "title": "Tasks for Phase 2: API Integration",
+  "description": "Overview",
+  "source": "@site/docs/specs/phase2/tasks.md",
+  "sourceDirName": "specs/phase2",
+  "slug": "/specs/phase2/tasks",
+  "permalink": "/Physical-AI-Humanoid-Robotics-Future/docs/specs/phase2/tasks",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/rizwanahmed1981/Physical-AI-Humanoid-Robotics-Future/edit/main/docs/specs/phase2/tasks.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {}
+}

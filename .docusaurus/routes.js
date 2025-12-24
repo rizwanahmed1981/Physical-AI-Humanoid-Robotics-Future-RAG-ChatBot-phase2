@@ -4,50 +4,50 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug',
-    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug', '75d'),
+    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug', '526'),
     exact: true
   },
   {
     path: '/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/config',
-    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/config', 'd58'),
+    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/config', 'e2d'),
     exact: true
   },
   {
     path: '/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/content',
-    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/content', '0d8'),
+    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/content', '0f2'),
     exact: true
   },
   {
     path: '/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/globalData',
-    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/globalData', '3b2'),
+    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/globalData', '2a7'),
     exact: true
   },
   {
     path: '/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/metadata',
-    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/metadata', 'a7d'),
+    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/metadata', '18e'),
     exact: true
   },
   {
     path: '/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/registry',
-    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/registry', '197'),
+    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/registry', 'fc9'),
     exact: true
   },
   {
     path: '/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/routes',
-    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/routes', '949'),
+    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/__docusaurus/debug/routes', '156'),
     exact: true
   },
   {
     path: '/Physical-AI-Humanoid-Robotics-Future/docs',
-    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs', '6b9'),
+    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs', 'a14'),
     routes: [
       {
         path: '/Physical-AI-Humanoid-Robotics-Future/docs',
-        component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs', 'b7a'),
+        component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs', 'ef9'),
         routes: [
           {
             path: '/Physical-AI-Humanoid-Robotics-Future/docs',
-            component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs', '855'),
+            component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs', '447'),
             routes: [
               {
                 path: '/Physical-AI-Humanoid-Robotics-Future/docs/chapters/chapter1',
@@ -284,6 +284,16 @@ export default [
                 path: '/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-sections',
                 component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs/quizzes/chapter6-sections', 'aa5'),
                 exact: true
+              },
+              {
+                path: '/Physical-AI-Humanoid-Robotics-Future/docs/specs/phase1/tasks',
+                component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs/specs/phase1/tasks', 'c33'),
+                exact: true
+              },
+              {
+                path: '/Physical-AI-Humanoid-Robotics-Future/docs/specs/phase2/tasks',
+                component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/docs/specs/phase2/tasks', '64f'),
+                exact: true
               }
             ]
           }
@@ -293,7 +303,7 @@ export default [
   },
   {
     path: '/Physical-AI-Humanoid-Robotics-Future/',
-    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/', '702'),
+    component: ComponentCreator('/Physical-AI-Humanoid-Robotics-Future/', '464'),
     exact: true
   },
   {

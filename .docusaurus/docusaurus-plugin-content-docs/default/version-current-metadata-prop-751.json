@@ -297,6 +297,16 @@
       "id": "quizzes/chapter6-sections",
       "title": "Chapter 6 - Capstone Project - Simulated Autonomous Humanoid Robot",
       "description": "Chapter 6 Comprehensive Quiz"
+    },
+    "specs/phase1/tasks": {
+      "id": "specs/phase1/tasks",
+      "title": "Tasks for Phase 1: UI Component Creation",
+      "description": "Overview"
+    },
+    "specs/phase2/tasks": {
+      "id": "specs/phase2/tasks",
+      "title": "Tasks for Phase 2: API Integration",
+      "description": "Overview"
     }
   }
 }

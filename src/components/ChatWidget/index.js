@@ -37,7 +37,7 @@ const ChatWidget = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleSend = () => {
+  const handleSend = async () => {
     if (inputValue.trim() === '' || isLoading) return;
 
     // Add user message
@@ -52,17 +52,52 @@ const ChatWidget = () => {
     setInputValue('');
     setIsLoading(true);
 
-    // Simulate bot response after a delay
-    setTimeout(() => {
+    try {
+      // Hardcoded API URL for hackathon to eliminate env var complexity
+      const API_URL = 'http://localhost:8000/rag/ask';
+
+      // Make API call to backend
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ query: inputValue }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      // Add bot response with sources
       const botResponse = {
         id: Date.now() + 1,
-        text: "Thanks for your question! This is a simulated response from the AI assistant. In a real implementation, this would connect to the backend API to provide accurate answers based on the textbook content.",
+        text: data.answer || "I don't have an answer for that question.",
         sender: "bot",
+        sources: data.sources || [],
         timestamp: new Date()
       };
+
       setMessages(prevMessages => [...prevMessages, botResponse]);
+    } catch (error) {
+      // Enhanced error logging for debugging
+      console.error("❌ RAG Connection Error:", error);
+      console.error("Attempted URL:", 'http://localhost:8000/rag/ask');
+
+      // Add error message
+      const errorMessage = {
+        id: Date.now() + 1,
+        text: "Sorry, I'm having trouble connecting to the brain right now. Please try again.",
+        sender: "bot",
+        sources: [],
+        timestamp: new Date()
+      };
+      setMessages(prevMessages => [...prevMessages, errorMessage]);
+    } finally {
       setIsLoading(false);
-    }, 1500);
+    }
   };
 
   const handleKeyPress = (e) => {
@@ -90,8 +125,21 @@ const ChatWidget = () => {
                 className={`${styles.message} ${message.sender === 'user' ? styles.user : styles.bot}`}
               >
                 {message.text}
+                {message.sources && message.sources.length > 0 && (
+                  <div className={styles.sourcesContainer}>
+                    <div className={styles.sourceTitle}>Sources:</div>
+                    <ul className={styles.sourceList}>
+                      {message.sources.map((source, index) => (
+                        <li key={index} className={styles.sourceItem}>
+                          [{source.chapter_id}: {source.title}]
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 <div className={styles.srOnly}>
                   {message.sender === 'user' ? 'You said:' : 'Assistant said:'} {message.text}
+                  {message.sources && message.sources.length > 0 && ` Sources: ${message.sources.map(s => s.title).join(', ')}`}
                 </div>
               </div>
             ))}
