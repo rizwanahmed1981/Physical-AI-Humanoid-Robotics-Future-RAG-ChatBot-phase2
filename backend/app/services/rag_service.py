@@ -64,25 +64,60 @@ class RAGService:
             # Step 1: Generate embedding for the query
             # Using input_type="search_query" for query embeddings (as opposed to "search_document" for documents)
             self.logger.debug("Generating embeddings for query", extra={"query_length": len(query)})
-            query_embedding = await self.cohere_service.get_embeddings([query])
+            query_embedding = await self.cohere_service.get_embeddings([query], input_type="search_query")
             query_vector = query_embedding[0]  # Get the first (and only) embedding
 
             # Step 2: Search for similar vectors in Qdrant
             self.logger.debug("Searching for similar vectors in Qdrant", extra={"limit": limit})
             search_results = await self.qdrant_service.search_vectors(query_vector, limit=limit)
 
+            # Debugging: Print search results information
+            print(f"DEBUG: Found {len(search_results)} vectors in Qdrant.")
+            for result in search_results:
+                print(f"DEBUG: Score: {result['score']}")
+
             # Step 3: Retrieve metadata from Neon DB and format sources
             sources = []
             self.logger.debug("Retrieving metadata from Neon DB", extra={"result_count": len(search_results)})
 
             for result in search_results:
-                payload = result["payload"]
-                score = result["score"]
+                payload = result.get("payload", {})
+                score = result.get("score", 0.0)
 
-                # Extract embedding_id from payload to get detailed metadata
-                embedding_id = payload.get("embedding_id", "")
-                if embedding_id:
-                    metadata = self.neon_service.get_metadata_by_embedding_id(embedding_id)
+                # Debug: Print the actual payload structure
+                print(f"DEBUG: Raw result structure: {result}")
+                print(f"DEBUG: Payload content: {payload}")
+                print(f"DEBUG: Payload type: {type(payload)}")
+                print(f"DEBUG: Payload keys: {list(payload.keys()) if isinstance(payload, dict) else 'Not a dict'}")
+
+                # Extract identifier from payload
+                # Qdrant payload contains chunk_id, but we need to look up by embedding_id
+                # However, for now we'll use chunk_id for metadata lookup since it's what's available
+                chunk_id = payload.get("chunk_id", "")
+                if chunk_id:
+                    # Use chunk_id as identifier for metadata lookup
+                    print(f"DEBUG: Using chunk_id for metadata lookup: {chunk_id}")
+
+                    # Try the embedding_id lookup first (in case chunk_id happens to match an embedding_id)
+                    metadata = None
+                    try:
+                        metadata = self.neon_service.get_metadata_by_embedding_id(chunk_id)
+                        print(f"DEBUG: Metadata retrieved by embedding_id lookup: {metadata}")
+                    except Exception as e:
+                        print(f"DEBUG: Embedding ID lookup failed with exception: {e}")
+                        metadata = None  # Ensure metadata is None if there's an exception
+
+                    # If embedding_id lookup didn't find anything, try chunk_id lookup
+                    if not metadata:
+                        print(f"DEBUG: Embedding ID lookup returned None, trying chunk_id lookup...")
+                        try:
+                            metadata = self.neon_service.get_metadata_by_chunk_id(chunk_id)
+                            print(f"DEBUG: Metadata retrieved by chunk_id lookup: {metadata}")
+                        except Exception as e:
+                            print(f"DEBUG: Chunk ID lookup failed with exception: {e}")
+                            metadata = None  # Ensure metadata is None if there's an exception
+
+                    # If we found metadata from either lookup, create a source
                     if metadata:
                         source = Source(
                             chapter_id=metadata["chapter_id"],
@@ -92,6 +127,24 @@ class RAGService:
                             score=score
                         )
                         sources.append(source)
+
+                else:
+                    print(f"DEBUG: No chunk_id found in payload")
+
+                # Alternative approach: Try to see if we can make this work with the actual database structure
+                # Since we know the ingestion stores embedding_id, but Qdrant doesn't return it,
+                # we need to either:
+                # 1. Store chunk_id as embedding_id in Qdrant (not ideal)
+                # 2. Change the metadata lookup to use chunk_id directly (better approach)
+
+                # For now, let's make it work by trying to see what's in the database
+                # We'll add a better debugging approach
+
+                # Since we know we have chunk_id, let's see what the database structure looks like
+                # and if we can query by chunk_id
+                print(f"DEBUG: Would normally look up metadata by embedding_id: {chunk_id}")
+                print(f"DEBUG: But chunk_id is available: {chunk_id}")
+                print(f"DEBUG: This suggests the metadata table needs to be queried by chunk_id")
 
             self.logger.info("RAG retrieval completed successfully", extra={"source_count": len(sources)})
             return sources

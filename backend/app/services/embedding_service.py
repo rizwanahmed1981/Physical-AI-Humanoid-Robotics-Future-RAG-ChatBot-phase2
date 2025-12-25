@@ -15,12 +15,13 @@ class CohereEmbeddingService:
 
         self.client = cohere.Client(api_key)
 
-    async def get_embeddings(self, texts: List[str]) -> List[List[float]]:
+    async def get_embeddings(self, texts: List[str], input_type: str = "search_document") -> List[List[float]]:
         """
         Generate embeddings for a list of text documents using Cohere API.
 
         Args:
             texts: List of text strings to embed
+            input_type: Type of input for embedding ('search_document' or 'search_query')
 
         Returns:
             List of embeddings (list of lists of floats)
@@ -28,13 +29,13 @@ class CohereEmbeddingService:
         Raises:
             ValueError: If embedding generation fails
         """
-        self.logger.info("Generating embeddings", extra={"text_count": len(texts)})
+        self.logger.info("Generating embeddings", extra={"text_count": len(texts), "input_type": input_type})
         try:
             # Use the embed endpoint with appropriate parameters
             response = self.client.embed(
                 texts=texts,
                 model="embed-english-v3.0",
-                input_type="search_document"  # For document embeddings
+                input_type=input_type
             )
 
             # Extract embeddings from the response

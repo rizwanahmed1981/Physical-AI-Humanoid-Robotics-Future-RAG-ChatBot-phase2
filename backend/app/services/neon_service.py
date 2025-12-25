@@ -176,6 +176,60 @@ class NeonDBService:
                 cursor.close()
                 connection.close()
 
+    def get_metadata_by_chunk_id(self, chunk_id: str) -> Optional[Dict[str, Any]]:
+        """
+        Retrieve metadata record by chunk ID.
+
+        Args:
+            chunk_id: ID of the text chunk
+
+        Returns:
+            Dictionary containing metadata or None if not found
+
+        Raises:
+            ValueError: If retrieval fails
+        """
+        self.logger.debug("Retrieving metadata by chunk ID", extra={"chunk_id": chunk_id})
+        connection = None
+        try:
+            connection = self._get_connection()
+            cursor = connection.cursor()
+
+            # Query metadata by chunk_id instead of embedding_id
+            select_query = """
+            SELECT id, chapter_id, title, file_path, chunk_id, chunk_text_preview, embedding_id
+            FROM chapter_metadata
+            WHERE chunk_id = %s
+            """
+
+            cursor.execute(select_query, (chunk_id,))
+            result = cursor.fetchone()
+
+            if result:
+                # Convert to dictionary
+                metadata = {
+                    "id": result[0],
+                    "chapter_id": result[1],
+                    "title": result[2],
+                    "file_path": result[3],
+                    "chunk_id": result[4],
+                    "chunk_text_preview": result[5],
+                    "embedding_id": result[6]
+                }
+                self.logger.debug("Metadata retrieved successfully", extra={"metadata_keys": list(metadata.keys())})
+                return metadata
+            else:
+                self.logger.debug("No metadata found for chunk ID", extra={"chunk_id": chunk_id})
+                return None
+
+        except Exception as e:
+            self.logger.error("Error retrieving metadata by chunk ID", extra={"error": str(e), "chunk_id": chunk_id})
+            raise ValueError(f"Error retrieving metadata by chunk ID: {str(e)}")
+        finally:
+            if connection:
+                cursor.close()
+                connection.close()
+
     def clear_metadata_table(self):
         """
         Clear all records from the chapter_metadata table.
